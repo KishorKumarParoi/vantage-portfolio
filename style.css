@@ -32,17 +32,18 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 body {
   background: var(--bg-body);
   color: var(--text-main);
-  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-family: "Lora", "Newsreader", "EB Garamond", Georgia, "Times New Roman", serif;
   text-rendering: optimizeLegibility;
-  line-height: 175%;
+  line-height: 162%;
   margin: 0;
   padding: 0;
-  font-size: 15.5pt;
+  font-size: 13.5pt;
 }
 
 /* --------------------------------------------------------------------------
@@ -51,13 +52,16 @@ body {
 .topouter {
   width: 100%;
   min-height: 1.5em;
-  padding: 0.85em 0;
-  z-index: 100;
-  background: #FFFFFF;
-  border-bottom: 1px solid var(--border-card);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 0.65em 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
   position: sticky;
   top: 0;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .top {
@@ -72,15 +76,16 @@ body {
 
 .title {
   margin: 0;
-  font-size: 115%;
+  font-size: 108%;
   font-variant: small-caps;
-  letter-spacing: 0.16em;
-  font-weight: 500;
+  letter-spacing: 0.12em;
+  font-weight: 600;
 }
 
 .site-title-link {
-  color: #222222;
+  color: #1A1A1A;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .site-title-link:hover {
@@ -88,26 +93,35 @@ body {
 }
 
 .links {
-  font-size: 88%;
+  font-size: 82%;
   font-variant: small-caps;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 .links nav {
   display: flex;
   align-items: center;
-  gap: 1.1em;
+  gap: 0.85em;
 }
 
 .links nav a {
   margin: 0;
   text-decoration: none;
   color: var(--accent-link);
-  transition: color 0.2s ease;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .links nav a:hover {
-  color: var(--accent-link-hover);
+  color: var(--accent-burgundy);
+  background: rgba(160, 32, 32, 0.06);
+}
+
+.links nav a.active {
+  color: var(--accent-burgundy);
+  background: rgba(160, 32, 32, 0.1);
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
@@ -186,8 +200,8 @@ a.button:hover {
 .boxed {
   border-radius: 6px;
   background: var(--bg-box);
-  padding: 2.2em 2.5em;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
+  padding: 1.8em 2.2em;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
   border: 1px solid #EEEEEE;
 }
 
@@ -389,13 +403,15 @@ p {
    -------------------------------------------------------------------------- */
 .section-heading {
   border-bottom: 2px solid var(--border-light);
-  padding-bottom: 0.4em;
-  padding-top: 0.5em;
-  line-height: 120%;
-  font-size: 1.55em;
+  padding-bottom: 0.35em;
+  padding-top: 0.4em;
+  line-height: 125%;
+  font-size: 1.28em;
   font-weight: 600;
-  margin-bottom: 1em;
+  margin-bottom: 0.85em;
   color: #1A1A1A;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
 }
 
 hr.vintage-divider {
@@ -595,7 +611,7 @@ hr.vintage-divider {
 }
 
 .paper-title {
-  font-size: 1.15em;
+  font-size: 1.08em;
   cursor: pointer;
   color: var(--accent-link);
   transition: color 0.2s ease;
@@ -613,7 +629,7 @@ hr.vintage-divider {
 .venue {
   font-style: italic;
   color: #555555;
-  font-size: 92%;
+  font-size: 90%;
   display: inline-block;
   margin-right: 0.5em;
 }
@@ -624,7 +640,7 @@ span.award {
   border: 1px solid #FFEBAA;
   border-radius: 3px;
   font-weight: 600;
-  font-size: 78%;
+  font-size: 76%;
   padding: 0.15em 0.5em;
   display: inline-block;
   vertical-align: middle;
@@ -632,10 +648,10 @@ span.award {
 }
 
 .pub-lead-desc {
-  font-size: 90%;
+  font-size: 88%;
   color: #333333;
-  margin: 0.35em 0 0.5em 0;
-  line-height: 155%;
+  margin: 0.3em 0 0.45em 0;
+  line-height: 152%;
 }
 
 .abstract-toggle-btn {
@@ -1047,4 +1063,141 @@ ul.carlini-list li {
   font-size: 80%;
   line-height: 155%;
   color: #444444;
+}
+
+/* --------------------------------------------------------------------------
+   Live Visitor Telemetry & Edge Pulse (macos.kishor.tech Sync)
+   -------------------------------------------------------------------------- */
+.live-visitor-card {
+  margin: 1.8em auto 1.4em auto;
+  max-width: 580px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding: 0.85em 1.2em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.live-visitor-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.visitor-pulse-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.live-pulse {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.4);
+  animation: pulseRing 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.pulse-dot {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.live-badge-label {
+  font-size: 74%;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #0F766E;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.visitor-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  font-size: 82%;
+  color: #334155;
+}
+
+.visitor-metric-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.metric-label {
+  color: #64748B;
+  font-size: 92%;
+}
+
+.metric-value {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  color: #0F172A;
+  font-size: 108%;
+  letter-spacing: -0.02em;
+}
+
+.metric-sep {
+  color: #CBD5E1;
+}
+
+.metric-link {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 88%;
+  color: var(--accent-link);
+  text-decoration: underline;
+}
+
+.metric-link:hover {
+  color: var(--accent-burgundy);
+}
+
+.metric-latency {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 88%;
+  color: #10B981;
+  font-weight: 600;
+  background: #ECFDF5;
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  border: 1px solid #A7F3D0;
 }
