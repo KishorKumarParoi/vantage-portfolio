@@ -49,7 +49,7 @@
 * **Impact:** 35M+ orders processed (2.3 GB), warehouse compute costs cut by 42% ($18K/month), delivery dispute fraud neutralized by 68% ($1.2M saved).
 
 ### [2. Hybrid Anime Intelligence & Continuous LLMOps Platform](https://github.com/KishorKumarParoi/Hybrid-Anime-Recommender)
-* **Stack:** Rust 1.85 SIMD, Go 1.24 Auth, vLLM Multi-LoRA, PyTorch, Kubeflow v2, MLflow, ArgoCD GitOps.
+* **Stack:** Rust SIMD, Go Gateway, vLLM Multi-LoRA, PyTorch, Kubeflow v2, MLflow, ArgoCD GitOps.
 * **Impact:** Vector scoring latency curtailed from 25ms to <0.5ms (50x speedup), NDCG@10 = 0.94, dynamic LoRA multiplexing on single-GPU instances.
 
 ### [3. Enterprise AI Security & Production Agentic RAG Platform](https://github.com/KishorKumarParoi/AI_Security_Production_App)
@@ -85,7 +85,7 @@
 * **Impact:** Dynamic scale-to-zero autoscaling (65% idle spend saved), automated canary traffic routing (90/10 split) with latency rollbacks.
 
 ### [11. Core Systems Engineering: Rust Git Engine & POSIX Shell](https://github.com/KishorKumarParoi/codecrafters-git-rust)
-* **Stack:** Bare-Metal Rust 1.85, SIMD Streaming zlib, Delta Packfiles, POSIX Async Signal Multiplexing.
+* **Stack:** Bare-Metal Rust, SIMD Streaming zlib, Delta Packfiles, POSIX Async Signal Multiplexing.
 * **Impact:** Matched C Git performance within 3% with 100% compile-time memory safety, sub-microsecond shell execution latency.
 
 ---
