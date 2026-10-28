@@ -80,6 +80,80 @@ body {
   font-variant: small-caps;
   letter-spacing: 0.12em;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.title-resume-pills {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-left: 0.4em;
+  font-size: 58%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: normal;
+  font-variant: normal;
+  vertical-align: middle;
+}
+
+.header-resume-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28em;
+  padding: 0.2em 0.55em;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.header-resume-pill.visual {
+  background: #FFF1F2;
+  border: 1px solid #FECDD3;
+  color: #9F1239;
+}
+.header-resume-pill.visual:hover {
+  background: #FFE4E6;
+  border-color: #FDA4AF;
+  color: #881337;
+  transform: translateY(-1px);
+}
+
+.header-resume-pill.ats {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #065F46;
+}
+.header-resume-pill.ats:hover {
+  background: #D1FAE5;
+  border-color: #6EE7B7;
+  color: #047857;
+  transform: translateY(-1px);
+}
+
+.pill-divider {
+  color: #CBD5E1;
+  font-size: 80%;
+}
+
+.header-resume-pill .pill-badge {
+  font-size: 82%;
+  opacity: 0.8;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .title-resume-pills {
+    display: none;
+  }
 }
 
 .site-title-link {
