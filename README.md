@@ -178,4 +178,5 @@ vercel --prod
 
 ## 📜 License
 
-Handcrafted by **Kishor Kumar Paroi** &bull; Distributed under the [MIT License](LICENSE).
+&copy; 2026 **Kishor Kumar Paroi** &bull; Distributed under the [MIT License](LICENSE).
+Design inspired by [Nicholas Carlini](https://nicholas.carlini.com/).
