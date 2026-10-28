@@ -152,7 +152,9 @@ body {
 
 @media (max-width: 900px) {
   .title-resume-pills {
-    display: none;
+    display: inline-flex;
+    font-size: 50%;
+    gap: 0.25em;
   }
 }
 
