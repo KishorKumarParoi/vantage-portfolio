@@ -1,0 +1,907 @@
+/* ==============================================================================
+   Nicholas Carlini Vantage Style — Modern Clean Academic Portfolio CSS
+   Features:
+     - Lora serif typography with optimized legibility
+     - Fixed boxed container with subtle dropshadows
+     - Sticky left navigation with small-caps and smooth scroll tracking
+     - Elegant right profile card with soft borders
+     - Pure CSS expandable abstracts (click-to-toggle accordion without bloat)
+     - Clean burgundy/crimson link accents (#A02020 / #633)
+     - Interactive media feature showcase (Carlini-style left/right mockups)
+   ============================================================================== */
+
+:root {
+  --bg-body: #FEFEFE;
+  --bg-box: #FFFFFF;
+  --text-main: #222222;
+  --text-muted: #555555;
+  --accent-burgundy: #633333;
+  --accent-burgundy-hover: #844444;
+  --accent-link: #A02020;
+  --accent-link-hover: #C03030;
+  --border-light: #DDDDDD;
+  --border-card: #D0D0D0;
+  --bg-card: #F8F8F8;
+  --award-bg: #FFF9DB;
+  --award-text: #856404;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-body);
+  color: var(--text-main);
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  text-rendering: optimizeLegibility;
+  line-height: 175%;
+  margin: 0;
+  padding: 0;
+  font-size: 15.5pt;
+}
+
+/* --------------------------------------------------------------------------
+   Top Outer Header & Navigation (Carlini refined vintage style)
+   -------------------------------------------------------------------------- */
+.topouter {
+  width: 100%;
+  min-height: 1.5em;
+  padding: 0.85em 0;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-card);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+}
+
+.top {
+  max-width: 62em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: 115%;
+  font-variant: small-caps;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+}
+
+.site-title-link {
+  color: #222222;
+  text-decoration: none;
+}
+
+.site-title-link:hover {
+  color: var(--accent-link);
+}
+
+.links {
+  font-size: 88%;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+}
+
+.links nav {
+  display: flex;
+  align-items: center;
+  gap: 1.1em;
+}
+
+.links nav a {
+  margin: 0;
+  text-decoration: none;
+  color: var(--accent-link);
+  transition: color 0.2s ease;
+}
+
+.links nav a:hover {
+  color: var(--accent-link-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Links
+   -------------------------------------------------------------------------- */
+a {
+  text-decoration: none;
+  color: var(--accent-link);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-link-hover);
+}
+
+a.button {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #442222;
+  border-radius: 0.25em;
+  padding: 0.2em 0.55em;
+  color: #FFFFFF !important;
+  background: var(--accent-burgundy);
+  transition: all 0.3s ease;
+  font-size: 85%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+a.button:hover {
+  color: #FFFFFF !important;
+  background: var(--accent-burgundy-hover);
+  border-color: #663333;
+  transform: translateY(-1px);
+}
+
+.fancy a {
+  position: relative;
+}
+
+.fancy a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #CC4444;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.fancy a:hover::before {
+  transform: scaleX(0.99);
+}
+
+/* --------------------------------------------------------------------------
+   Main Container & Boxed Inner
+   -------------------------------------------------------------------------- */
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2em;
+}
+
+.outer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+  max-width: 62em;
+}
+
+.boxed {
+  border-radius: 6px;
+  background: var(--bg-box);
+  padding: 2.2em 2.5em;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #EEEEEE;
+}
+
+.inner {
+  width: 100%;
+  position: relative;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.1em;
+}
+
+/* --------------------------------------------------------------------------
+   Outside Edge Hover Drawer: Quick Index
+   Sits completely on the screen edge outside the reading column.
+   Collapses to a sleek tab and expands smoothly when hovered.
+   -------------------------------------------------------------------------- */
+#leftnav.hover-drawer {
+  position: fixed;
+  top: 7em;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  transform: translateX(-160px);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+}
+
+#leftnav.hover-drawer:hover {
+  transform: translateX(0);
+}
+
+.drawer-peek-tab {
+  order: 2;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0.7em 0.45em;
+  box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+  user-select: none;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+
+.drawer-peek-tab .peek-icon {
+  font-size: 1.1em;
+}
+
+.drawer-peek-tab .peek-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-variant: small-caps;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-burgundy);
+}
+
+.drawer-content {
+  order: 1;
+  width: 160px;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-left: none;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.12);
+  padding: 0.8em 0.9em 1em 0.9em;
+  border-radius: 0 8px 8px 0;
+  font-variant: small-caps;
+}
+
+.leftnav-header {
+  border-bottom: 1px dashed #E2E8F0;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em;
+}
+
+#leftnav .sub {
+  font-size: 0.72em;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.1em;
+}
+
+#leftnav a {
+  color: #334155;
+  text-decoration: none;
+  display: block;
+  padding: 0.25em 0.2em;
+  font-size: 0.9em;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+#leftnav a:hover {
+  color: var(--accent-link);
+  background: #F8FAFC;
+  padding-left: 0.5em;
+}
+
+#leftnav a.active {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--accent-link);
+}
+
+/* Hide on mobile devices where the top menu already provides navigation */
+@media all and (max-width: 50em) {
+  #leftnav.hover-drawer {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Right Profile Card (Desktop Passport Format)
+   -------------------------------------------------------------------------- */
+.rightouter {
+  width: 15.5em;
+  display: inline;
+  float: right;
+  margin-left: 1.8em;
+  margin-bottom: 1.2em;
+}
+
+.rightinner {
+  padding-left: 8px;
+}
+
+.rightelement {
+  background: var(--bg-card);
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 1px solid var(--border-card);
+  border-right: 1px solid var(--border-card);
+  border-left: 1px solid #ECECEC;
+  border-top: 1px solid #ECECEC;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 14.5em;
+  text-align: center;
+}
+
+.rightelement img {
+  border-radius: 3px;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin: 0 auto;
+}
+
+.card-caption {
+  margin-top: 0.7em;
+  font-size: 82%;
+  line-height: 145%;
+}
+
+.role-affiliation {
+  color: var(--accent-burgundy);
+  font-weight: 600;
+}
+
+.location-tag {
+  color: #666666;
+  font-size: 85%;
+}
+
+.email-text {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 78%;
+  color: #444444;
+  display: inline-block;
+  margin: 0.3em 0;
+}
+
+.card-social-links {
+  margin-top: 0.4em;
+  font-size: 95%;
+}
+
+.card-social-links .sep {
+  color: #BBBBBB;
+  margin: 0 0.2em;
+}
+
+.contact {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Headings & Dividers
+   -------------------------------------------------------------------------- */
+.section-heading {
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.4em;
+  padding-top: 0.5em;
+  line-height: 120%;
+  font-size: 1.55em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: #1A1A1A;
+}
+
+hr.vintage-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 2.5em 0 2em 0;
+  clear: both;
+}
+
+/* --------------------------------------------------------------------------
+   Media Feature Showcase (Carlini-style Video / Terminal Mockups)
+   -------------------------------------------------------------------------- */
+.media-feature {
+  margin-bottom: 2em;
+  clear: both;
+}
+
+.video-container {
+  width: 440px;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.left-media {
+  float: left;
+  margin-right: 1.6em;
+}
+
+.right-media {
+  float: right;
+  margin-left: 1.6em;
+}
+
+.video-mockup {
+  background: #1E293B;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  border: 1px solid #334155;
+}
+
+.mockup-header {
+  background: #0F172A;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid #1E293B;
+}
+
+.mockup-header .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mockup-header .dot.red { background: #EF4444; }
+.mockup-header .dot.yellow { background: #F59E0B; }
+.mockup-header .dot.green { background: #10B981; }
+
+.mockup-title {
+  margin-left: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 70%;
+  color: #94A3B8;
+}
+
+.mockup-screen {
+  padding: 12px;
+  background: #090D16;
+}
+
+.code-preview {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 72%;
+  color: #38BDF8;
+  line-height: 145%;
+}
+
+.mockup-badge {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #1E293B;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 72%;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Publications / Architectures (Carlini expandable layout)
+   -------------------------------------------------------------------------- */
+.publication {
+  padding-bottom: 1.4em;
+  margin-bottom: 1.4em;
+  border-bottom: 1px solid #EFEFEF;
+  position: relative;
+}
+
+.publication:last-child {
+  border-bottom: none;
+}
+
+.pubstuff {
+  float: right;
+  margin-left: 1em;
+}
+
+.paper-title {
+  font-size: 1.15em;
+  cursor: pointer;
+  color: var(--accent-link);
+  transition: color 0.2s ease;
+}
+
+.paper-title:hover {
+  color: var(--accent-link-hover);
+}
+
+.me {
+  font-weight: 600;
+  color: #111111;
+}
+
+.venue {
+  font-style: italic;
+  color: #555555;
+  font-size: 92%;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+span.award {
+  background: var(--award-bg);
+  color: var(--award-text);
+  border: 1px solid #FFEBAA;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 78%;
+  padding: 0.15em 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Expandable Abstract using pure CSS checkbox hack (Carlini) */
+input[type="checkbox"] {
+  display: none;
+}
+
+.abstract {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 0.8em;
+  background: #FBFBFB;
+  border-left: 3px solid var(--accent-burgundy);
+  border-radius: 0 4px 4px 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, padding 0.3s ease;
+}
+
+input[type="checkbox"]:checked ~ .abstract {
+  max-height: 35em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  overflow: auto;
+}
+
+.tech-tag {
+  font-size: 85%;
+  color: #666666;
+  font-style: normal;
+  margin-top: 0.4em;
+}
+
+/* --------------------------------------------------------------------------
+   Timeline (Work Experience)
+   -------------------------------------------------------------------------- */
+.timeline-item {
+  margin-bottom: 1.8em;
+  padding-left: 1.2em;
+  border-left: 2px solid #E2E8F0;
+}
+
+.timeline-header {
+  font-size: 1.05em;
+  margin-bottom: 0.4em;
+}
+
+.role-title {
+  color: var(--accent-burgundy);
+  font-weight: 600;
+}
+
+.timeline-date {
+  float: right;
+  font-size: 85%;
+  color: #777777;
+  font-style: italic;
+}
+
+ul {
+  margin-top: 0.4em;
+  padding-left: 1.4em;
+}
+
+li {
+  padding-bottom: 0.4em;
+}
+
+ul.carlini-list li {
+  padding-bottom: 0.8em;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-size: 82%;
+  color: #777777;
+  border-top: 1px solid var(--border-light);
+  margin-top: 3em;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile & Responsive Adaptations (matching Carlini max-width: 40em)
+   -------------------------------------------------------------------------- */
+.bars {
+  display: none;
+}
+
+@media all and (max-width: 50em) {
+  body {
+    font-size: 13pt;
+  }
+
+  .boxed {
+    padding: 1.2em;
+  }
+
+  .timeline-date {
+    float: none;
+    display: block;
+    margin-top: 0.2em;
+  }
+
+  .rightouter {
+    display: none;
+  }
+
+  .contact {
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .contact img {
+    border-radius: 4px;
+    margin-bottom: 0.6em;
+  }
+
+  .left-media,
+  .right-media {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .bars {
+    display: block;
+    cursor: pointer;
+    float: right;
+  }
+
+  .bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #222222;
+    border-radius: 2px;
+  }
+
+  .bar ~ .bar {
+    margin: 4px 0;
+  }
+
+  .dropdown {
+    position: absolute;
+    right: 1em;
+    top: 2.8em;
+    width: 11em;
+    padding: 0.8em;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    z-index: 200;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: none;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 0.4em 0;
+    margin-right: 0 !important;
+  }
+
+  #mobilelinks:checked ~ .dropdown {
+    display: block;
+  }
+
+  .abstract {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Ecosystem Navigation Banner & Tags
+   -------------------------------------------------------------------------- */
+.ecosystem-banner {
+  margin: 1.5em 0;
+  padding: 0.9em 1.2em;
+  background: #FDFBFA;
+  border: 1px solid #EADBDA;
+  border-left: 4px solid var(--accent-burgundy);
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 80%;
+  line-height: 140%;
+}
+
+.ecosystem-label {
+  font-variant: small-caps;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-burgundy);
+  margin-right: 0.4em;
+}
+
+.eco-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.25em 0.65em;
+  background: #FFFFFF;
+  border: 1px solid #D8D0CF;
+  border-radius: 3px;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.eco-tag:hover {
+  background: #F4EBEB;
+  border-color: var(--accent-burgundy);
+  color: var(--accent-link);
+}
+
+.eco-tag.active {
+  background: #F0E2E2;
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy);
+  font-weight: 600;
+}
+
+.eco-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #28a745;
+  display: inline-block;
+}
+
+.eco-dot.active {
+  background-color: var(--accent-burgundy);
+}
+
+/* --------------------------------------------------------------------------
+   AI Engineering Journey Section Grid & Cards
+   -------------------------------------------------------------------------- */
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.journey-card {
+  background: #FBFBFB;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  padding: 1em 1.2em;
+  transition: box-shadow 0.2s ease;
+}
+
+.journey-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-color: #C8B8B8;
+}
+
+.journey-card h4 {
+  margin: 0 0 0.6em 0;
+  font-size: 92%;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--accent-burgundy);
+  border-bottom: 1px solid #EDE8E8;
+  padding-bottom: 0.3em;
+}
+
+.journey-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 78%;
+  line-height: 165%;
+  color: #333333;
+}
+
+.journey-list li {
+  margin-bottom: 0.35em;
+  position: relative;
+  padding-left: 1.1em;
+}
+
+.journey-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent-burgundy);
+}
+
+.journey-list code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 88%;
+  background: #EFEFEF;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+  color: #222222;
+}
+
+/* --------------------------------------------------------------------------
+   Education & Specialized Courses Cards
+   -------------------------------------------------------------------------- */
+.course-box {
+  margin-top: 0.8em;
+  padding: 0.8em 1em;
+  background: #F9F9F9;
+  border-left: 3px solid var(--accent-burgundy);
+  font-size: 82%;
+  line-height: 155%;
+  color: #444444;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2em;
+  margin-top: 1em;
+}
+
+.course-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  border-radius: 4px;
+  padding: 1em 1.1em;
+  transition: all 0.2s ease;
+}
+
+.course-card:hover {
+  border-color: var(--accent-burgundy);
+  box-shadow: 0 2px 8px rgba(100, 30, 30, 0.07);
+}
+
+.course-card h4 {
+  margin: 0 0 0.2em 0;
+  font-size: 92%;
+  color: #111111;
+}
+
+.course-issuer {
+  font-size: 78%;
+  font-style: italic;
+  color: var(--accent-burgundy);
+  margin-bottom: 0.5em;
+  border-bottom: 1px dashed #E0D4D4;
+  padding-bottom: 0.3em;
+}
+
+.course-card p {
+  margin: 0;
+  font-size: 80%;
+  line-height: 155%;
+  color: #444444;
+}

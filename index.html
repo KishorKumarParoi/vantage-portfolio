@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kishor Kumar Paroi</title>
+    <meta name="description" content="Kishor Kumar Paroi is a Principal AI Systems Architect and Founder @ KoomAI working on sub-35ms Agentic Hybrid RAG, distributed LLM fine-tuning, and high-performance SIMD systems.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Top Navigation Header -->
+    <header class="topouter">
+      <div class="top">
+        <div class="title">
+          <a href="#about" class="site-title-link">Kishor Kumar Paroi</a>
+        </div>
+        <div class="links">
+          <div class="bars">
+            <label for="mobilelinks" aria-label="Toggle Navigation Menu">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+          </div>
+          <input type="checkbox" id="mobilelinks">
+          <div class="dropdown fancy">
+            <nav>
+              <a href="#experience">Work Experience</a>
+              <a href="#projects">Technical Projects</a>
+              <a href="#founder">Founder @ KoomAI</a>
+              <a href="#journey">AI Engineering Journey</a>
+              <a href="#skills">Technical Skills</a>
+              <a href="#education">Education &amp; Courses</a>
+              <a href="#achievements">Honors &amp; Hackathons</a>
+              <a href="resume.pdf" class="button" target="_blank" rel="noopener">Resume [PDF]</a>
+            </nav>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+    </header>
+
+    <!-- Side Sticky Left Navigation: Outside Hover Drawer (Does not overlap text) -->
+    <nav id="leftnav" class="hover-drawer" aria-label="Quick Section Jumper">
+      <div class="drawer-peek-tab" title="Hover to view resume sections">
+        <span class="peek-icon">📑</span>
+        <span class="peek-text">SECTIONS</span>
+      </div>
+      <div class="drawer-content">
+        <div class="leftnav-header">
+          <span class="sub">RESUME SECTIONS</span>
+        </div>
+        <div id="leftnav-links">
+          <a href="#about" class="active">Profile</a>
+          <a href="#experience">Work Experience</a>
+          <a href="#projects">Technical Projects</a>
+          <a href="#founder">Founder @ KoomAI</a>
+          <a href="#journey">AI Engineering Journey</a>
+          <a href="#skills">Technical Skills</a>
+          <a href="#education">Education &amp; Courses</a>
+          <a href="#achievements">Achievements</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" style="color: #633; font-weight: bold;">Resume PDF ↗</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+      <div class="outer">
+        <div class="boxed">
+          <div class="inner">
+
+            <!-- Desktop Right Profile Card -->
+            <aside class="rightouter">
+              <div class="rightinner">
+                <div class="rightelement">
+                  <img src="kishor.jpg" alt="Photograph of Kishor Kumar Paroi" width="300" height="300">
+                  <div class="card-caption fancy">
+                    <strong>Kishor Kumar Paroi</strong><br>
+                    <span>Principal AI Systems Architect</span><br>
+                    <span class="role-affiliation">Founder @ KoomAI</span><br>
+                    <span class="location-tag">Dhaka &bull; Global Remote</span><br>
+                    <span class="email-text">kishor.ruet.cse [at] gmail [dot] com</span>
+                    <div class="card-social-links">
+                      <a href="https://github.com/KishorKumarParoi" target="_blank" rel="noopener">GitHub</a>
+                      <span class="sep">|</span>
+                      <a href="https://linkedin.com/in/kishor-kumar-paroi-b06344166" target="_blank" rel="noopener">LinkedIn</a>
+                      <span class="sep">|</span>
+                      <a href="https://x.com/Mr_paroi" target="_blank" rel="noopener">X</a>
+                      <span class="sep">|</span>
+                      <a href="https://koom.kishor.tech/" target="_blank" rel="noopener">KoomAI</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Mobile Contact Header -->
+            <div class="contact">
+              <img src="kishor.jpg" alt="Photograph of Kishor Kumar Paroi" width="160" height="160">
+              <div class="card-caption fancy">
+                <strong>Kishor Kumar Paroi</strong><br>
+                <span>Principal AI Systems Architect & Founder @ KoomAI</span><br>
+                <span class="email-text">kishor.ruet.cse [at] gmail [dot] com</span><br>
+                <a href="https://github.com/KishorKumarParoi" target="_blank" rel="noopener">GitHub</a> |
+                <a href="https://linkedin.com/in/kishor-kumar-paroi-b06344166" target="_blank" rel="noopener">LinkedIn</a> |
+                <a href="https://x.com/Mr_paroi" target="_blank" rel="noopener">X</a> |
+                <a href="resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+              </div>
+            </div>
+
+            <!-- Lead Bio Section -->
+            <section id="about">
+              <p>
+                I am an AI systems architect and engineer working at the intersection of
+                <strong>distributed ML infrastructure, sub-millisecond retrieval, and production agent mesh networks</strong>.
+                Currently, I am the founder and lead architect at <a href="https://koom.kishor.tech/" target="_blank" rel="noopener">KoomAI</a>,
+                where I built an enterprise WebRTC high-performance video communication engine sustaining &lt;120ms glass-to-glass latency across 50,000+ recording minutes.
+              </p>
+
+              <p>
+                Previously, I served as a Forward Deployed AI Engineer at <strong>phi0.ai</strong> in Europe, architecting production LangGraph agent workflows (99.4% task completion across enterprise workloads) and high-throughput Hybrid RAG engines
+                (<sup><a href="#rag-footnote" id="ref-rag">1</a></sup>)
+                that curtailed p95 latency to &lt;35ms and saved $18K/month in compute expenses.
+                Earlier, at <strong>Samsung AI Core / Care Health</strong>, I engineered distributed data pipelines across AWS EMR and accelerated 8B/70B LLM training and inference on NVIDIA H100 clusters with FlashAttention-2, custom fused CUDA kernels, and PyTorch FSDP / DeepSpeed ZeRO-3.
+                I hold a B.Sc. in Computer Science & Engineering from RUET (ranked 483rd nationwide in Bangladesh).
+              </p>
+
+              <p>
+                My work spans low-latency systems and mathematical foundations: from authoring <strong>Rust SIMD vector search accelerators</strong> (&lt;0.5ms scoring latency, 50x speedup over standard implementations) and <strong>Go microservices</strong> handling high concurrency, to building zero-trust enterprise guardrails (BotShield WAF, NVIDIA NeMo) blocking 95%+ of prompt injections and jailbreaks.
+              </p>
+
+              <p>
+                When not designing production lakehouses or fine-tuning models with LoRA/DPO, I write experimental systems software ranging from
+                a <a href="https://github.com/KishorKumarParoi" target="_blank" rel="noopener">Git storage engine written in pure Rust</a>,
+                to an offline-first industrial IoT edge telemetry engine with SQLite write-ahead caching,
+                to a real-time multimodal receipt arbitration engine using DHash perceptual hashing and G-Eval.
+              </p>
+
+              <p>
+                Below is a curated collection of my <a href="#papers">systems &amp; architectures</a>,
+                active <a href="#code">open-source code</a>,
+                work <a href="#experience">history</a>,
+                and technical <a href="#writing">writings</a>. You can also inspect the full single-column <a href="resume.pdf" target="_blank" rel="noopener">Resume [PDF]</a>.
+              </p>
+                          <!-- Live Digital Ecosystem Navigation -->
+              <div class="ecosystem-banner">
+                <span class="ecosystem-label">EXPLORE LIVE ECOSYSTEM:</span>
+                <a href="https://kishor.tech" target="_blank" rel="noopener" class="eco-tag">
+                  <span class="eco-dot"></span><strong>kishor.tech</strong> &bull; macOS Desktop Portfolio
+                </a>
+                <a href="https://3d.kishor.tech" target="_blank" rel="noopener" class="eco-tag">
+                  <span class="eco-dot"></span><strong>3d.kishor.tech</strong> &bull; Interactive 3D WebGL Platform
+                </a>
+                <a href="https://koom.kishor.tech" target="_blank" rel="noopener" class="eco-tag">
+                  <span class="eco-dot"></span><strong>koom.kishor.tech</strong> &bull; Sub-120ms Video Intelligence
+                </a>
+                <a href="https://vantage.kishor.tech" class="eco-tag active">
+                  <span class="eco-dot active"></span><strong>vantage.kishor.tech</strong> &bull; Vintage Academic Portfolio
+                </a>
+              </div>
+
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- Founder Experience & Startup Platform: KoomAI -->
+            <section id="founder">
+              <div class="section-heading">Founder Experience &amp; Startup Platform: KoomAI</div>
+              <p style="margin-bottom: 1.2em;">
+                <strong>KoomAI — Enterprise Asynchronous Video Intelligence Platform</strong> &bull; <em>Founder &amp; Principal Architect</em><br>
+                Orchestrating Desktop (Electron), Chrome Extension (Manifest V3), Backend (Express/AWS), and Full-Stack Next.js 16 App Router.
+                [<a href="https://koom.kishor.tech/" target="_blank" rel="noopener">Live Platform</a> &bull; <a href="https://github.com/KishorKumarParoi/Koom-AI" target="_blank" rel="noopener">GitHub</a>]
+              </p>
+
+              <!-- Item 1: KoomAI Video Engine -->
+              <article class="media-feature">
+                <div class="video-container left-media">
+                  <div class="video-mockup">
+                    <div class="mockup-header">
+                      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                      <span class="mockup-title">koom.kishor.tech &bull; WebRTC SVC Engine</span>
+                    </div>
+                    <div class="mockup-screen">
+                      <div class="code-preview">
+                        <code>// Sub-120ms Glass-to-Glass WebRTC Pipeline<br>
+const peer = new RTCPeerConnection({ sdpSemantics: 'unified-plan' });<br>
+peer.addTransceiver('video', { direction: 'sendrecv', streams: [mediaStream] });<br>
+const stats = await peer.getStats();<br>
+// p99 latency: 114ms &bull; 60 FPS 1080p &bull; 0% packet stutter</code>
+                      </div>
+                      <div class="mockup-badge"><span class="award">LIVE STARTUP</span> 50K+ Video Minutes &bull; $24K MRR</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-body">
+                  <p>
+                    <strong><a href="https://koom.kishor.tech/" target="_blank" rel="noopener">KoomAI — Sub-120ms Real-Time Desktop, Extension &amp; Web Platform</a></strong>
+                    <br>
+                    I founded KoomAI to challenge traditional bloated screen-recording tools. By implementing an adaptive WebRTC pipeline with Scalable Video Coding (SVC), hardware-accelerated NVENC/VideoToolbox native capture in Electron, and offscreen Manifest V3 browser capture, we achieved 60 FPS 1080p video recording with zero packet stutter across 50,000+ recording minutes.
+                    The Next.js 16 cockpit with AWS S3 multipart streaming cut video storage expenses by 62%.
+                  </p>
+                  <p>
+                    Integrated an autonomous 20-agent LangGraph copilot mesh (<35ms p99) and interactive video chatbot generating 1-click GitHub PRs, Jira BDD stories, and Playwright E2E tests over Whisper transcripts.
+                  </p>
+                  <p>
+                    <strong>Personal NotebookLLM Studio &amp; AI Job Recon:</strong> Built conversational two-host audio podcast generator, Principal Architect system design drills (Kafka, CDC, Feast, Saga), and automated <code>ai-job-search</code> Trojan Horse proposals with tailored ATS CVs, candidate briefing dossiers, and automated outreach pipelines.
+                  </p>
+                  <p>
+                    <strong>Pomodoro Chrome MV3 &amp; Client Invoicing:</strong> Engineered screen-recording extension with integrated Pomodoro focus sprints, tab usage monitor, and 432Hz meditation audio, coupled with instant Stripe client invoicing ($24K MRR pilot).
+                  </p>
+                </div>
+                <div style="clear: both"></div>
+              </article>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- Technical Projects Section (matching Resume) -->
+            <section id="projects">
+              <div class="section-heading">Technical Projects &amp; Architectures</div>
+              <p style="margin-bottom: 1.5em; font-style: italic; color: #555;">
+                Click on any system title or abstract to expand the architecture details, benchmarks, and engineering trade-offs.
+              </p>
+
+              <!-- System 1 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/zomato-analysis" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/zomato-analysis" target="_blank" rel="noopener" class="button">Docs</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-zomato" class="paper-title">
+                    <strong>Zomato AI Lakehouse &amp; Multimodal Dispute Platform</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Enterprise Data &amp; AI Platform Engineering &bull; Production Lakehouse</span>
+                  <span class="award">35M+ Orders &bull; $1.2M Saved</span>
+                </p>
+                <input type="checkbox" id="pub-zomato">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Designed and deployed an enterprise Medallion Lakehouse on Snowflake and PySpark Delta Lake processing 35M+ orders (2.3 GB) using dbt Core SCD-2, reducing compute expenditure by 42% ($18K/month).
+                    Devised streaming feature ingestion via Apache Airflow, Debezium CDC WAL capture, and Feast Feature Store over Redis, bringing feature serving latencies below 5ms.
+                    Additionally built an automated multimodal dispute resolution engine using DHash perceptual hashing and G-Eval chain-of-thought verification to neutralize delivery fraud claims by 68%, safeguarding $1.2M in annual partner margins.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> Snowflake, PySpark, Delta Lake, dbt Core, Debezium CDC, Feast, Kafka, OpenCV, Presidio PII, AWS S3 Glacier.</p>
+                </div>
+              </div>
+
+              <!-- System 2 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/Hybrid-Anime-Recommender" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/Hybrid-Anime-Recommender" target="_blank" rel="noopener" class="button">System</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-anime" class="paper-title">
+                    <strong>Hybrid Intelligence, Rust SIMD Scoring &amp; Continuous LLMOps Platform</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Distributed LLMOps &bull; High-Throughput Recommender Mesh</span>
+                  <span class="award">50x Speedup &bull; NDCG@10 = 0.94</span>
+                </p>
+                <input type="checkbox" id="pub-anime">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Engineered a polyglot service mesh integrating Go 1.24 authentication, a Rust 1.85 SIMD vector scoring engine, and a FastAPI core over Apache Kafka.
+                    Curtailed ranking latency from 25ms to &lt;0.5ms (a 50x speedup), diminishing CPU costs by 64%.
+                    Synthesized Dual-Tower Neural Collaborative Filtering (NCF), ChromaDB HNSW dense vectors, and BM25 sparse search using Reciprocal Rank Fusion to achieve NDCG@10 = 0.94.
+                    Served LoRA adapters via dynamic vLLM multiplexing on single-GPU instances, elevating throughput by 3.4x while orchestrating multi-cloud GitOps delivery with ArgoCD across AWS EKS, GCP GKE, and Azure AKS.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> Rust 1.85 SIMD, Go 1.24, vLLM Multi-LoRA, PyTorch, Kubeflow v2, MLflow, ArgoCD, Kafka, KEDA.</p>
+                </div>
+              </div>
+
+              <!-- System 3 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/AI_Security_Production_App" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/AI_Security_Production_App" target="_blank" rel="noopener" class="button">Paper</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-security" class="paper-title">
+                    <strong>Enterprise AI Security, LangGraph Agent Mesh &amp; FastMCP Governance</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">AI Safety &amp; Adversarial Defense &bull; Production Agent Mesh</span>
+                  <span class="award">95%+ Attacks Blocked &bull; Sub-35ms p95</span>
+                </p>
+                <input type="checkbox" id="pub-security">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Architected zero-trust security defense for enterprise LLM agents combining BotShield WAF, Portkey API gateway, and NVIDIA NeMo Guardrails.
+                    Defended against 95%+ of adversarial prompt injections and jailbreak attacks benchmarked through Microsoft PyRIT 0.14.0.
+                    Formulated a cyclic state machine in LangGraph with state checkpointers, saving $8.4K/month via &lt;50ms semantic similarity caching.
+                    Standardized tool invocation via FastMCP with human-in-the-loop break-glass gates, and coupled two-stage retrieval (Jina v3 1024-dim dense vectors, BM25, and local ONNX FlashRank cross-encoders) to realize 96.4% context precision.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> LangGraph, FastMCP, NeMo Guardrails, FlashRank ONNX, Portkey, Microsoft PyRIT, Qdrant, Docker.</p>
+                </div>
+              </div>
+
+              <!-- System 4 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/smart-manufacturing" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/smart-manufacturing" target="_blank" rel="noopener" class="button">Edge</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-mfg" class="paper-title">
+                    <strong>Smart Manufacturing Industrial AI &amp; Multi-Cloud MLOps Platform</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Edge AI &bull; Industrial Computer Vision &bull; Kubernetes</span>
+                  <span class="award">31% Defect Reduction &bull; $420K Saved</span>
+                </p>
+                <input type="checkbox" id="pub-mfg">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Deployed edge anomaly detection (PyTorch Autoencoders) and visual defect inspection (&lt;20ms CNN inference) mitigating part escape defect rates by 31% and preventing $420K in scrap waste.
+                    Built a 4-tier edge architecture: Rust 1.85 SIMD edge vibration pre-filter, Go cloud-native gateway, Next.js industrial cockpit, and PyTorch AI core.
+                    Engineered resilient Kubernetes deployments with automated failover between Google GKE and lightweight CNCF k3s runtimes, backed by local SQLite write-ahead caching for full offline resilience across 120+ simulated industrial sensors.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> PyTorch, OpenCV, Rust SIMD, Go Gateway, GKE, K3s, MQTT Broker, SQLite WAL, Jenkins CI/CD.</p>
+                </div>
+              </div>
+
+              <!-- System 5 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/Nexus_AI" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/Nexus_AI" target="_blank" rel="noopener" class="button">Mesh</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-nexus" class="paper-title">
+                    <strong>Nexus-AI: Multi-Cloud Lakehouse &amp; Autonomous Agent Mesh</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Multi-Cloud IaC &bull; Distributed Lakehouse &bull; 5-Agent Supervisor</span>
+                  <span class="award">12K req/s &bull; 82% Faster Analytics</span>
+                </p>
+                <input type="checkbox" id="pub-nexus">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Orchestrated a 5-agent mesh (Data NL2SQL, Business Intelligence, MLOps Supervisor, OWASP Firewall, Voice Alerts) over LangGraph, accelerating turnaround on complex ad-hoc analytics by 82%.
+                    Constructed a 3-tier Medallion Lakehouse with DuckDB and Parquet storage achieving sub-120ms dashboard queries.
+                    Paired a Go 1.22 API gateway sustaining 12,000 requests per second with full multi-cloud infrastructure codified via Terraform across AWS (EKS, S3, Glue), GCP (GKE, BigQuery), and Azure (AKS, Synapse).
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> Terraform, AWS, Azure, GCP, DuckDB, LangGraph, Go Gateway, Next.js, Docker Compose.</p>
+                </div>
+              </div>
+
+              <!-- System 6 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/Advanced_AI_Chatbot_Project" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/Advanced_AI_Chatbot_Project" target="_blank" rel="noopener" class="button">Agent</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-chatbot" class="paper-title">
+                    <strong>Advanced AI Chatbot: Enterprise Autonomous Agent &amp; HITL Platform</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Production Agent Orchestration &bull; Stateful Checkpointing</span>
+                  <span class="award">Sub-50ms Recovery &bull; Zero State Loss</span>
+                </p>
+                <input type="checkbox" id="pub-chatbot">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Built an enterprise conversational agent using LangGraph cyclic state machines with PostgreSQL persistence checkpointers, empowering fault-tolerant multi-turn thread persistence, dynamic rollbacks, and sub-50ms session recovery under heavy concurrency.
+                    Standardized isolated tool execution using Model Context Protocol (FastMCP) with strict Human-in-the-Loop (HITL) approval gates on financial actions (&gt;$50 refunds/cancellations), eradicating 100% of unauthorized transaction risk.
+                    Pioneered BotShield WAF middleware featuring honeypot traps (/.env, /wp-admin), scanner fingerprint dropping, and sliding-window rate limiting; intercepted 99.4% of adversarial probes.
+                    Operationalized two-stage hybrid retrieval with Qdrant (BGE-Large dense vectors) and BM25 sparse keyword matching with real-time SSE token streaming, elevating response relevance to 94.8%.
+                    Architected semantic intent caching layer with Redis &amp; Cosine similarity gating (&lt;0.15 threshold), serving 38% of repetitive customer intents in &lt;12ms and cutting LLM token billing by $3.2K/month.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> LangGraph, PostgreSQL Checkpointer, FastMCP, Qdrant, Redis Semantic Cache, BotShield WAF, Streamlit.</p>
+                </div>
+              </div>
+
+              <!-- System 7 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/Data-Agent" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/Data-Agent" target="_blank" rel="noopener" class="button">Agent</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-data-agent" class="paper-title">
+                    <strong>Data Agent: Enterprise Multi-Agent Business Intelligence &amp; SQL System</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Hierarchical LangGraph Mesh &bull; Self-Reflective SQL Security Judge &bull; ReAct ETL</span>
+                  <span class="award">96.2% Routing Accuracy &bull; 75% Faster BI</span>
+                </p>
+                <input type="checkbox" id="pub-data-agent">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Architected a LangGraph supervisor router classifying business queries into specialized SQL and ETL analyst subgraphs, garnering 96.2% routing accuracy across multi-domain operational requests.
+                    Instituted dynamic PostgreSQL schema introspection with an independent LLM security judge, sanitizing generated SQL and intercepting 100% of destructive DDL/DML injection attacks.
+                    Built autonomous ReAct tool-calling agent for file extraction, pandas data transformation, and sandboxed python execution, compressing ad-hoc data pipeline development time by 75%.
+                    Integrated self-healing SQL execution with automatic syntax retry &amp; schema reflection, programmatically correcting 89% of initial query execution errors without human intervention.
+                    Orchestrated multi-dialect SQL transpilations supporting PostgreSQL, Snowflake, and BigQuery with proactive EXPLAIN cost estimation, preventing runaway analytical queries exceeding cost ceilings.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> LangGraph, PostgreSQL, Multi-Agent Supervisor, Sandboxed Python, ReAct ETL, Streamlit, DuckDB.</p>
+                </div>
+              </div>
+
+              <!-- System 8 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/Advanced_ETL_Project" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/Advanced_ETL_Project" target="_blank" rel="noopener" class="button">Lakehouse</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-azure-etl" class="paper-title">
+                    <strong>Advanced Network Security Medallion Lakehouse &amp; Distributed ML Platform</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Azure Data Factory &bull; ADLS Gen2 &bull; Databricks Spark &bull; Synapse CETAS &bull; Sub-4ms ML</span>
+                  <span class="award">1.4B Records &bull; 6.2x Faster Queries &bull; 98.4% Accuracy</span>
+                </p>
+                <input type="checkbox" id="pub-azure-etl">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Architected an enterprise Lakehouse orchestrating batch extraction via Azure Data Factory (ADF v2) dynamic lookup and parallel ForEach loops, landing raw security telemetry into ADLS Gen2 Bronze layer.
+                    Conducted large-scale ETL in Azure Databricks (Apache Spark) with Azure AD OAuth 2.0 Client Credentials, cross-joining real-time operational metadata from MongoDB Atlas.
+                    Materialized analytical serving layer in Azure Synapse Analytics Serverless SQL using Managed Identity scoped credentials and CETAS (<em>Create External Table As Select</em>) for instant Power BI and Fabric reporting.
+                    Built data validation engine with schema drift traps, KNN imputation + RobustScaler, and multi-model benchmark (XGBoost, CatBoost, Random Forest delivering 98.4% detection accuracy).
+                    Containerized sub-4ms FastAPI ONNX inference serving with single-command zero-touch bootstrapper (curl | bash) and deterministic $0.00 teardown (clear.sh); mitigated p99 latency by 11.8x.
+                    Implemented dynamic partition pruning and Z-Order clustering on ADLS Gen2 Delta Parquet files, expediting complex analytical join queries by 6.2x across 1.4B security log records.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> Azure Data Factory, Azure Databricks, Apache Spark, Synapse CETAS, ADLS Gen2 Delta Lake, MongoDB Atlas, ONNX Runtime.</p>
+                </div>
+              </div>
+
+              <!-- System 9 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/AI-Engineering/tree/main/38_AWS_Sagemaker" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/AI-Engineering/tree/main/38_AWS_Sagemaker" target="_blank" rel="noopener" class="button">MLOps</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-sagemaker" class="paper-title">
+                    <strong>AWS SageMaker End-to-End MLOps Pipeline &amp; Governance Platform</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">SageMaker Pipelines (DAG) &bull; Managed Spot Training &bull; Model Registry &bull; Serverless Serving</span>
+                  <span class="award">70% Cost Reduction &bull; 2,500 req/s &bull; NIST AI RMF Compliant</span>
+                </p>
+                <input type="checkbox" id="pub-sagemaker">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Designed an automated SageMaker DAG Pipeline (ProcessingStep &rarr; TrainingStep &rarr; ConditionStep &rarr; ModelStep) with AWS Managed Spot Training, curtailing model training compute costs by 70%.
+                    Instituted programmatic quality evaluation gating (&ge; 85% holdout accuracy) for promotion into SageMaker Model Registry, deploying to real-time and serverless endpoints with standard inference contracts (model_fn, input_fn, predict_fn, output_fn) and FastAPI fallback.
+                    Configured DataCaptureConfig streaming 100% of live inference payloads to Amazon S3 for baseline statistical drift detection, anomaly alerting, and programmatic retraining triggers.
+                    Devised multi-model endpoint deployments with autoscaling policies (target tracking at 70% CPU/GPU), sustaining 2,500 req/s with zero cold-start timeouts under spiky production loads.
+                    Hardened inference endpoints with AWS KMS customer-managed keys (CMK) envelope encryption and TLS 1.3 mutual auth, achieving complete compliance with NIST AI RMF governance mandates.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> AWS SageMaker Pipelines, Managed Spot Instances, Model Registry, DataCapture, KMS CMK, S3, Docker, FastAPI.</p>
+                </div>
+              </div>
+
+              <!-- System 10 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/AI-Engineering" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/AI-Engineering" target="_blank" rel="noopener" class="button">Infra</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-kserve" class="paper-title">
+                    <strong>Cloud-Native Real-Time MLOps: KServe, AWS ECS Fargate &amp; Kubernetes</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">KServe v1beta1 &bull; AWS ECS Fargate &bull; Kubernetes &bull; Terraform IaC &bull; Envoy Sidecars</span>
+                  <span class="award">65% Idle Spend Slashed &bull; Scale-to-Zero</span>
+                </p>
+                <input type="checkbox" id="pub-kserve">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Deployed serverless model inference using KServe v1beta1 InferenceService on Kubernetes backed by Amazon S3 model storage; facilitated dynamic scale-to-zero autoscaling, curtailing idle GPU/CPU compute spend by 65%.
+                    Architected containerized microservices orchestration on AWS ECS on Fargate with Application Load Balancers and modular Terraform IaC; accelerated infrastructure provisioning by 80% with zero server maintenance overhead.
+                    Hardened end-to-end container security with Trivy CVE scanning and AWS KMS envelope encryption, ensuring 100% programmatic CI/CD gating with zero critical vulnerability deployments.
+                    Configured automated canary traffic routing (90/10 split) via Envoy sidecars with Prometheus-driven automatic rollback on p99 latency regressions (&gt;25ms).
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> KServe v1beta1, Kubernetes (EKS), AWS ECS Fargate, Terraform, Envoy Sidecars, Trivy, Prometheus, S3.</p>
+                </div>
+              </div>
+
+              <!-- System 11 -->
+              <div class="publication">
+                <div class="pubstuff">
+                  <span class="rightlinks">
+                    <a href="https://github.com/KishorKumarParoi/codecrafters-git-rust" target="_blank" rel="noopener" class="button">Code</a>
+                    <a href="https://github.com/KishorKumarParoi/codecrafters-git-rust" target="_blank" rel="noopener" class="button">Systems</a>
+                  </span>
+                </div>
+                <p>
+                  <label for="pub-rust-git" class="paper-title">
+                    <strong>Core Systems Engineering: Rust Git Engine &amp; POSIX Terminal Shell</strong>
+                  </label>
+                  <br>
+                  <span class="me">Kishor Kumar Paroi</span>
+                  <br>
+                  <span class="venue">Bare-Metal Systems Programming in Rust 1.85 &bull; Concurrency &bull; Process Pipelines</span>
+                  <span class="award">Within 3% of C Git &bull; 73% Lower Peak Heap</span>
+                </p>
+                <input type="checkbox" id="pub-rust-git">
+                <div class="abstract">
+                  <p>
+                    <strong>Abstract:</strong> Crafted Git internals in Rust 1.85 (SHA-1 object graph, streaming zlib decompression with SIMD vectorization, delta packfiles decompression); matched C Git performance within 3% while guaranteeing 100% compile-time memory safety.
+                    Built a custom POSIX terminal shell with asynchronous signal multiplexing, fork/exec process execution pipelines, and file descriptor I/O redirection; clocked sub-microsecond execution latency under heavy concurrent process loads with 73% lower peak heap allocation.
+                  </p>
+                  <p class="tech-tag"><strong>Key Stack:</strong> Rust 1.85, SIMD Intrinsics, POSIX System Calls, Fork/Exec Pipelines, Memory Safety, Async Signal Multiplexing.</p>
+                </div>
+              </div>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- Work Experience Timeline -->
+            <section id="experience">
+              <div class="section-heading">Professional Career &amp; Experience</div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>phi0.ai</strong> &bull; <span class="role-title">Forward Deployed AI Engineer</span>
+                  <span class="timeline-date">July 2026 – Oct 2026 &bull; Europe (Remote)</span>
+                </div>
+                <ul>
+                  <li>Deployed 5 concurrent autonomous AI agents running cyclic state machines (<strong>LangGraph</strong>) with dynamic routing, attaining <strong>99.4% task completion</strong> under enterprise workloads.</li>
+                  <li>Devised a high-throughput <strong>Hybrid RAG engine</strong> combining dense HNSW vector search, sparse BM25, and multi-stage re-ranking (<strong>FlashRank ONNX + Cohere v3.5</strong>) with semantic caching (<strong>&lt;35ms latency</strong>), curtailing hallucinations by 46% and reducing token costs by $18K/month.</li>
+                  <li>Codified continuous MLOps flywheels with NeMo Guardrails, automated PII scrubbing, and canary rollouts on <strong>Kubernetes</strong>, supporting $1.4M in enterprise contracts.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>Samsung AI Core / Care Health</strong> &bull; <span class="role-title">Data Engineering &amp; AI Systems Intern</span>
+                  <span class="timeline-date">March 2026 – June 2026 &bull; Gurgaon / Remote</span>
+                </div>
+                <ul>
+                  <li>Formulated batch and streaming pipelines via <strong>AWS S3, EMR, Athena, PySpark</strong>; cut operational overhead by 34% through event-driven Lambda/SQS asynchronous dispatch.</li>
+                  <li>Accelerated 8B/70B LLM inference on NVIDIA H100 GPUs using <strong>FlashAttention-2</strong> and fused CUDA kernels, realizing <strong>3.8x throughput</strong> and reducing p99 latency by 54%.</li>
+                  <li>Spearheaded multi-node fine-tuning with <strong>PyTorch FSDP and DeepSpeed ZeRO-3</strong> with HIPAA-compliant de-identification, trimming training time by 42% ($14K saved/run).</li>
+                  <li>Deployed real-time health insurance claim fraud detection over <strong>AWS Kinesis and OpenTelemetry</strong>, safeguarding $380K annually across audits.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>kepi.ai</strong> &bull; <span class="role-title">Senior Full Stack Engineer</span>
+                  <span class="timeline-date">Jan 2022 – Sep 2025 (3 yrs 9 mos) &bull; Remote</span>
+                </div>
+                <ul>
+                  <li>Architected zero-downtime microservices migration to <strong>Kubernetes on AWS EKS</strong>; scaled platform throughput by <strong>300%</strong> while reducing p95 latency by 48% at 99.99% availability.</li>
+                  <li>Fortified zero-trust mesh infrastructure with <strong>Istio mTLS and fine-grained RBAC</strong>, diminishing cross-zone egress expenses by 38%.</li>
+                  <li>Designed asynchronous event-driven core using <strong>Redis Streams and Celery</strong>, sustaining <strong>15M+ daily background jobs</strong> with zero message loss.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>foodpanda</strong> &bull; <span class="role-title">Full Stack Engineer</span>
+                  <span class="timeline-date">2021 – 2022 &bull; Dhaka / Remote</span>
+                </div>
+                <ul>
+                  <li>Crafted high-traffic checkout microservices with Next.js/Node; trimmed latency by 34% and sustained <strong>100K+ daily peak orders</strong> at 99.98% uptime, preventing $120K in checkout cart abandonment.</li>
+                </ul>
+              </div>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- Open Code & Systems -->
+            <section id="code">
+              <div class="section-heading">Open-Source Code &amp; Systems Software</div>
+              <p>
+                A selection of systems, tools, and repositories authored by Kishor:
+              </p>
+
+              <ul class="carlini-list">
+                <li>
+                  <a href="https://koom.kishor.tech/" target="_blank" rel="noopener"><strong>KoomAI Platform</strong></a>:
+                  Sub-120ms WebRTC video communication platform with Electron desktop client, Manifest V3 Chrome extension, and Next.js 16 App Router dashboard.
+                </li>
+                <li>
+                  <a href="https://github.com/KishorKumarParoi/Hybrid-Anime-Recommender" target="_blank" rel="noopener"><strong>Rust SIMD &amp; Go LLMOps Mesh</strong></a>:
+                  High-throughput vector search accelerator utilizing CPU AVX-512 and ARM NEON intrinsics (&lt;0.5ms scoring latency, 50x speedup).
+                </li>
+                <li>
+                  <a href="https://github.com/KishorKumarParoi/AI_Security_Production_App" target="_blank" rel="noopener"><strong>Enterprise AI Security &amp; FastMCP</strong></a>:
+                  Production agent mesh with BotShield WAF, NVIDIA NeMo rails, Portkey semantic caching, and Microsoft PyRIT adversarial validation.
+                </li>
+                <li>
+                  <a href="https://github.com/KishorKumarParoi/zomato-analysis" target="_blank" rel="noopener"><strong>Zomato Lakehouse Pipeline</strong></a>:
+                  Medallion streaming lakehouse over Snowflake, PySpark Delta Lake, dbt Core SCD-2, and Debezium CDC feature streaming.
+                </li>
+                <li>
+                  <a href="https://github.com/KishorKumarParoi/smart-manufacturing" target="_blank" rel="noopener"><strong>Smart Manufacturing Industrial Edge AI</strong></a>:
+                  Multi-cloud MLOps with automated failover between Google GKE and lightweight CNCF k3s runtimes, with offline SQLite write-ahead caching.
+                </li>
+                <li>
+                  <a href="https://github.com/KishorKumarParoi/Nexus_AI" target="_blank" rel="noopener"><strong>Nexus-AI Multi-Cloud Mesh</strong></a>:
+                  Complete multi-cloud IaC with Terraform managing EKS, GKE, AKS, and a 5-agent supervisor coordinating complex ad-hoc analytics.
+                </li>
+              </ul>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- AI Engineering Learning Journey (Showcasing all 38 modules of AI_Engineering) -->
+            <section id="journey">
+              <div class="section-heading">AI Engineering Learning Journey &bull; 38-Module Curriculum</div>
+              <p>
+                An exhaustive, production-tested curriculum codified across the <a href="https://github.com/KishorKumarParoi/AI-Engineering" target="_blank" rel="noopener"><strong>AI-Engineering</strong></a> repository.
+                Spanning foundational prompt engineering to agentic cyclic state machines, synthetic data generation, multimodal OCR, and distributed cloud inference:
+              </p>
+
+              <div class="journey-grid">
+                <div class="journey-card">
+                  <h4>Phase I: Foundations &amp; Retrieval</h4>
+                  <ul class="journey-list">
+                    <li><code>00_Setting_Up_Git</code> &bull; Git hygiene, secrets scanning, pre-commit hooks</li>
+                    <li><code>01_Prompt_Engineering</code> &bull; Few-shot, chain-of-thought, structured JSON outputs</li>
+                    <li><code>02_Embeddings_and_RAG</code> &bull; Vector similarity, chunking strategies, dense embeddings</li>
+                    <li><code>03_End-to-End_RAG</code> &bull; Complete naive RAG pipelines with LangChain &amp; OpenAI</li>
+                    <li><code>04_Production_RAG</code> &bull; Production observability, error handling, token latency</li>
+                    <li><code>09_Finetuning_Embeddings</code> &bull; Matryoshka representations, domain contrastive loss</li>
+                    <li><code>13_Advanced_Retrieval</code> &bull; Multi-query expansion, reciprocal rank fusion (RRF)</li>
+                    <li><code>20_Data_Preprocessing_Embeddings</code> &bull; High-throughput tokenization &amp; chunk cleaning</li>
+                  </ul>
+                </div>
+
+                <div class="journey-card">
+                  <h4>Phase II: Agents &amp; State Machines</h4>
+                  <ul class="journey-list">
+                    <li><code>05_First_Agent_with_LangGraph</code> &bull; State graphs, tool binding, conditional edges</li>
+                    <li><code>06_Multi_Agent_with_LangGraph</code> &bull; Supervisor patterns, agent handoffs, subgraphs</li>
+                    <li><code>24_LangGraph</code> &bull; Cyclic graphs, PostgreSQL memory checkpointers, rollbacks</li>
+                    <li><code>25_Multi_Agents</code> &bull; Hierarchical team meshes with specialized tools</li>
+                    <li><code>26_Agentic_AI</code> &bull; Self-reflective reasoning loops, autonomous planning</li>
+                    <li><code>27_Production_Agents</code> &bull; Resilient retries, timeouts, deterministic execution</li>
+                    <li><code>14_Open_DeepResearch</code> &bull; Recursive web crawling, multi-source synthesis</li>
+                    <li><code>17_On_Prem_Agent</code> &bull; Local air-gapped agent deployment with Ollama &amp; vLLM</li>
+                  </ul>
+                </div>
+
+                <div class="journey-card">
+                  <h4>Phase III: Evaluation, Fine-Tuning &amp; Vector Databases</h4>
+                  <ul class="journey-list">
+                    <li><code>07_Synthetic_Data_Generation</code> &bull; LangSmith datasets, LLM-as-a-judge filtering</li>
+                    <li><code>08_Evaluating_RAG_With_Ragas</code> &bull; Faithfulness, Answer Relevance, Context Precision</li>
+                    <li><code>10_Finetuning_Reasoning_Model</code> &bull; QLoRA, DeepSeek-R1 style CoT reinforcement</li>
+                    <li><code>21_Rag_Qdrant_Pipeline</code> &bull; Dense HNSW indexing, payload filtering, scalar quantization</li>
+                    <li><code>22_Rag_Qdrant_Hybrid_Search</code> &bull; Dense + Sparse BM25 vector hybrid retrieval</li>
+                    <li><code>23_Rag_Hybrid_Re_Rank</code> &bull; FlashRank local ONNX + Cohere Rerank v3.5 fallback</li>
+                    <li><code>18_Inference_Quantization</code> &bull; AWQ, GPTQ, GGUF 4-bit/8-bit memory optimizations</li>
+                    <li><code>19_Testing</code> &bull; Automated unit testing, pytest mocks, evaluation benchmarks</li>
+                  </ul>
+                </div>
+
+                <div class="journey-card">
+                  <h4>Phase IV: Production Systems &amp; Cloud MLOps</h4>
+                  <ul class="journey-list">
+                    <li><code>15_Open_Source_Endpoints</code> &bull; vLLM, TGI, self-hosted open-weight LLMs</li>
+                    <li><code>16_LLMOps</code> &bull; Prompt registry, latency tracking, semantic caching</li>
+                    <li><code>28_LLM_Engineering</code> &bull; Production engineering best practices, token budgets</li>
+                    <li><code>30_Forward_Deployment_Engineering</code> &bull; Client-facing integration, production SLAs</li>
+                    <li><code>32_Agentic_RAG_Project</code> &bull; Full-stack enterprise search with memory &amp; tools</li>
+                    <li><code>34_Enterprise_Rag_Development</code> &bull; Enterprise RBAC, audit logging, PII redaction</li>
+                    <li><code>35_Multimodal_Intelligence_System</code> &bull; Vision-language models, document understanding</li>
+                    <li><code>36_Nemotron_Parse_Mistral_OCR</code> &bull; NVIDIA Nemotron parsing + Mistral OCR extraction</li>
+                    <li><code>37_Astro_Airflow</code> &bull; Orchestrated batch ingestion DAGs with Astro CLI</li>
+                    <li><code>38_AWS_Sagemaker</code> &bull; SageMaker DAG Pipelines, Managed Spot, Model Registry</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+                        <!-- Technical Skills (matching Resume) -->
+            <section id="skills">
+              <div class="section-heading">Technical Skills &amp; Core Pillars</div>
+              <ul class="carlini-list">
+                <li>
+                  <strong>Languages &amp; Core Frameworks:</strong>
+                  Python, C/C++, Rust (1.85 SIMD, Actix-web), Go (1.24 Gin/Fiber), SQL, Bash, TypeScript, JavaScript, Java (Spring Boot), FastAPI, Express.js, NestJS, Next.js 16, Streamlit.
+                </li>
+                <li>
+                  <strong>AI, ML &amp; LLMOps:</strong>
+                  PyTorch, vLLM (Multi-LoRA Dynamic Multiplexing), LangGraph (Cyclic State Machines), LangChain, HuggingFace, LangSmith, LangFuse, DeepEval, TRL, PEFT (RSLoRA, QLoRA), NeFTune, MLflow, Feast Feature Store, Kubeflow v2, AWS SageMaker, KServe, DVC.
+                </li>
+                <li>
+                  <strong>Big Data &amp; Medallion Lakehouses:</strong>
+                  Snowflake, Databricks, Azure Data Factory (ADF), Azure Synapse Analytics (CETAS), ADLS Gen2, dbt Core (SCD-2), PySpark, Delta Lake, Apache Kafka, Apache Airflow, Debezium CDC, DuckDB, ChromaDB, Qdrant.
+                </li>
+                <li>
+                  <strong>Cloud Platforms &amp; Infrastructure (IaC):</strong>
+                  AWS (EKS, S3, KMS, EMR, Athena, ECS Fargate, Bedrock, SageMaker), GCP (GKE, BigQuery, GCE, VertexAI, Gemini AI), Azure (Databricks, Synapse, Fabric, vLLM, AKS), Terraform, Ansible, Helm, ArgoCD GitOps, Sonatype Nexus, Docker, Kubernetes (GKE, EKS, AKS, K3s).
+                </li>
+                <li>
+                  <strong>DevSecOps &amp; Observability:</strong>
+                  NVIDIA NeMo Guardrails, PyRIT RedTeaming (Microsoft), BotShield WAF, SonarQube, Trivy CVE Scanning, Jenkins, GitLab CI/CD, GitHub Actions, Prometheus, Grafana, EFK Stack, OpenTelemetry, Redis.
+                </li>
+                <li>
+                  <strong>WebRTC &amp; Systems Engineering:</strong>
+                  WebRTC (SVC, &lt;120ms latency), ElectronJS, Manifest V3 Chrome Extensions, Next.js 16 App Router, Stripe Billing, PostgreSQL, MongoDB Atlas.
+                </li>
+              </ul>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- Education & Courses (matching Resume) -->
+            <section id="education">
+              <div class="section-heading">Education &amp; Specialized Courses</div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>Rajshahi University of Engineering &amp; Technology (RUET)</strong>
+                  <span class="timeline-date">2018 – 2023 &bull; Rajshahi, Bangladesh</span>
+                </div>
+                <p>
+                  <strong>B.Sc. in Computer Science &amp; Engineering</strong> &bull; CGPA: <strong>3.25 / 4.00 (Degree with Honors)</strong><br>
+                  <span class="award">Merit Rank: 483rd Nationwide in Bangladesh</span>
+                </p>
+                <div class="course-box">
+                  <strong>Core CS &amp; Engineering Foundations (RUET):</strong>
+                  Advanced Data Structures &amp; Algorithms, Object-Oriented Programming (C++/Java), Operating Systems &amp; System Programming, Database Systems (DBMS), Distributed Systems &amp; Cloud Computing, Computer Networks &amp; Internet Protocols, Theory of Computation &amp; Automata, Compiler Design, Software Engineering &amp; System Analysis, Computer Architecture, Artificial Intelligence, Microprocessors &amp; Interfacing, Discrete Mathematics, and Network Security &amp; Cryptography.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>Saint Joseph Higher Secondary School</strong>
+                  <span class="timeline-date">2015 – 2017 &bull; Dhaka Board</span>
+                </div>
+                <p>
+                  <strong>Higher Secondary Certificate (HSC)</strong> &bull; GPA: <strong>5.00 / 5.00</strong><br>
+                  <span class="award">Merit Rank: 85th in Dhaka Board &bull; National Merit Scholarship</span>
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>S.J Govt Model High School</strong>
+                  <span class="timeline-date">2013 – 2015 &bull; Gopalganj, Dhaka Board</span>
+                </div>
+                <p>
+                  <strong>Secondary School Certificate (SSC)</strong> &bull; GPA: <strong>5.00 / 5.00</strong><br>
+                  <span class="award">Merit Rank: 90th in Dhaka Board &bull; National Merit Scholarship</span>
+                </p>
+              </div>
+
+              <!-- Specialized Certifications & Masterclasses (from Resume) -->
+              <div class="sub-section-title" style="margin-top: 1.8em; margin-bottom: 0.8em; font-variant: small-caps; font-size: 110%; font-weight: 600; color: #633;">
+                Certifications, Specializations &amp; System Design Courses
+              </div>
+
+              <div class="course-grid">
+                <div class="course-card">
+                  <h4>Deep Learning Specialization</h4>
+                  <div class="course-issuer">DeepLearning.AI &amp; Stanford &bull; Andrew Ng</div>
+                  <p>Neural Networks, Backpropagation calculus, Hyperparameter Tuning, Regularization (Dropout, BatchNorm), Convolutional Neural Networks (CNNs), Sequence Models, Attention Mechanisms, and Transformers.</p>
+                </div>
+
+                <div class="course-card">
+                  <h4>Machine Learning Specialization</h4>
+                  <div class="course-issuer">Stanford Online &amp; DeepLearning.AI &bull; Andrew Ng</div>
+                  <p>Supervised Learning (Linear/Logistic Regression, Decision Trees), Advanced Learning Algorithms, Neural Networks, Unsupervised Learning (K-Means, PCA, Anomaly Detection), Recommender Systems, and Reinforcement Learning.</p>
+                </div>
+
+                <div class="course-card">
+                  <h4>Enterprise Production MLOps &amp; AI Systems</h4>
+                  <div class="course-issuer">Vivian Aranha, Mayank Agarwal &amp; Krish Naik</div>
+                  <p>End-to-End MLOps Pipelines (CampusX / Krish Naik), Enterprise AI Systems Architecture (Vivian Aranha), Agentic-AI &amp; n8n (Mayank Agarwal), Computer Vision (Sourangshu Paul), AI Data Analyst (Ansh Lamba), Automation &amp; FastMCP (Ed Donner).</p>
+                </div>
+
+                <div class="course-card">
+                  <h4>Distributed Systems, Big Data &amp; AI Design</h4>
+                  <div class="course-issuer">Arpit Bhayani, Zach Wilson, Hussein Nasser &amp; ByteByteGo</div>
+                  <p>High-Throughput Distributed Systems &amp; System Design (Arpit Bhayani, Gaurav Sen, Hussein Nasser, ByteByteGo), Big Data Engineering &amp; Medallion Lakehouses (Mayank Agarwal, Zach Wilson), LLM Foundations (Karpathy, Aurimas), and 2000+ LeetCode/Codeforces algorithmic mastery.</p>
+                </div>
+
+                <div class="course-card">
+                  <h4>Interactive 3D Engineering Platform (re:invent)</h4>
+                  <div class="course-issuer"><a href="https://3d.kishor.tech" target="_blank" rel="noopener">3d.kishor.tech</a> &bull; Live Platform &bull; GitHub: re-invent</div>
+                  <p>Architected high-performance 3D portfolio ecosystem with React 19.2, Rolldown Vite, and Tailwind CSS v4; choreographed GSAP 3.13 + ScrollTrigger 3D camera choreography, interactive Bento showcase grids, Supabase PostgreSQL real-time visitor counter with anti-tamper rate limiting, and sub-100ms Vercel Edge CDN delivery.</p>
+                </div>
+              </div>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- Achievements & Hackathons (matching Resume) -->
+            <section id="achievements">
+              <div class="section-heading">Achievements, Hackathons &amp; Mentorship</div>
+              <ul class="carlini-list">
+                <li>
+                  <strong>Competitive Programming &amp; Algorithms:</strong>
+                  Ranked <strong>232nd in Codeforces Div-2 (Blue Coder)</strong>, <strong>5★ on CodeChef</strong>, 17th in IUPC, Qualified in Meta Hacker Cup Round 3. Solved 2000+ DSA and system design problems.
+                </li>
+                <li>
+                  <strong>Champion | Technobeast AI Agents Hackathon:</strong>
+                  Pioneered Qdrant vector optimization with negative embeddings, trajectory matching with transformers, and multimodal API divergence detection.
+                </li>
+                <li>
+                  <strong>7th Rank | AI Security Hackathon:</strong>
+                  Ranked in top tier for real-time prompt injection firewall (97.2% accuracy, &lt;30ms latency).
+                </li>
+                <li>
+                  <strong>In-Person AI Agents Building Masterclass:</strong>
+                  Conducted immersive hands-on in-person workshops on architecting autonomous AI Agents, cyclic state machines (LangGraph), tool calling, and production deployment.
+                </li>
+                <li>
+                  <strong>Technical Mentorship &amp; Community Impact:</strong>
+                  Mentored 100+ students and engineers across Machine Learning, AI Agents, DevOps, and MLOps, leading code reviews and production architecture design sessions.
+                </li>
+              </ul>
+            </section>
+
+            <div style="clear: both"></div>
+
+            <hr class="vintage-divider">
+
+            <!-- Footnotes -->
+            <footer class="footer">
+              <p id="rag-footnote">
+                [1] For deep-dive benchmarks on Hybrid RAG vs dense vector retrieval, inspect the Context Precision evaluations in our
+                <a href="https://github.com/KishorKumarParoi/AI_Security_Production_App" target="_blank" rel="noopener">AI Security Repository</a>.
+              </p>
+              <p>
+                Design inspired by <a href="https://nicholas.carlini.com/" target="_blank" rel="noopener">Nicholas Carlini</a>'s clean academic vantage layout.
+                Handcrafted with semantic HTML &amp; Vanilla CSS.
+                &bull; &copy; 2026 Kishor Kumar Paroi &bull;
+                <a href="resume.pdf" target="_blank" rel="noopener">Download Resume [PDF]</a>
+              </p>
+            </footer>
+
+          </div><!-- /.inner -->
+        </div><!-- /.boxed -->
+      </div><!-- /.outer -->
+    </main>
+
+    <!-- Interactive Script for Carlini-style Dropdown & Smooth Left Navigation -->
+    <script>
+      // Highlight active leftnav section on scroll
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('#leftnav a');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
