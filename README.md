@@ -136,6 +136,16 @@ Codified across the [AI-Engineering](https://github.com/KishorKumarParoi/AI-Engi
     ├── 36_Nemotron_Parse_Mistral_OCR ── NVIDIA Nemotron & Mistral OCR
     ├── 37_Astro_Airflow ── Batch data pipelines with Astro CLI
     └── 38_AWS_Sagemaker ── Production SageMaker DAG pipelines & Model Registry
+│
+└── Phase V: Platform Engineering, FastMCP & HITL Governance
+    ├── FastMCP Tool Standardization ── Typed contracts & isolated tool sandbox
+    ├── HITL Break-Glass Gates ── Human authorization on critical actions
+    ├── Zero-Trust BotShield WAF ── Honeypot traps, sliding rate limits, WAF
+    ├── Semantic Intent Caching ── Sub-12ms Cosine similarity gating (<0.15)
+    ├── Multi-Cloud Terraform IaC ── Single-command deploy.sh & $0.00 clear.sh
+    ├── ArgoCD GitOps Mesh ── Canary deployments across AWS EKS & GCP GKE
+    ├── NIST AI RMF Governance ── ISO 27001, SOC 2, HIPAA PII scrubbers
+    └── Distributed Observability ── Prometheus, Grafana, OpenTelemetry, Logfire
 ```
 
 ---
