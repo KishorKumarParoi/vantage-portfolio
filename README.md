@@ -2,11 +2,14 @@
 
 <div align="center">
 
-[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-vantage.kishor.tech-800000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://vantage.kishor.tech)
-[![macOS Desktop Portfolio](https://img.shields.io/badge/macOS_Ecosystem-kishor.tech-000000?style=for-the-badge&logo=apple&logoColor=white)](https://kishor.tech)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-kishor.tech-800000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://kishor.tech)
+[![macOS Desktop Portfolio](https://img.shields.io/badge/macOS_Ecosystem-macos.kishor.tech-000000?style=for-the-badge&logo=apple&logoColor=white)](https://macos.kishor.tech)
 [![3D WebGL Platform](https://img.shields.io/badge/3D_Platform-3d.kishor.tech-4B0082?style=for-the-badge&logo=three.js&logoColor=white)](https://3d.kishor.tech)
+[![3D Cyber Hacker](https://img.shields.io/badge/Hacker_Cockpit-hacker.kishor.tech-008080?style=for-the-badge&logo=gnubash&logoColor=white)](https://hacker.kishor.tech)
 [![KoomAI Platform](https://img.shields.io/badge/Video_AI-koom.kishor.tech-0052CC?style=for-the-badge&logo=webrtc&logoColor=white)](https://koom.kishor.tech)
-[![Resume PDF](https://img.shields.io/badge/Resume-PDF-A02020?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://vantage.kishor.tech/resume.pdf)
+<br/>
+[![Executive CV (1-Page)](https://img.shields.io/badge/Executive_CV-1--Page%20PDF%20(ATS%20100)-A02020?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://kishor.tech/resume.pdf)
+[![ATS Resume (2-Page)](https://img.shields.io/badge/ATS_Resume-2--Page%20PDF%20(ATS%20100)-1a1a1a?style=for-the-badge&logo=files&logoColor=white)](https://kishor.tech/resume_single_column.pdf)
 
 <br/>
 
@@ -23,6 +26,7 @@
 ## ⚡ Quick Navigation
 
 * [🌐 Live Digital Ecosystem](#-live-digital-ecosystem)
+* [📜 Official Verified Resumes (ATS 100/100)](#-official-verified-resumes)
 * [🚀 Flagship Technical Projects (1 - 11)](#-flagship-technical-projects)
 * [🎓 38-Module AI Engineering Journey](#-38-module-ai-engineering-journey)
 * [📚 Education & Specialized Certifications](#-education--specialized-certifications)
@@ -35,10 +39,22 @@
 
 | Platform | URL | Architecture Highlights |
 | :--- | :--- | :--- |
-| **Vintage Academic Portfolio** | **[vantage.kishor.tech](https://vantage.kishor.tech)** | Minimalist academic layout, sub-35ms Hybrid RAG, 38-module bootcamp showcase |
-| **macOS Interactive Portfolio** | **[kishor.tech](https://kishor.tech)** | Full desktop OS emulator with draggable windows, dock, and terminal CLI |
-| **Interactive 3D WebGL Platform** | **[3d.kishor.tech](https://3d.kishor.tech)** | React 19.2, Rolldown Vite, Tailwind v4, GSAP 3.13 camera choreography |
-| **KoomAI Video Intelligence** | **[koom.kishor.tech](https://koom.kishor.tech)** | Sub-120ms WebRTC SVC engine, Electron native capture, 20-agent LangGraph copilot |
+| **🎓 Kishor.tech (Main Academic Portfolio)** | **[kishor.tech](https://kishor.tech)** | Minimalist academic layout, sub-35ms Hybrid RAG, 38-module AI curriculum |
+| **💻 macos-portfolio (Desktop Environment)** | **[macos.kishor.tech](https://macos.kishor.tech)** | Interactive desktop OS emulator with draggable windows, dock, and terminal CLI |
+| **🧊 3d (Interactive 3D WebGL Platform)** | **[3d.kishor.tech](https://3d.kishor.tech)** | React 19.2, Rolldown Vite, Tailwind v4, GSAP 3.13 camera choreography |
+| **⚡ hacker (3D Cyber Hacker Workstation)** | **[hacker.kishor.tech](https://hacker.kishor.tech)** | 3D Cyber Hacker command room, CRT monitor shaders, Web Audio, terminal HUD |
+| **▶ KoomAI Video Intelligence** | **[koom.kishor.tech](https://koom.kishor.tech)** | Sub-120ms WebRTC SVC engine, Electron native capture, 20-agent LangGraph copilot |
+| **💼 LinkedIn Network** | **[linkedin.com/in/kishor-kumar-paroi-b06344166](https://linkedin.com/in/kishor-kumar-paroi-b06344166)** | Verified professional connections, endorsements, and leadership updates |
+| **🐙 GitHub Repositories** | **[github.com/KishorKumarParoi](https://github.com/KishorKumarParoi)** | 11 production-grade ML/LLM/Lakehouse systems with 1-click cloud bootstrap scripts |
+
+---
+
+## 📜 Official Verified Resumes
+
+| Format | Document | Specifications & ATS Score | Direct Download Link |
+| :--- | :--- | :--- | :--- |
+| **Executive CV** | `resume.pdf` | **Strict 1-Page A4 PDF &bull; 100/100 ATS Score:** High-DPI typography, RUET CSE credentials, 61 quantified metrics, competitive programming track record. | [📥 **Download Executive CV (1-Page)**](https://kishor.tech/resume.pdf) |
+| **Comprehensive ATS Resume** | `resume_single_column.pdf` | **Comprehensive 2-Page A4 PDF &bull; 100/100 ATS Score:** 97 quantified metrics, deep architectural breakdown across all 11 production systems, zero PUA glyphs. | [📥 **Download ATS Resume (2-Page)**](https://kishor.tech/resume_single_column.pdf) |
 
 ---
 
