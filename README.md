@@ -35,7 +35,7 @@
 
 | Platform | URL | Architecture Highlights |
 | :--- | :--- | :--- |
-| **Vintage Academic Portfolio** | **[vantage.kishor.tech](https://vantage.kishor.tech)** | Nicholas Carlini clean aesthetic, sub-35ms Hybrid RAG, 38-module bootcamp showcase |
+| **Vintage Academic Portfolio** | **[vantage.kishor.tech](https://vantage.kishor.tech)** | Minimalist academic layout, sub-35ms Hybrid RAG, 38-module bootcamp showcase |
 | **macOS Interactive Portfolio** | **[kishor.tech](https://kishor.tech)** | Full desktop OS emulator with draggable windows, dock, and terminal CLI |
 | **Interactive 3D WebGL Platform** | **[3d.kishor.tech](https://3d.kishor.tech)** | React 19.2, Rolldown Vite, Tailwind v4, GSAP 3.13 camera choreography |
 | **KoomAI Video Intelligence** | **[koom.kishor.tech](https://koom.kishor.tech)** | Sub-120ms WebRTC SVC engine, Electron native capture, 20-agent LangGraph copilot |
@@ -179,4 +179,3 @@ vercel --prod
 ## 📜 License
 
 Handcrafted by **Kishor Kumar Paroi** &bull; Distributed under the [MIT License](LICENSE).
-Design inspired by [Nicholas Carlini](https://nicholas.carlini.com/)'s clean academic layout.
