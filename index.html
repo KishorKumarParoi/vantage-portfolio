@@ -80,21 +80,95 @@
               <a href="#skills">Technical Skills</a>
               <a href="#education">Education &amp; Courses</a>
               <a href="#achievements">Honors &amp; Hackathons</a>
-              <div class="nav-resume-dropdown">
-                <button class="nav-resume-btn" type="button" aria-haspopup="true" aria-expanded="false" id="resumeDropdownBtn" onclick="toggleResumeDropdown(event)">
-                  <span class="btn-icon">📄</span>
-                  <span class="btn-text">Resume</span>
-                  <span class="btn-arrow">▾</span>
+              <!-- Vintage Curriculum Vitæ Dropdown (Hover & Click) -->
+              <div class="vintage-resume-dropdown" id="resumeDropdown">
+                <button class="vintage-dropdown-btn" type="button" aria-haspopup="true" aria-expanded="false" id="resumeMenuTrigger" title="Official Curriculum Vitæ &amp; Dossier">
+                  <span class="btn-scroll-icon">📜</span>
+                  <span class="btn-text">Curriculum Vitæ</span>
+                  <span class="btn-score-pill">100 ATS</span>
+                  <span class="btn-arrow" aria-hidden="true">▾</span>
                 </button>
-                <div class="nav-resume-menu" id="resumeDropdownMenu" aria-labelledby="resumeDropdownBtn">
-                  <a href="resume.pdf" target="_blank" rel="noopener" class="dropdown-item">
-                    <span class="item-icon">📄</span>
-                    <span class="item-text">1-Page Visual Resume</span>
-                  </a>
-                  <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="dropdown-item">
-                    <span class="item-icon">📑</span>
-                    <span class="item-text">2-Page ATS Resume</span>
-                  </a>
+                
+                <div class="vintage-dropdown-panel" role="menu" aria-labelledby="resumeMenuTrigger">
+                  <!-- Ornate Archival Header -->
+                  <div class="panel-header">
+                    <div class="panel-seal">
+                      <span class="seal-icon">🏛️</span>
+                    </div>
+                    <div class="panel-title-group">
+                      <div class="panel-title">Official Engineering Dossier</div>
+                      <div class="panel-subtitle">Rajshahi University of Engineering &amp; Technology &bull; CSE</div>
+                    </div>
+                  </div>
+
+                  <div class="panel-ornament">
+                    <span class="ornament-line"></span>
+                    <span class="ornament-glyph">◈</span>
+                    <span class="ornament-line"></span>
+                  </div>
+
+                  <!-- Cards Body -->
+                  <div class="panel-cards">
+                    <!-- Card 1: 1-Page Visual Human Review -->
+                    <a href="resume.pdf" target="_blank" rel="noopener" class="dossier-card card-visual" role="menuitem">
+                      <div class="card-accent-bar"></div>
+                      <div class="card-icon-box">
+                        <span class="card-icon">📄</span>
+                      </div>
+                      <div class="card-content">
+                        <div class="card-topline">
+                          <span class="card-name">Executive CV</span>
+                          <span class="card-badge badge-visual">1-Page Visual</span>
+                        </div>
+                        <p class="card-description">
+                          High-DPI typography, RUET CSE credentials &amp; 61 quantified metrics. Designed for founders, engineering leaders &amp; human review.
+                        </p>
+                        <div class="card-meta">
+                          <span class="meta-tag">A4 Portrait</span>
+                          <span class="meta-bullet">&bull;</span>
+                          <span class="meta-tag">61 Metrics</span>
+                          <span class="meta-bullet">&bull;</span>
+                          <span class="meta-action">Open PDF ↗</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Card 2: 2-Page Single-Column ATS 100 -->
+                    <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="dossier-card card-ats" role="menuitem">
+                      <div class="card-accent-bar"></div>
+                      <div class="card-icon-box">
+                        <span class="card-icon">📑</span>
+                      </div>
+                      <div class="card-content">
+                        <div class="card-topline">
+                          <span class="card-name">Comprehensive ATS Resume</span>
+                          <span class="card-badge badge-ats">100/100 ATS</span>
+                        </div>
+                        <p class="card-description">
+                          Single-column canonical format, 97 quantified metrics &amp; zero PUA glyphs. Verified parseable for Greenhouse, Lever &amp; Workday.
+                        </p>
+                        <div class="card-meta">
+                          <span class="meta-tag">2-Page Strict</span>
+                          <span class="meta-bullet">&bull;</span>
+                          <span class="meta-tag">97 Metrics</span>
+                          <span class="meta-bullet">&bull;</span>
+                          <span class="meta-action">Open PDF ↗</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Panel Footer: Direct 15-Minute Sync -->
+                  <div class="panel-footer">
+                    <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" class="footer-sync-link">
+                      <span class="sync-status-dot"></span>
+                      <span class="sync-label"><strong>Book 15m Technical Sync</strong> &bull; Instant Zoom / Meet</span>
+                      <span class="sync-arrow">↗</span>
+                    </a>
+                    <div class="panel-formats">
+                      Alternate formats: <a href="resume.html" target="_blank">Interactive HTML</a> &bull; <a href="resume_single_column.html" target="_blank">ATS HTML</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </nav>
@@ -1520,24 +1594,34 @@ const stats = await peer.getStats();<br>
           ticking = true;
         }
       }, { passive: true });
-      // Resume Dropdown Interactive Controller
-      function toggleResumeDropdown(e) {
-        if (e) {
+      // 3. Vintage Curriculum Vitæ Dropdown Toggle (Desktop Click/Touch & Accessibility)
+      (function() {
+        const dropdown = document.getElementById('resumeDropdown');
+        const trigger = document.getElementById('resumeMenuTrigger');
+        if (!dropdown || !trigger) return;
+
+        trigger.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
-        }
-        const dropdown = document.querySelector('.nav-resume-dropdown');
-        if (dropdown) {
-          dropdown.classList.toggle('open');
-        }
-      }
+          const isOpen = dropdown.classList.toggle('open');
+          trigger.setAttribute('aria-expanded', isOpen);
+        });
 
-      document.addEventListener('click', function(e) {
-        const dropdown = document.querySelector('.nav-resume-dropdown');
-        if (dropdown && !dropdown.contains(e.target)) {
-          dropdown.classList.remove('open');
-        }
-      });
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && dropdown.classList.contains('open')) {
+            dropdown.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+            trigger.focus();
+          }
+        });
+      })();
     </script>
   </body>
 </html>

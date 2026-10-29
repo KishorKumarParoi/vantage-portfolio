@@ -87,115 +87,434 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   Navigation Resume Dropdown (Minimal 2-Option Menu)
+   Vintage Aristocratic Curriculum Vitæ Dropdown (Nicholas Carlini Academic Heritage)
    -------------------------------------------------------------------------- */
-.nav-resume-dropdown {
+.vintage-resume-dropdown {
   position: relative;
-  display: inline-block;
-}
-
-.nav-resume-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35em;
-  padding: 0.22em 0.65em;
-  font-family: inherit;
-  font-size: 88%;
-  font-variant: small-caps;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  color: #FFFFFF !important;
-  background: var(--accent-burgundy, #641C26);
-  border: 1px solid #4a141c;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 1px 3px rgba(100, 28, 38, 0.18);
-  line-height: 1.3;
+  vertical-align: middle;
 }
 
-.nav-resume-btn:hover {
-  background: var(--accent-burgundy-hover, #7b2734);
-  box-shadow: 0 2px 6px rgba(100, 28, 38, 0.28);
+/* Dropdown Trigger Button */
+.vintage-dropdown-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: linear-gradient(180deg, #FDFCF9 0%, #F5EFE6 100%);
+  border: 1px solid #C4B0A0;
+  border-radius: 5px;
+  padding: 0.28em 0.65em;
+  color: #5C1923;
+  font-family: "Lora", "EB Garamond", Georgia, serif;
+  font-size: 88%;
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.vintage-dropdown-btn:hover,
+.vintage-resume-dropdown:hover .vintage-dropdown-btn,
+.vintage-resume-dropdown.open .vintage-dropdown-btn {
+  background: linear-gradient(180deg, #FFFFFF 0%, #EDE1D2 100%);
+  border-color: #641C26;
+  color: #641C26;
+  box-shadow: 0 3px 12px rgba(100, 28, 38, 0.16), inset 0 1px 0 #FFFFFF;
   transform: translateY(-1px);
 }
 
-.nav-resume-btn .btn-arrow {
-  font-size: 70%;
-  transition: transform 0.2s ease;
-  margin-left: 0.15em;
-}
-
-.nav-resume-dropdown:hover .btn-arrow,
-.nav-resume-dropdown.open .btn-arrow {
-  transform: rotate(180deg);
-}
-
-.nav-resume-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 0.35em;
-  min-width: 195px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 6px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
-  padding: 0.3em 0;
-  z-index: 1050;
-  display: none;
-  font-variant: normal !important;
-  letter-spacing: normal !important;
-  text-align: left;
-}
-
-.nav-resume-dropdown:hover .nav-resume-menu,
-.nav-resume-dropdown:focus-within .nav-resume-menu,
-.nav-resume-dropdown.open .nav-resume-menu {
-  display: block;
-  animation: navDropdownFade 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes navDropdownFade {
-  from {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.dropdown-item {
-  display: flex !important;
-  align-items: center;
-  gap: 0.55em;
-  padding: 0.5em 0.85em !important;
-  color: #1F2937 !important;
-  text-decoration: none !important;
-  font-size: 84% !important;
-  font-weight: 500 !important;
-  font-variant: normal !important;
-  letter-spacing: normal !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-  transition: background 0.15s ease, color 0.15s ease;
-  white-space: nowrap !important;
-}
-
-.dropdown-item:hover {
-  background: #F3F4F6 !important;
-  color: var(--accent-burgundy, #641C26) !important;
-}
-
-.dropdown-item .item-icon {
+.btn-scroll-icon {
   font-size: 105%;
+  line-height: 1;
+}
+
+.btn-text {
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.btn-score-pill {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 72%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  padding: 0.1em 0.4em;
+  border-radius: 9999px;
+  line-height: 1.2;
+}
+
+.btn-arrow {
+  display: inline-block;
+  font-size: 78%;
+  color: #8C7066;
+  margin-left: 0.15em;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+}
+
+.vintage-dropdown-btn:hover .btn-arrow,
+.vintage-resume-dropdown:hover .btn-arrow,
+.vintage-resume-dropdown.open .btn-arrow {
+  transform: rotate(180deg);
+  color: #641C26;
+}
+
+/* Dropdown Floating Panel */
+.vintage-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 400px;
+  background: #FAF7F2;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #FAF5EC 100%);
+  border: 1px solid rgba(100, 28, 38, 0.28);
+  border-radius: 8px;
+  box-shadow: 0 20px 48px -6px rgba(45, 15, 20, 0.22), 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 14px 14px 10px 14px;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.97);
+  transform-origin: top right;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+  pointer-events: none;
+}
+
+/* Safe Hover Bridge */
+.vintage-dropdown-panel::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: transparent;
+}
+
+/* Delicate Antique Double-Border */
+.vintage-dropdown-panel::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px dashed rgba(184, 134, 11, 0.22);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+/* Hover & Open States */
+.vintage-resume-dropdown:hover .vintage-dropdown-panel,
+.vintage-resume-dropdown:focus-within .vintage-dropdown-panel,
+.vintage-resume-dropdown.open .vintage-dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Ornate Archival Header */
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.panel-seal {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FFF1F2;
+  border: 1px solid #FECDD3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  box-shadow: inset 0 1px 3px rgba(100, 28, 38, 0.12), 0 1px 3px rgba(0, 0, 0, 0.04);
   flex-shrink: 0;
 }
 
-.dropdown-item .item-text {
+.panel-title-group {
   flex-grow: 1;
-  white-space: nowrap !important;
+}
+
+.panel-title {
+  font-family: "Lora", "EB Garamond", Georgia, serif;
+  font-size: 88%;
+  font-weight: 700;
+  color: #641C26;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.panel-subtitle {
+  font-size: 68%;
+  color: #7A665E;
+  font-style: italic;
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+/* Divider Ornament */
+.panel-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 9px 0 11px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.ornament-line {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(100, 28, 38, 0.22), transparent);
+}
+
+.ornament-glyph {
+  font-size: 8px;
+  color: #B8860B;
+}
+
+/* Cards Body */
+.panel-cards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dossier-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  background: #FFFFFF;
+  border: 1px solid #E6DCD1;
+  border-radius: 6px;
+  padding: 10px 12px;
+  text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.card-accent-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: transparent;
+  transition: all 0.22s ease;
+}
+
+.card-visual:hover .card-accent-bar {
+  background: #641C26;
+  width: 4px;
+}
+
+.card-ats:hover .card-accent-bar {
+  background: #059669;
+  width: 4px;
+}
+
+.dossier-card:hover {
+  transform: translateX(3px);
+  background: #FFFDFB;
+  border-color: rgba(100, 28, 38, 0.35);
+  box-shadow: 0 4px 16px rgba(100, 28, 38, 0.12);
+}
+
+.card-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: transform 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-visual .card-icon-box {
+  background: #FFF5F5;
+  border: 1px solid #FCD4D7;
+}
+
+.card-ats .card-icon-box {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+}
+
+.dossier-card:hover .card-icon-box {
+  transform: scale(1.12);
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.card-name {
+  font-family: "Lora", "EB Garamond", Georgia, serif;
+  font-size: 86%;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: 0.02em;
+}
+
+.card-badge {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 68%;
+  font-weight: 700;
+  padding: 0.15em 0.45em;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.badge-visual {
+  background: #FFF1F2;
+  border: 1px solid #FECDD3;
+  color: #9F1239;
+}
+
+.badge-ats {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #065F46;
+}
+
+.card-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 71%;
+  color: #555555;
+  line-height: 1.35;
+  margin: 0 0 5px 0;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 68%;
+  color: #8C7E77;
+}
+
+.meta-action {
+  margin-left: auto;
+  color: #641C26;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.dossier-card:hover .meta-action {
+  transform: translateX(2px);
+  text-decoration: underline;
+}
+
+/* Panel Footer */
+.panel-footer {
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px solid rgba(100, 28, 38, 0.12);
+  position: relative;
+  z-index: 2;
+}
+
+.footer-sync-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  background: rgba(2, 132, 199, 0.06);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  border-radius: 5px;
+  text-decoration: none !important;
+  color: #0369A1;
+  font-size: 73%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: all 0.2s ease;
+}
+
+.footer-sync-link:hover {
+  background: rgba(2, 132, 199, 0.12);
+  border-color: #0284C7;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+}
+
+.sync-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: syncPulse 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes syncPulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.sync-label {
+  flex-grow: 1;
+}
+
+.sync-arrow {
+  margin-left: auto;
+  font-size: 85%;
+  transition: transform 0.2s ease;
+}
+
+.footer-sync-link:hover .sync-arrow {
+  transform: translate(2px, -2px);
+}
+
+.panel-formats {
+  margin-top: 6px;
+  font-size: 67%;
+  color: #8C7E77;
+  text-align: center;
+  font-style: italic;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.panel-formats a {
+  color: #641C26;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.panel-formats a:hover {
+  text-decoration: underline;
 }
 
 .site-title-link {
@@ -971,13 +1290,13 @@ ul.carlini-list li {
     position: absolute;
     right: 1em;
     top: 2.8em;
-    width: 14.5em;
+    width: 15.5em;
     padding: 0.8em;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.15);
     z-index: 200;
     border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     display: none;
   }
 
@@ -987,42 +1306,44 @@ ul.carlini-list li {
     margin-right: 0 !important;
   }
 
-  .nav-resume-dropdown {
+  #mobilelinks:checked ~ .dropdown {
     display: block;
-    width: 100%;
-    margin-top: 0.4em;
-    padding-top: 0.4em;
-    border-top: 1px solid #E5E7EB;
   }
 
-  .nav-resume-btn {
+  .vintage-resume-dropdown {
+    width: 100%;
+    display: block;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top: 1px solid rgba(100, 28, 38, 0.15);
+  }
+
+  .vintage-dropdown-btn {
     width: 100%;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 0.35em 0.6em;
   }
 
-  .nav-resume-menu {
+  .vintage-dropdown-panel {
     position: static;
-    box-shadow: none;
-    border: 1px solid #E5E7EB;
-    margin-top: 0.35em;
-    min-width: 100%;
+    width: 100%;
     box-sizing: border-box;
-    border-radius: 4px;
-    background: #FAFAFA;
+    margin-top: 6px;
+    box-shadow: 0 4px 14px rgba(100, 28, 38, 0.08);
+    padding: 10px 8px;
+    display: none;
   }
 
-  .nav-resume-menu .dropdown-item {
-    display: flex !important;
-    align-items: center;
-    gap: 0.55em;
-    padding: 0.45em 0.75em !important;
-    font-size: 85% !important;
-  }
-
-  #mobilelinks:checked ~ .dropdown {
+  .vintage-resume-dropdown.open .vintage-dropdown-panel,
+  .vintage-resume-dropdown:hover .vintage-dropdown-panel {
     display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .dossier-card {
+    padding: 8px 9px;
   }
 
   .abstract {
