@@ -61,19 +61,6 @@
       <div class="top">
         <div class="title">
           <a href="#about" class="site-title-link">Kishor Kumar Paroi</a>
-          <span class="title-resume-pills">
-            <a href="resume.pdf" class="header-resume-pill visual" target="_blank" rel="noopener" title="1-Page Visual Human Review Resume (PDF)">
-              <span class="pill-icon">📄</span>
-              <span class="pill-name">resume.pdf</span>
-              <span class="pill-badge">1-Page Visual</span>
-            </a>
-            <span class="pill-divider">&bull;</span>
-            <a href="resume_single_column.pdf" class="header-resume-pill ats" target="_blank" rel="noopener" title="Single-Column ATS 100 Resume for Job Portals (PDF)">
-              <span class="pill-icon">📑</span>
-              <span class="pill-name">resume_single_column.pdf</span>
-              <span class="pill-badge">ATS 100</span>
-            </a>
-          </span>
         </div>
         <div class="links">
           <div class="bars">
@@ -93,8 +80,46 @@
               <a href="#skills">Technical Skills</a>
               <a href="#education">Education &amp; Courses</a>
               <a href="#achievements">Honors &amp; Hackathons</a>
-              <a href="resume.pdf" class="button" target="_blank" rel="noopener" title="1-Page Compact Visual Resume for Founders & Humans">📄 resume.pdf (1-Page)</a>
-              <a href="resume_single_column.pdf" class="button button-outline" target="_blank" rel="noopener" title="2-Page ATS Single-Column Clean Resume for Job Portals">📑 resume_single_column.pdf (ATS)</a>
+              <div class="nav-resume-dropdown">
+                <button class="nav-resume-btn" type="button" aria-haspopup="true" aria-expanded="false" id="resumeDropdownBtn" onclick="toggleResumeDropdown(event)">
+                  <span class="btn-icon">📄</span>
+                  <span class="btn-text">Resume</span>
+                  <span class="btn-arrow">▾</span>
+                </button>
+                <div class="nav-resume-menu" id="resumeDropdownMenu" aria-labelledby="resumeDropdownBtn">
+                  <div class="dropdown-category">PDF Resumes</div>
+                  <a href="resume.pdf" target="_blank" rel="noopener" class="dropdown-item">
+                    <span class="item-icon">📄</span>
+                    <span class="item-text">1-Page Visual Resume</span>
+                    <span class="item-badge">Visual</span>
+                  </a>
+                  <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="dropdown-item">
+                    <span class="item-icon">📑</span>
+                    <span class="item-text">2-Page ATS Resume</span>
+                    <span class="item-badge ats">ATS 100</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-category">Word Documents (.docx)</div>
+                  <a href="resume.docx" download class="dropdown-item">
+                    <span class="item-icon">📝</span>
+                    <span class="item-text">1-Page Visual (.docx)</span>
+                  </a>
+                  <a href="resume_single_column.docx" download class="dropdown-item">
+                    <span class="item-icon">📝</span>
+                    <span class="item-text">2-Page ATS (.docx)</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-category">LaTeX Sources (.tex)</div>
+                  <a href="resume.tex" download class="dropdown-item">
+                    <span class="item-icon">📜</span>
+                    <span class="item-text">1-Page Source (.tex)</span>
+                  </a>
+                  <a href="resume_single_column.tex" download class="dropdown-item">
+                    <span class="item-icon">📜</span>
+                    <span class="item-text">2-Page ATS Source (.tex)</span>
+                  </a>
+                </div>
+              </div>
             </nav>
           </div>
         </div>
@@ -121,8 +146,10 @@
           <a href="#skills">Technical Skills</a>
           <a href="#education">Education &amp; Courses</a>
           <a href="#achievements">Achievements</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" style="color: #633; font-weight: bold;">📄 resume.pdf (1-Page Visual) ↗</a>
-          <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="color: #047857; font-weight: bold;">📑 resume_single_column.pdf (ATS 100) ↗</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" style="color: #633; font-weight: bold;">📄 1-Page Visual Resume (PDF) ↗</a>
+          <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="color: #047857; font-weight: bold;">📑 2-Page ATS Resume (PDF) ↗</a>
+          <a href="resume_single_column.docx" download style="color: #2563eb; font-weight: 500; font-size: 85%;">📝 2-Page ATS (.docx) ⤓</a>
+          <a href="resume_single_column.tex" download style="color: #4b5563; font-weight: 500; font-size: 85%;">📜 LaTeX Source (.tex) ⤓</a>
         </div>
       </div>
     </nav>
@@ -163,11 +190,16 @@
                     </div>
                     <div style="margin-top: 0.85em; display: flex; flex-direction: column; gap: 0.35em;">
                       <a href="resume.pdf" target="_blank" rel="noopener" class="button" style="display: block; text-align: center; font-size: 80%; background: #633; border-color: #4a2525;">
-                        📄 Download resume.pdf (1-Page Visual)
+                        📄 1-Page Visual Resume (PDF)
                       </a>
                       <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="button button-outline" style="display: block; text-align: center; font-size: 80%;">
-                        📑 Download resume_single_column.pdf (ATS 100)
+                        📑 2-Page ATS Resume (PDF)
                       </a>
+                      <div style="display: flex; gap: 0.35em; justify-content: center; margin-top: 0.25em;">
+                        <a href="resume_single_column.docx" download class="tag-pill" style="font-size: 72%; padding: 0.2em 0.5em; text-decoration: none;">📝 DOCX</a>
+                        <a href="resume.docx" download class="tag-pill" style="font-size: 72%; padding: 0.2em 0.5em; text-decoration: none;">📝 1-Page</a>
+                        <a href="resume_single_column.tex" download class="tag-pill" style="font-size: 72%; padding: 0.2em 0.5em; text-decoration: none;">📜 LaTeX</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -192,8 +224,13 @@
                   <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="color: #0284C7; font-weight: bold;">📅 15m Zoom</a>
                 </div>
                 <div style="display: flex; gap: 0.5em; justify-content: center; flex-wrap: wrap;">
-                  <a href="resume.pdf" target="_blank" rel="noopener" class="button" style="font-size: 78%; background: #633;">📄 resume.pdf (1-Page)</a>
-                  <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="button button-outline" style="font-size: 78%;">📑 resume_single_column.pdf (ATS)</a>
+                  <a href="resume.pdf" target="_blank" rel="noopener" class="button" style="font-size: 78%; background: #633;">📄 1-Page Visual (PDF)</a>
+                  <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="button button-outline" style="font-size: 78%;">📑 2-Page ATS (PDF)</a>
+                </div>
+                <div style="display: flex; gap: 0.35em; justify-content: center; margin-top: 0.35em; flex-wrap: wrap;">
+                  <a href="resume_single_column.docx" download class="tag-pill" style="font-size: 72%; padding: 0.2em 0.5em; text-decoration: none;">📝 ATS (.docx)</a>
+                  <a href="resume.docx" download class="tag-pill" style="font-size: 72%; padding: 0.2em 0.5em; text-decoration: none;">📝 Visual (.docx)</a>
+                  <a href="resume_single_column.tex" download class="tag-pill" style="font-size: 72%; padding: 0.2em 0.5em; text-decoration: none;">📜 LaTeX (.tex)</a>
                 </div>
               </div>
             </div>
@@ -232,9 +269,13 @@
                 work <a href="#experience">history</a>,
                 and technical <a href="#journey">learning curriculum</a>.
                 You can also inspect the verified credentials:
-                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 resume.pdf (1-Page Visual Human Review) [PDF]</a>
+                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 1-Page Visual Resume (PDF)</a>
                 &bull;
-                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 resume_single_column.pdf (Single-Column ATS 100) [PDF]</a>.
+                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 2-Page ATS Resume (PDF)</a>
+                &bull;
+                <a href="resume_single_column.docx" download style="font-weight: 500; color: #2563eb;">📝 Word (.docx)</a>
+                &bull;
+                <a href="resume_single_column.tex" download style="font-weight: 500; color: #4b5563;">📜 LaTeX (.tex)</a>.
               </p>
                           <!-- Live Digital Ecosystem Navigation -->
               <div class="ecosystem-banner">
@@ -1423,9 +1464,13 @@ const stats = await peer.getStats();<br>
               <p>
                 Design inspired by <a href="https://nicholas.carlini.com/" target="_blank" rel="noopener">Nicholas Carlini</a>.
                 &bull; &copy; 2026 Kishor Kumar Paroi &bull;
-                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 resume.pdf (1-Page Visual) [PDF]</a>
+                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 1-Page Visual Resume (PDF)</a>
                 &bull;
-                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 resume_single_column.pdf (ATS 100) [PDF]</a>
+                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 2-Page ATS Resume (PDF)</a>
+                &bull;
+                <a href="resume_single_column.docx" download style="font-weight: 500; color: #2563eb;">📝 DOCX</a>
+                &bull;
+                <a href="resume_single_column.tex" download style="font-weight: 500; color: #4b5563;">📜 LaTeX</a>
                 &bull;
                 <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="font-weight: bold; color: #0284c7;">📅 Book 15m Zoom</a>
               </p>
@@ -1518,6 +1563,24 @@ const stats = await peer.getStats();<br>
           ticking = true;
         }
       }, { passive: true });
+      // Resume Dropdown Interactive Controller
+      function toggleResumeDropdown(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        const dropdown = document.querySelector('.nav-resume-dropdown');
+        if (dropdown) {
+          dropdown.classList.toggle('open');
+        }
+      }
+
+      document.addEventListener('click', function(e) {
+        const dropdown = document.querySelector('.nav-resume-dropdown');
+        if (dropdown && !dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      });
     </script>
   </body>
 </html>
