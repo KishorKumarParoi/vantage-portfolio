@@ -54,6 +54,18 @@
     <!-- Aesthetic Old-School Academic Typography (Lora + EB Garamond + JetBrains Mono) -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Immediate Anti-Flash Theme Script -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('vantage_theme');
+          var theme = saved ? saved : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch(e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- Top Navigation Header -->
@@ -61,6 +73,10 @@
       <div class="top">
         <div class="title">
           <a href="#about" class="site-title-link">Kishor Kumar Paroi</a>
+          <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle Dark / Light Theme" title="Switch Theme">
+            <span class="theme-icon-dark">🌙 Dark</span>
+            <span class="theme-icon-light">☀️ Light</span>
+          </button>
         </div>
         <div class="links">
           <div class="bars">
@@ -131,8 +147,8 @@
           <a href="#skills">Technical Skills</a>
           <a href="#education">Education &amp; Courses</a>
           <a href="#achievements">Achievements</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" style="color: #633; font-weight: bold;">📄 1-Page Visual Resume ↗</a>
-          <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="color: #047857; font-weight: bold;">📑 2-Page ATS Resume ↗</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" style="color: var(--accent-burgundy-hover, #fda4af); font-weight: bold;">📄 1-Page Visual Resume ↗</a>
+          <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="color: #10b981; font-weight: bold;">📑 2-Page ATS Resume ↗</a>
         </div>
       </div>
     </nav>
@@ -253,17 +269,17 @@
                 work <a href="#experience">history</a>,
                 and technical <a href="#journey">learning curriculum</a>.
                 You can also inspect the verified credentials:
-                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 1-Page Visual Resume (PDF)</a>
+                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: var(--accent-burgundy-hover, #fda4af);">📄 1-Page Visual Resume (PDF)</a>
                 &bull;
-                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 2-Page ATS Resume (PDF)</a>.
+                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #10b981;">📑 2-Page ATS Resume (PDF)</a>.
               </p>
                           <!-- Live Digital Ecosystem Navigation -->
               <div class="ecosystem-banner">
                 <span class="ecosystem-label">EXPLORE LIVE ECOSYSTEM:</span>
-                <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="eco-tag" style="border-color: #e11d48; background: #fff1f2; font-weight: bold; color: #be123c;">
+                <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="eco-tag" style="border-color: #e11d48; background: rgba(225, 29, 72, 0.15); font-weight: bold; color: #fda4af;">
                   <span class="eco-dot" style="background: #e11d48;"></span>🔥 <strong>Watch $1.4M Reel (YouTube)</strong> &bull; 90s Cinematic Pitch ↗
                 </a>
-                <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="eco-tag" style="border-color: #d97706; background: #fffbeb; font-weight: bold; color: #b45309;">
+                <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="eco-tag" style="border-color: #d97706; background: rgba(217, 119, 6, 0.15); font-weight: bold; color: #fcd34d;">
                   <span class="eco-dot" style="background: #d97706;"></span>💎 <strong>$10K Executive Pitch Deck</strong> &bull; pptx.kishor.tech ↗
                 </a>
                 <a href="https://kishor.tech" class="eco-tag active">
@@ -349,7 +365,7 @@ const stats = await peer.getStats();<br>
             <!-- Technical Projects Section (Carlini Side-by-Side Layout) -->
             <section id="projects">
               <div class="section-heading">Technical Projects &amp; Architectures</div>
-              <p style="margin-bottom: 1.5em; font-style: italic; color: #555;">
+              <p style="margin-bottom: 1.5em; font-style: italic; color: var(--text-muted);">
                 Engineered with strict enterprise rigor: Latency vs Cost vs Accuracy vs VPC Data Privacy. Click any diagram thumbnail to view full resolution or click titles to expand architectural benchmarks.
               </p>
 
@@ -1342,7 +1358,7 @@ const stats = await peer.getStats();<br>
               </div>
 
               <!-- Specialized Certifications & Masterclasses (from Resume) -->
-              <div class="sub-section-title" style="margin-top: 1.8em; margin-bottom: 0.8em; font-variant: small-caps; font-size: 110%; font-weight: 600; color: #633;">
+              <div class="sub-section-title" style="margin-top: 1.8em; margin-bottom: 0.8em; font-variant: small-caps; font-size: 110%; font-weight: 600; color: var(--accent-burgundy-hover, #fda4af);">
                 Certifications, Specializations &amp; System Design Courses
               </div>
 
@@ -1454,11 +1470,11 @@ const stats = await peer.getStats();<br>
                 &bull;
                 <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" style="font-weight: bold; color: #d97706;">💎 $10K Deck ↗</a>
                 &bull;
-                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 1-Page Visual Resume (PDF)</a>
+                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: var(--accent-burgundy-hover, #fda4af);">📄 1-Page Visual Resume (PDF)</a>
                 &bull;
-                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 2-Page ATS Resume (PDF)</a>
+                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #10b981;">📑 2-Page ATS Resume (PDF)</a>
                 &bull;
-                <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="font-weight: bold; color: #0284c7;">📅 Book 15m Zoom</a>
+                <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="font-weight: bold; color: #38bdf8;">📅 Book 15m Zoom</a>
               </p>
             </footer>
 
@@ -1575,6 +1591,18 @@ const stats = await peer.getStats();<br>
             trigger.setAttribute('aria-expanded', 'false');
             trigger.focus();
           }
+        });
+      })();
+
+      // 4. Dark / Light Theme Toggle Listener
+      (function() {
+        const toggleBtn = document.getElementById('themeToggle');
+        if (!toggleBtn) return;
+        toggleBtn.addEventListener('click', function() {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('vantage_theme', newTheme);
         });
       })();
     </script>
