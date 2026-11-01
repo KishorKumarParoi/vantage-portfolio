@@ -63,8 +63,10 @@
           var saved = localStorage.getItem('vantage_theme');
           var theme = saved ? saved : 'dark';
           document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.className = theme === 'light' ? 'light-theme light' : 'dark-theme dark';
         } catch(e) {
           document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.className = 'dark-theme dark';
         }
       })();
     </script>
@@ -1614,15 +1616,48 @@ const stats = await peer.getStats();<br>
         });
       })();
 
-      // 4. Dark / Light Theme Toggle Listener
+      // 4. Instant Dark / Light Theme Toggle (0ms Dynamic Switch without Refresh)
       (function() {
         const toggleBtn = document.getElementById('themeToggle');
         if (!toggleBtn) return;
-        toggleBtn.addEventListener('click', function() {
-          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+
+        function applyTheme(theme) {
+          // 1. Set attribute on html & body
+          document.documentElement.setAttribute('data-theme', theme);
+          if (document.body) {
+            document.body.setAttribute('data-theme', theme);
+          }
+          // 2. Set classes on html & body for immediate cascade invalidation
+          if (theme === 'light') {
+            document.documentElement.classList.add('light-theme', 'light');
+            document.documentElement.classList.remove('dark-theme', 'dark');
+            if (document.body) {
+              document.body.classList.add('light-theme', 'light');
+              document.body.classList.remove('dark-theme', 'dark');
+            }
+          } else {
+            document.documentElement.classList.add('dark-theme', 'dark');
+            document.documentElement.classList.remove('light-theme', 'light');
+            if (document.body) {
+              document.body.classList.add('dark-theme', 'dark');
+              document.body.classList.remove('light-theme', 'light');
+            }
+          }
+          try {
+            localStorage.setItem('vantage_theme', theme);
+          } catch(e) {}
+        }
+
+        // Initialize state as soon as body is attached
+        const initialTheme = localStorage.getItem('vantage_theme') || 'dark';
+        applyTheme(initialTheme);
+
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
           const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', newTheme);
-          localStorage.setItem('vantage_theme', newTheme);
+          applyTheme(newTheme);
         });
       })();
     </script>
