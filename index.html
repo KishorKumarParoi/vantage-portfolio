@@ -51,10 +51,8 @@
     <link rel="prefetch" href="resume_single_column.pdf" as="fetch">
     <link rel="prefetch" href="resume.pdf" as="fetch">
 
-    <!-- World-Class Modern Engineering Typography (Inter + JetBrains Mono) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Aesthetic Old-School Academic Typography (Lora + EB Garamond + JetBrains Mono) -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Immediate Anti-Flash Theme Script -->
     <script>
@@ -63,10 +61,10 @@
           var saved = localStorage.getItem('vantage_theme');
           var theme = saved ? saved : 'dark';
           document.documentElement.setAttribute('data-theme', theme);
-          document.documentElement.className = theme === 'light' ? 'light-theme light' : 'dark-theme dark';
+          document.documentElement.className = theme;
         } catch(e) {
           document.documentElement.setAttribute('data-theme', 'dark');
-          document.documentElement.className = 'dark-theme dark';
+          document.documentElement.className = 'dark';
         }
       })();
     </script>
@@ -93,36 +91,35 @@
           <input type="checkbox" id="mobilelinks">
           <div class="dropdown fancy">
             <nav>
-              <a href="#projects">Projects</a>
-              <a href="#founder">Founder</a>
-              <a href="#experience">Experience</a>
-              <a href="#journey">Curriculum</a>
-              <a href="#skills">Skills</a>
-              <a href="#education">Education</a>
-              <a href="#achievements">Honors</a>
-              <!-- Sleek Resume / CV Dropdown (Zero Bloat) -->
+              <a href="#projects">Technical Projects</a>
+              <a href="#founder">Founder @ KoomAI</a>
+              <a href="#experience">Work Experience</a>
+              <a href="#journey">AI Engineering Journey</a>
+              <a href="#skills">Technical Skills</a>
+              <a href="#education">Education &amp; Courses</a>
+              <a href="#achievements">Honors &amp; Hackathons</a>
+              <!-- Carlini Vintage Curriculum Vitæ Dropdown -->
               <div class="nav-dropdown" id="resumeDropdown">
-                <button class="nav-dropbtn" type="button" aria-haspopup="true" aria-expanded="false" id="resumeMenuTrigger" title="Curriculum Vitæ &amp; Key Assets">
-                  <span>CV &bull; Resume</span> <span class="drop-arrow" aria-hidden="true">▾</span>
+                <button class="nav-dropbtn" type="button" aria-haspopup="true" aria-expanded="false" id="resumeMenuTrigger" title="Curriculum Vitæ">
+                  Curriculum Vitæ <span class="drop-arrow" aria-hidden="true">▾</span>
                 </button>
                 <div class="nav-dropdown-menu" role="menu" aria-labelledby="resumeMenuTrigger">
-                  <div class="nav-dropdown-header">Curriculum Vitæ</div>
                   <a href="resume.pdf" target="_blank" rel="noopener" class="nav-dropdown-item" role="menuitem">
-                    <span class="item-icon">📄</span> Visual CV &bull; 1-Page (PDF) ↗
+                    Visual CV &bull; 1-Page (PDF)
                   </a>
                   <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="nav-dropdown-item" role="menuitem">
-                    <span class="item-icon">📑</span> ATS Resume &bull; 2-Page (PDF) ↗
+                    ATS Resume &bull; 2-Page (PDF)
                   </a>
                   <div class="nav-dropdown-divider"></div>
-                  <div class="nav-dropdown-header">Key Executive Assets</div>
-                  <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="nav-dropdown-item" style="color: #fbbf24 !important;" role="menuitem">
-                    <span class="item-icon">💎</span> $10K Deck (pptx.kishor.tech) ↗
+                  <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="nav-dropdown-item" style="color: #e11d48; font-weight: bold;" role="menuitem">
+                    🎬 Watch $1.4M Reel (YouTube) ↗
                   </a>
-                  <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="nav-dropdown-item" style="color: #fda4af !important;" role="menuitem">
-                    <span class="item-icon">🎬</span> Watch $1.4M Reel (YouTube) ↗
+                  <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="nav-dropdown-item" style="color: #d97706; font-weight: bold;" role="menuitem">
+                    💎 $10K Pitch Deck (pptx.kishor.tech) ↗
                   </a>
+                  <div class="nav-dropdown-divider"></div>
                   <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" class="nav-dropdown-item nav-sync-item" role="menuitem">
-                    <span class="item-icon">📅</span> 15m Meeting (Zoom) ↗
+                    15m Meeting (Zoom) ↗
                   </a>
                 </div>
               </div>
@@ -145,15 +142,15 @@
         </div>
         <div id="leftnav-links">
           <a href="#about" class="active">Profile</a>
-          <a href="#projects">Projects</a>
-          <a href="#founder">Founder</a>
-          <a href="#experience">Experience</a>
-          <a href="#journey">Curriculum</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
-          <a href="#achievements">Honors</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 600;">📄 Visual CV ↗</a>
-          <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="color: #10b981; font-weight: 600;">📑 ATS Resume ↗</a>
+          <a href="#projects">Technical Projects</a>
+          <a href="#founder">Founder @ KoomAI</a>
+          <a href="#experience">Work Experience</a>
+          <a href="#journey">AI Engineering Journey</a>
+          <a href="#skills">Technical Skills</a>
+          <a href="#education">Education &amp; Courses</a>
+          <a href="#achievements">Achievements</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" style="color: #633; font-weight: bold;">📄 1-Page Visual Resume ↗</a>
+          <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="color: #047857; font-weight: bold;">📑 2-Page ATS Resume ↗</a>
         </div>
       </div>
     </nav>
@@ -194,23 +191,18 @@
                       <span class="sep">|</span>
                       <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="color: #0284C7; font-weight: bold;">📅 15m Zoom</a>
                     </div>
-                    <!-- Sleek 2x2 Command Grid (Zero Bloat) -->
-                    <div class="profile-cta-grid">
-                      <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="cta-card cta-reel">
-                        <span class="cta-badge">🎬 REEL</span>
-                        <span class="cta-label">Watch $1.4M ↗</span>
+                    <div style="margin-top: 0.85em; display: flex; flex-direction: column; gap: 0.35em;">
+                      <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="button" style="display: block; text-align: center; font-size: 82%; background: linear-gradient(135deg, #e11d48, #be123c); border: 1px solid #fda4af; color: #fff; font-weight: bold; box-shadow: 0 2px 8px rgba(225,29,72,0.35);">
+                        🔥 Watch $1.4M Reel (YouTube) ↗
                       </a>
-                      <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="cta-card cta-deck">
-                        <span class="cta-badge">💎 DECK</span>
-                        <span class="cta-label">$10K Pitch ↗</span>
+                      <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="button" style="display: block; text-align: center; font-size: 82%; background: linear-gradient(135deg, #d97706, #b45309); border: 1px solid #fcd34d; color: #fff; font-weight: bold; box-shadow: 0 2px 8px rgba(217,119,6,0.35);">
+                        💎 $10K Pitch Deck (pptx.kishor.tech) ↗
                       </a>
-                      <a href="resume.pdf" target="_blank" rel="noopener" class="cta-card cta-pdf">
-                        <span class="cta-badge">📄 CV</span>
-                        <span class="cta-label">Visual PDF ↗</span>
+                      <a href="resume.pdf" target="_blank" rel="noopener" class="button" style="display: block; text-align: center; font-size: 80%; background: #633; border-color: #4a2525;">
+                        📄 1-Page Visual Resume
                       </a>
-                      <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="cta-card cta-ats">
-                        <span class="cta-badge">📑 ATS</span>
-                        <span class="cta-label">2-Page PDF ↗</span>
+                      <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="button button-outline" style="display: block; text-align: center; font-size: 80%;">
+                        📑 2-Page ATS Resume
                       </a>
                     </div>
                   </div>
@@ -221,9 +213,9 @@
             <!-- Mobile Contact Header -->
             <div class="contact">
               <img src="kishor.jpg" alt="Photograph of Kishor Kumar Paroi" width="160" height="160">
-              <div class="card-caption">
-                <strong class="profile-name">Kishor Kumar Paroi</strong><br>
-                <span class="profile-title">Principal AI Systems Architect &amp; Founder @ KoomAI</span><br>
+              <div class="card-caption fancy">
+                <strong>Kishor Kumar Paroi</strong><br>
+                <span>Principal AI Systems Architect & Founder @ KoomAI</span><br>
                 <span class="email-text">kishor.ruet.cse [at] gmail [dot] com</span><br>
                 <div style="margin-top: 0.3em; margin-bottom: 0.5em;">
                   <a href="https://kishor.tech/" target="_blank" rel="noopener">🎓 Kishor.tech</a> |
@@ -234,25 +226,13 @@
                   <a href="https://x.com/Mr_paroi" target="_blank" rel="noopener">𝕏 Twitter</a> |
                   <a href="https://github.com/KishorKumarParoi" target="_blank" rel="noopener">🐙 GitHub</a> |
                   <a href="https://koom.kishor.tech/" target="_blank" rel="noopener">▶ KoomAI</a> |
-                  <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: bold;">📅 15m Zoom</a>
+                  <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="color: #0284C7; font-weight: bold;">📅 15m Zoom</a>
                 </div>
-                <div class="profile-cta-grid" style="max-width: 320px; margin: 0.5em auto 0 auto;">
-                  <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="cta-card cta-reel">
-                    <span class="cta-badge">🎬 REEL</span>
-                    <span class="cta-label">Watch $1.4M</span>
-                  </a>
-                  <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="cta-card cta-deck">
-                    <span class="cta-badge">💎 DECK</span>
-                    <span class="cta-label">$10K Pitch</span>
-                  </a>
-                  <a href="resume.pdf" target="_blank" rel="noopener" class="cta-card cta-pdf">
-                    <span class="cta-badge">📄 CV</span>
-                    <span class="cta-label">Visual PDF</span>
-                  </a>
-                  <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="cta-card cta-ats">
-                    <span class="cta-badge">📑 ATS</span>
-                    <span class="cta-label">2-Page PDF</span>
-                  </a>
+                <div style="display: flex; gap: 0.5em; justify-content: center; flex-wrap: wrap;">
+                  <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="button" style="font-size: 80%; background: #e11d48; color: #fff; font-weight: bold;">🔥 Watch $1.4M Reel</a>
+                  <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="button" style="font-size: 80%; background: #d97706; color: #fff; font-weight: bold;">💎 $10K Deck ↗</a>
+                  <a href="resume.pdf" target="_blank" rel="noopener" class="button" style="font-size: 78%; background: #633;">📄 1-Page Resume</a>
+                  <a href="resume_single_column.pdf" target="_blank" rel="noopener" class="button button-outline" style="font-size: 78%;">📑 2-Page ATS</a>
                 </div>
               </div>
             </div>
@@ -289,19 +269,19 @@
                 Below is a curated collection of my <a href="#projects">systems &amp; architectures</a>,
                 active <a href="#code">open-source code</a>,
                 work <a href="#experience">history</a>,
-                and technical <a href="#journey">curriculum</a>.
-                Verified credentials:
-                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: 600; color: #38bdf8;">📄 Visual CV (PDF)</a>
+                and technical <a href="#journey">learning curriculum</a>.
+                You can also inspect the verified credentials:
+                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 1-Page Visual Resume (PDF)</a>
                 &bull;
-                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: 600; color: #10b981;">📑 ATS Resume (PDF)</a>.
+                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 2-Page ATS Resume (PDF)</a>.
               </p>
                           <!-- Live Digital Ecosystem Navigation -->
               <div class="ecosystem-banner">
                 <span class="ecosystem-label">EXPLORE LIVE ECOSYSTEM:</span>
-                <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="eco-tag" style="border-color: #e11d48; background: rgba(225, 29, 72, 0.15); font-weight: bold; color: #fda4af;">
+                <a href="https://www.youtube.com/watch?v=mqX-2FW3o0Q" target="_blank" rel="noopener" class="eco-tag" style="border-color: #e11d48; background: #fff1f2; font-weight: bold; color: #be123c;">
                   <span class="eco-dot" style="background: #e11d48;"></span>🔥 <strong>Watch $1.4M Reel (YouTube)</strong> &bull; 90s Cinematic Pitch ↗
                 </a>
-                <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="eco-tag" style="border-color: #d97706; background: rgba(217, 119, 6, 0.15); font-weight: bold; color: #fcd34d;">
+                <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" class="eco-tag" style="border-color: #d97706; background: #fffbeb; font-weight: bold; color: #b45309;">
                   <span class="eco-dot" style="background: #d97706;"></span>💎 <strong>$10K Executive Pitch Deck</strong> &bull; pptx.kishor.tech ↗
                 </a>
                 <a href="https://kishor.tech" class="eco-tag active">
@@ -387,7 +367,7 @@ const stats = await peer.getStats();<br>
             <!-- Technical Projects Section (Carlini Side-by-Side Layout) -->
             <section id="projects">
               <div class="section-heading">Technical Projects &amp; Architectures</div>
-              <p style="margin-bottom: 1.5em; font-style: italic; color: var(--text-muted);">
+              <p style="margin-bottom: 1.5em; font-style: italic; color: #555;">
                 Engineered with strict enterprise rigor: Latency vs Cost vs Accuracy vs VPC Data Privacy. Click any diagram thumbnail to view full resolution or click titles to expand architectural benchmarks.
               </p>
 
@@ -1380,7 +1360,7 @@ const stats = await peer.getStats();<br>
               </div>
 
               <!-- Specialized Certifications & Masterclasses (from Resume) -->
-              <div class="sub-section-title" style="margin-top: 1.8em; margin-bottom: 0.8em; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; color: var(--accent-burgundy-hover, #fda4af);">
+              <div class="sub-section-title" style="margin-top: 1.8em; margin-bottom: 0.8em; font-variant: small-caps; font-size: 110%; font-weight: 600; color: #633;">
                 Certifications, Specializations &amp; System Design Courses
               </div>
 
@@ -1492,11 +1472,11 @@ const stats = await peer.getStats();<br>
                 &bull;
                 <a href="https://pptx.kishor.tech" target="_blank" rel="noopener" style="font-weight: bold; color: #d97706;">💎 $10K Deck ↗</a>
                 &bull;
-                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: var(--accent-burgundy-hover, #fda4af);">📄 1-Page Visual Resume (PDF)</a>
+                <a href="resume.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #633;">📄 1-Page Visual Resume (PDF)</a>
                 &bull;
-                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #10b981;">📑 2-Page ATS Resume (PDF)</a>
+                <a href="resume_single_column.pdf" target="_blank" rel="noopener" style="font-weight: bold; color: #047857;">📑 2-Page ATS Resume (PDF)</a>
                 &bull;
-                <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="font-weight: bold; color: #38bdf8;">📅 Book 15m Zoom</a>
+                <a href="https://calendly.com/kishor-ruet-cse/15min" target="_blank" rel="noopener" style="font-weight: bold; color: #0284c7;">📅 Book 15m Zoom</a>
               </p>
             </footer>
 
@@ -1616,31 +1596,29 @@ const stats = await peer.getStats();<br>
         });
       })();
 
-      // 4. Instant Dark / Light Theme Toggle (0ms Dynamic Switch without Refresh)
+      // 4. Smooth Instant Dark / Light Theme Toggle (0ms dynamic switch, no refresh required)
       (function() {
         const toggleBtn = document.getElementById('themeToggle');
         if (!toggleBtn) return;
 
         function applyTheme(theme) {
-          // 1. Set attribute on html & body
           document.documentElement.setAttribute('data-theme', theme);
           if (document.body) {
             document.body.setAttribute('data-theme', theme);
           }
-          // 2. Set classes on html & body for immediate cascade invalidation
-          if (theme === 'light') {
-            document.documentElement.classList.add('light-theme', 'light');
-            document.documentElement.classList.remove('dark-theme', 'dark');
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
             if (document.body) {
-              document.body.classList.add('light-theme', 'light');
-              document.body.classList.remove('dark-theme', 'dark');
+              document.body.classList.add('dark');
+              document.body.classList.remove('light');
             }
           } else {
-            document.documentElement.classList.add('dark-theme', 'dark');
-            document.documentElement.classList.remove('light-theme', 'light');
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
             if (document.body) {
-              document.body.classList.add('dark-theme', 'dark');
-              document.body.classList.remove('light-theme', 'light');
+              document.body.classList.add('light');
+              document.body.classList.remove('dark');
             }
           }
           try {
@@ -1648,16 +1626,16 @@ const stats = await peer.getStats();<br>
           } catch(e) {}
         }
 
-        // Initialize state as soon as body is attached
+        // Initialize state on load
         const initialTheme = localStorage.getItem('vantage_theme') || 'dark';
         applyTheme(initialTheme);
 
         toggleBtn.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          applyTheme(newTheme);
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          const next = current === 'dark' ? 'light' : 'dark';
+          applyTheme(next);
         });
       })();
     </script>
