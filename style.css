@@ -10,7 +10,32 @@
      - Interactive media feature showcase (Carlini-style left/right mockups)
    ============================================================================== */
 
-:root,
+:root {
+  /* Default Obsidian Slate Dark Palette */
+  --bg-body: #090d13;
+  --bg-box: #111722;
+  --bg-card: #17202e;
+  --text-main: #e2e8f0;
+  --text-muted: #8e9bb0;
+  --heading-color: #f8fafc;
+  --accent-burgundy: #f43f5e;
+  --accent-burgundy-hover: #fb7185;
+  --accent-link: #38bdf8;
+  --accent-link-hover: #7dd3fc;
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --award-bg: rgba(245, 158, 11, 0.12);
+  --award-text: #fbbf24;
+  --award-border: rgba(245, 158, 11, 0.25);
+  --code-bg: #0d131d;
+  --code-text: #38bdf8;
+  --nav-bg: rgba(17, 23, 34, 0.92);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="dark"],
 html[data-theme="dark"],
 body[data-theme="dark"],
 html.dark,
@@ -33,7 +58,7 @@ body.dark {
   --award-border: rgba(245, 158, 11, 0.25);
   --code-bg: #0d131d;
   --code-text: #38bdf8;
-  --nav-bg: rgba(17, 23, 34, 0.88);
+  --nav-bg: rgba(17, 23, 34, 0.92);
   --nav-border: rgba(255, 255, 255, 0.08);
   --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
@@ -62,7 +87,7 @@ body.light {
   --award-border: #fef3c7;
   --code-bg: #f1f5f9;
   --code-text: #0f172a;
-  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-bg: rgba(255, 255, 255, 0.94);
   --nav-border: rgba(0, 0, 0, 0.07);
   --nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -89,20 +114,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.04rem;
-}
-
-/* Universal Silky Smooth Theme Transition */
-html, body, .boxed, .topouter, .theme-toggle-btn, button.nav-dropbtn, .nav-dropdown-menu, .nav-dropdown-item,
-.drawer-peek-tab, .drawer-content, #leftnav a, .rightelement, .pub-thumb a.thumb-link,
-.abstract, .deploy-tag, .timeline-item, .footer, .ecosystem-banner, .eco-tag,
-.journey-card, .course-card, .course-box, .live-visitor-card, a.button, a, code,
-.metric-value, .section-heading, .card-caption, .role-affiliation, .location-tag,
-.email-text, .venue, .pub-lead-desc, .tech-tag, .timeline-date, .role-title,
-.cv-quick-btn, .nav-item-badge {
-  transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 /* --------------------------------------------------------------------------
@@ -122,10 +134,10 @@ html, body, .boxed, .topouter, .theme-toggle-btn, button.nav-dropbtn, .nav-dropd
   border-bottom: 1px solid var(--nav-border);
   box-shadow: var(--nav-shadow);
   transform: translateY(0);
-  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
-              background-color 0.35s ease,
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
   will-change: transform;
 }
 
@@ -174,15 +186,16 @@ html, body, .boxed, .topouter, .theme-toggle-btn, button.nav-dropbtn, .nav-dropd
   border: 1px solid var(--border-card);
   color: var(--text-main);
   border-radius: 4px;
-  padding: 0.2em 0.6em;
+  padding: 0.18em 0.55em;
   font-family: "Lora", "EB Garamond", Georgia, serif;
-  font-size: 80%;
+  font-size: 78%;
   font-variant: small-caps;
   letter-spacing: 0.05em;
   cursor: pointer;
   user-select: none;
   outline: none;
   margin-left: 0.5em;
+  transition: all 0.2s ease;
 }
 
 .theme-toggle-btn:hover {
@@ -213,7 +226,7 @@ body.light .theme-icon-dark {
 }
 
 /* --------------------------------------------------------------------------
-   Minimalist Elegant Curriculum Vitæ Dropdown
+   Compact, Small & Click-Only Curriculum Vitæ Dropdown
    -------------------------------------------------------------------------- */
 .nav-dropdown {
   position: relative;
@@ -224,85 +237,69 @@ body.light .theme-icon-dark {
 button.nav-dropbtn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35em;
+  gap: 0.25em;
   border: 1px solid var(--border-card);
   border-radius: 4px;
-  padding: 0.22em 0.65em;
+  padding: 0.16em 0.5em;
   color: var(--heading-color) !important;
   background: var(--bg-card);
   font-family: "Lora", "EB Garamond", Georgia, serif;
-  font-size: 85%;
+  font-size: 78%;
   font-variant: small-caps;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   font-weight: 600;
   cursor: pointer;
   outline: none;
   line-height: normal;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
 }
 
 button.nav-dropbtn:hover,
-.nav-dropdown:hover button.nav-dropbtn,
 .nav-dropdown.open button.nav-dropbtn {
-  background: var(--bg-card);
   border-color: var(--accent-burgundy);
   color: var(--accent-burgundy) !important;
   transform: translateY(-1px);
 }
 
 .drop-arrow {
-  font-size: 70%;
+  font-size: 68%;
   display: inline-block;
-  transition: transform 0.25s ease;
-  margin-left: 0.15em;
-  opacity: 0.7;
+  transition: transform 0.2s ease;
+  margin-left: 0.12em;
+  opacity: 0.75;
 }
 
-.nav-dropdown:hover .drop-arrow,
 .nav-dropdown.open .drop-arrow {
   transform: rotate(180deg);
   opacity: 1;
 }
 
+/* Strictly Click-Only Dropdown (No hovering popup bloat) */
 .nav-dropdown-menu {
   position: absolute;
   top: 100%;
   right: 0;
-  margin-top: 0.45em;
-  min-width: 230px;
-  background: var(--nav-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  margin-top: 0.3em;
+  min-width: 175px;
+  background: var(--bg-box);
   border: 1px solid var(--border-card);
-  border-radius: 6px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  padding: 0.4em 0;
+  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  padding: 0.25em 0;
   z-index: 1050;
   display: none;
   text-align: left;
 }
 
-/* Safe hover bridge */
-.nav-dropdown-menu::before {
-  content: "";
-  position: absolute;
-  top: -0.5em;
-  left: 0;
-  right: 0;
-  height: 0.5em;
-}
-
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu,
 .nav-dropdown.open .nav-dropdown-menu {
   display: block;
-  animation: carliniDropdownFade 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: carliniDropdownFade 0.16s ease-out;
 }
 
 @keyframes carliniDropdownFade {
   from {
     opacity: 0;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
   to {
     opacity: 1;
@@ -314,15 +311,16 @@ button.nav-dropbtn:hover,
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5em 0.95em !important;
+  padding: 0.35em 0.7em !important;
   margin: 0 !important;
   color: var(--text-main) !important;
   font-family: "Lora", "EB Garamond", Georgia, serif !important;
-  font-size: 86% !important;
+  font-size: 80% !important;
   font-variant: small-caps !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0.03em !important;
   text-decoration: none !important;
   white-space: nowrap !important;
+  transition: all 0.15s ease;
 }
 
 .nav-dropdown-item:hover {
@@ -333,9 +331,9 @@ button.nav-dropbtn:hover,
 
 .nav-item-badge {
   font-family: "JetBrains Mono", monospace;
-  font-size: 68%;
+  font-size: 65%;
   font-weight: 600;
-  padding: 0.12em 0.45em;
+  padding: 0.08em 0.35em;
   border-radius: 3px;
   border: 1px solid var(--border-light);
   background: var(--bg-card);
@@ -367,7 +365,7 @@ button.nav-dropbtn:hover,
 .nav-dropdown-divider {
   height: 1px;
   background: var(--border-light);
-  margin: 0.3em 0;
+  margin: 0.2em 0;
 }
 
 .links {
