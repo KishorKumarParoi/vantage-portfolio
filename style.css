@@ -15,28 +15,28 @@ html[data-theme="dark"],
 body[data-theme="dark"],
 html.dark,
 body.dark {
-  /* Vintage Academic Dark Palette (Substack/Carlini Reader Mode) */
-  --bg-body: #0d1117;
-  --bg-box: #161b22;
-  --text-main: #e6edf3;
-  --text-muted: #8b949e;
-  --heading-color: #f0f6fc;
-  --accent-burgundy: #e06c75;
-  --accent-burgundy-hover: #f78c95;
-  --accent-link: #58a6ff;
-  --accent-link-hover: #79c0ff;
-  --border-light: #30363d;
-  --border-card: #30363d;
-  --bg-card: #21262d;
-  --award-bg: rgba(187, 128, 9, 0.15);
-  --award-text: #f2cc60;
-  --award-border: rgba(187, 128, 9, 0.4);
-  --code-bg: #161b22;
-  --code-text: #79c0ff;
-  --nav-bg: rgba(22, 27, 34, 0.94);
-  --nav-border: rgba(255, 255, 255, 0.1);
-  --nav-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
-  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  /* Obsidian Slate Dark Mode (Deep, Elegant, High-Legibility) */
+  --bg-body: #090d13;
+  --bg-box: #111722;
+  --bg-card: #17202e;
+  --text-main: #e2e8f0;
+  --text-muted: #8e9bb0;
+  --heading-color: #f8fafc;
+  --accent-burgundy: #f43f5e;
+  --accent-burgundy-hover: #fb7185;
+  --accent-link: #38bdf8;
+  --accent-link-hover: #7dd3fc;
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --award-bg: rgba(245, 158, 11, 0.12);
+  --award-text: #fbbf24;
+  --award-border: rgba(245, 158, 11, 0.25);
+  --code-bg: #0d131d;
+  --code-text: #38bdf8;
+  --nav-bg: rgba(17, 23, 34, 0.88);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
 :root[data-theme="light"],
@@ -44,28 +44,28 @@ html[data-theme="light"],
 body[data-theme="light"],
 html.light,
 body.light {
-  /* Classic Carlini Vintage Light Palette */
-  --bg-body: #FEFEFE;
-  --bg-box: #FFFFFF;
-  --text-main: #222222;
-  --text-muted: #555555;
-  --heading-color: #111111;
-  --accent-burgundy: #633333;
-  --accent-burgundy-hover: #844444;
-  --accent-link: #A02020;
-  --accent-link-hover: #C03030;
-  --border-light: #DDDDDD;
-  --border-card: #D0D0D0;
-  --bg-card: #F8F8F8;
-  --award-bg: #FFF9DB;
-  --award-text: #856404;
-  --award-border: #FFEBAA;
-  --code-bg: #EFEFEF;
-  --code-text: #222222;
-  --nav-bg: rgba(255, 255, 255, 0.94);
-  --nav-border: rgba(0, 0, 0, 0.08);
-  --nav-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
-  --card-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  /* Pure Editorial Light Mode (Warm Ivory-Stone, High-End Academic) */
+  --bg-body: #f8f9fa;
+  --bg-box: #ffffff;
+  --bg-card: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --heading-color: #0f172a;
+  --accent-burgundy: #9f1239;
+  --accent-burgundy-hover: #be123c;
+  --accent-link: #0369a1;
+  --accent-link-hover: #0284c7;
+  --border-light: #e2e8f0;
+  --border-card: #e2e8f0;
+  --award-bg: #fffbeb;
+  --award-text: #92400e;
+  --award-border: #fef3c7;
+  --code-bg: #f1f5f9;
+  --code-text: #0f172a;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-border: rgba(0, 0, 0, 0.07);
+  --nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -74,38 +74,63 @@ body.light {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px;
+  scroll-padding-top: 80px;
   background: var(--bg-body);
 }
 
 body {
   background: var(--bg-body);
   color: var(--text-main);
-  font-family: "Lora", "Newsreader", "EB Garamond", Georgia, "Times New Roman", serif;
+  font-family: "Lora", "Newsreader", "EB Garamond", Georgia, serif;
   text-rendering: optimizeLegibility;
-  line-height: 162%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.68;
   margin: 0;
   padding: 0;
-  font-size: 13.5pt;
-  transition: background 0.25s ease, color 0.25s ease;
+  font-size: 1.04rem;
+}
+
+/* Universal Silky Smooth Theme Transition */
+html, body, .boxed, .topouter, .theme-toggle-btn, button.nav-dropbtn, .nav-dropdown-menu, .nav-dropdown-item,
+.drawer-peek-tab, .drawer-content, #leftnav a, .rightelement, .pub-thumb a.thumb-link,
+.abstract, .deploy-tag, .timeline-item, .footer, .ecosystem-banner, .eco-tag,
+.journey-card, .course-card, .course-box, .live-visitor-card, a.button, a, code,
+.metric-value, .section-heading, .card-caption, .role-affiliation, .location-tag,
+.email-text, .venue, .pub-lead-desc, .tech-tag, .timeline-date, .role-title,
+.cv-quick-btn, .nav-item-badge {
+  transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* --------------------------------------------------------------------------
-   Top Outer Header & Navigation (Carlini refined vintage style)
+   Smart Autohiding Sticky/Fixed Header with Cursor Hover Reveal
    -------------------------------------------------------------------------- */
 .topouter {
   width: 100%;
-  min-height: 1.5em;
-  padding: 0.65em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
+  min-height: 1.5em;
+  padding: 0.6em 0;
   background: var(--nav-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--nav-border);
   box-shadow: var(--nav-shadow);
-  position: sticky;
-  top: 0;
-  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transform: translateY(0);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.topouter.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .top {
@@ -120,9 +145,9 @@ body {
 
 .title {
   margin: 0;
-  font-size: 108%;
+  font-size: 106%;
   font-variant: small-caps;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -131,7 +156,7 @@ body {
 }
 
 .site-title-link {
-  color: var(--text-main);
+  color: var(--heading-color);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -140,22 +165,21 @@ body {
   color: var(--accent-burgundy);
 }
 
-/* Carlini Vintage Theme Toggle */
+/* Refined Minimalist Theme Toggle */
 .theme-toggle-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.3em;
+  gap: 0.35em;
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   color: var(--text-main);
   border-radius: 4px;
-  padding: 0.18em 0.55em;
+  padding: 0.2em 0.6em;
   font-family: "Lora", "EB Garamond", Georgia, serif;
   font-size: 80%;
   font-variant: small-caps;
   letter-spacing: 0.05em;
   cursor: pointer;
-  transition: all 0.2s ease;
   user-select: none;
   outline: none;
   margin-left: 0.5em;
@@ -189,7 +213,7 @@ body.light .theme-icon-dark {
 }
 
 /* --------------------------------------------------------------------------
-   Carlini-Style Vintage Curriculum Vitæ Dropdown
+   Minimalist Elegant Curriculum Vitæ Dropdown
    -------------------------------------------------------------------------- */
 .nav-dropdown {
   position: relative;
@@ -201,53 +225,58 @@ button.nav-dropbtn {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
-  border: 1px solid #442222;
-  border-radius: 0.25em;
-  padding: 0.22em 0.6em;
-  color: #FFFFFF !important;
-  background: var(--accent-burgundy, #641C26);
+  border: 1px solid var(--border-card);
+  border-radius: 4px;
+  padding: 0.22em 0.65em;
+  color: var(--heading-color) !important;
+  background: var(--bg-card);
   font-family: "Lora", "EB Garamond", Georgia, serif;
   font-size: 85%;
   font-variant: small-caps;
   letter-spacing: 0.05em;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
   outline: none;
   line-height: normal;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 button.nav-dropbtn:hover,
 .nav-dropdown:hover button.nav-dropbtn,
 .nav-dropdown.open button.nav-dropbtn {
-  background: var(--accent-burgundy-hover, #7b2734);
-  border-color: #663333;
+  background: var(--bg-card);
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy) !important;
   transform: translateY(-1px);
 }
 
 .drop-arrow {
-  font-size: 72%;
+  font-size: 70%;
   display: inline-block;
   transition: transform 0.25s ease;
-  margin-left: 0.1em;
+  margin-left: 0.15em;
+  opacity: 0.7;
 }
 
 .nav-dropdown:hover .drop-arrow,
 .nav-dropdown.open .drop-arrow {
   transform: rotate(180deg);
+  opacity: 1;
 }
 
 .nav-dropdown-menu {
   position: absolute;
   top: 100%;
   right: 0;
-  margin-top: 0.35em;
-  min-width: 195px;
-  background: var(--bg-box);
+  margin-top: 0.45em;
+  min-width: 230px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-card);
-  border-radius: 4px;
-  box-shadow: var(--card-shadow);
-  padding: 0.35em 0;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  padding: 0.4em 0;
   z-index: 1050;
   display: none;
   text-align: left;
@@ -257,17 +286,17 @@ button.nav-dropbtn:hover,
 .nav-dropdown-menu::before {
   content: "";
   position: absolute;
-  top: -0.45em;
+  top: -0.5em;
   left: 0;
   right: 0;
-  height: 0.45em;
+  height: 0.5em;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu,
 .nav-dropdown.open .nav-dropdown-menu {
   display: block;
-  animation: carliniDropdownFade 0.16s ease-out;
+  animation: carliniDropdownFade 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes carliniDropdownFade {
@@ -282,8 +311,10 @@ button.nav-dropbtn:hover,
 }
 
 .nav-dropdown-item {
-  display: block !important;
-  padding: 0.45em 0.85em !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 0.95em !important;
   margin: 0 !important;
   color: var(--text-main) !important;
   font-family: "Lora", "EB Garamond", Georgia, serif !important;
@@ -292,39 +323,51 @@ button.nav-dropbtn:hover,
   letter-spacing: 0.04em !important;
   text-decoration: none !important;
   white-space: nowrap !important;
-  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .nav-dropdown-item:hover {
   background: var(--bg-card) !important;
-  color: var(--accent-burgundy, #641C26) !important;
-  transform: translateX(3px);
+  color: var(--accent-burgundy) !important;
+  transform: translateX(2px);
+}
+
+.nav-item-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 68%;
+  font-weight: 600;
+  padding: 0.12em 0.45em;
+  border-radius: 3px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.nav-dropdown-item:hover .nav-item-badge {
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy);
+}
+
+.nav-item-badge.badge-accent {
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #f59e0b;
+}
+
+.nav-item-badge.badge-reel {
+  border-color: rgba(244, 63, 94, 0.4);
+  color: var(--accent-burgundy);
+}
+
+.nav-item-badge.badge-sync {
+  border-color: rgba(56, 189, 248, 0.4);
+  color: var(--accent-link);
 }
 
 .nav-dropdown-divider {
   height: 1px;
   background: var(--border-light);
-  margin: 0.25em 0;
-}
-
-.nav-sync-item {
-  color: #0369A1 !important;
-  font-size: 82% !important;
-}
-
-.nav-sync-item:hover {
-  color: #0284C7 !important;
-  background: #F0F9FF !important;
-}
-
-.site-title-link {
-  color: #1A1A1A;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.site-title-link:hover {
-  color: var(--accent-link);
+  margin: 0.3em 0;
 }
 
 .links {
@@ -377,21 +420,22 @@ a.button {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border: 1px solid #442222;
-  border-radius: 0.25em;
-  padding: 0.2em 0.55em;
+  border: 1px solid var(--border-card);
+  border-radius: 4px;
+  padding: 0.25em 0.65em;
   color: #FFFFFF !important;
   background: var(--accent-burgundy);
-  transition: all 0.3s ease;
-  font-size: 85%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  font-size: 84%;
+  font-family: "Lora", "EB Garamond", Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
 }
 
 a.button:hover {
   color: #FFFFFF !important;
   background: var(--accent-burgundy-hover);
-  border-color: #663333;
+  border-color: var(--accent-burgundy-hover);
   transform: translateY(-1px);
 }
 
@@ -407,7 +451,7 @@ a.button:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #CC4444;
+  background-color: var(--accent-burgundy);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -422,7 +466,7 @@ a.button:hover {
 .container {
   padding-left: 1em;
   padding-right: 1em;
-  padding-top: 2em;
+  padding-top: 4.6em;
 }
 
 .outer {
@@ -572,21 +616,16 @@ p {
 
 .rightelement {
   background: var(--bg-card);
-  padding: 10px;
-  border-radius: 4px;
+  padding: 12px;
+  border-radius: 6px;
   border: 1px solid var(--border-card);
   box-shadow: var(--card-shadow);
-  width: 14.5em;
-  text-align: center;
-  transition: background 0.25s ease, border-color 0.25s ease;
-}
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   width: 14.5em;
   text-align: center;
 }
 
 .rightelement img {
-  border-radius: 3px;
+  border-radius: 4px;
   width: 100%;
   max-width: 220px;
   height: auto;
@@ -609,26 +648,79 @@ p {
 }
 
 .location-tag {
-  color: #666666;
+  color: var(--text-muted);
   font-size: 85%;
 }
 
 .email-text {
   font-family: "JetBrains Mono", monospace;
   font-size: 78%;
-  color: #444444;
+  color: var(--text-muted);
   display: inline-block;
   margin: 0.3em 0;
 }
 
 .card-social-links {
   margin-top: 0.4em;
-  font-size: 95%;
+  font-size: 92%;
 }
 
 .card-social-links .sep {
-  color: #BBBBBB;
+  color: var(--border-light);
   margin: 0 0.2em;
+}
+
+/* Minimalist CV & Executive Deck Action Grid */
+.cv-quick-grid {
+  margin-top: 0.85em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45em;
+}
+
+.cv-quick-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em;
+  padding: 0.38em 0.45em;
+  border-radius: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  color: var(--text-main);
+  font-size: 79%;
+  font-family: "Lora", "EB Garamond", Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cv-quick-btn:hover {
+  background: var(--bg-box);
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv-quick-btn.cv-featured-deck {
+  border-color: rgba(245, 158, 11, 0.35);
+  color: var(--text-main);
+}
+.cv-quick-btn.cv-featured-deck:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.cv-quick-btn.cv-featured-reel {
+  border-color: rgba(244, 63, 94, 0.35);
+  color: var(--text-main);
+}
+.cv-quick-btn.cv-featured-reel:hover {
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy);
 }
 
 .contact {
@@ -639,21 +731,21 @@ p {
    Headings & Dividers
    -------------------------------------------------------------------------- */
 .section-heading {
-  border-bottom: 2px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   padding-bottom: 0.35em;
   padding-top: 0.4em;
   line-height: 125%;
-  font-size: 1.28em;
+  font-size: 1.25em;
   font-weight: 600;
   margin-bottom: 0.85em;
-  color: #1A1A1A;
+  color: var(--heading-color);
   font-variant: small-caps;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
 }
 
 hr.vintage-divider {
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid var(--border-light);
   margin: 2.5em 0 2em 0;
   clear: both;
 }
@@ -747,7 +839,7 @@ hr.vintage-divider {
 .publication {
   padding-bottom: 2em;
   margin-bottom: 2em;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid var(--border-light);
   position: relative;
 }
 
@@ -776,8 +868,8 @@ hr.vintage-divider {
   border: 1px solid var(--border-card);
   border-radius: 6px;
   overflow: hidden;
-  background: #F4F4F6;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background: var(--bg-card);
+  box-shadow: var(--card-shadow);
   transition: all 0.25s ease-in-out;
 }
 
@@ -838,14 +930,14 @@ hr.vintage-divider {
 
 a.button.button-outline,
 .button-outline {
-  background: #FFFFFF !important;
-  color: #633333 !important;
-  border: 1px solid #633333 !important;
+  background: transparent !important;
+  color: var(--accent-burgundy) !important;
+  border: 1px solid var(--accent-burgundy) !important;
 }
 
 a.button.button-outline:hover,
 .button-outline:hover {
-  background: #633333 !important;
+  background: var(--accent-burgundy) !important;
   color: #FFFFFF !important;
 }
 
@@ -862,12 +954,12 @@ a.button.button-outline:hover,
 
 .me {
   font-weight: 600;
-  color: #111111;
+  color: var(--heading-color);
 }
 
 .venue {
   font-style: italic;
-  color: #555555;
+  color: var(--text-muted);
   font-size: 90%;
   display: inline-block;
   margin-right: 0.5em;
@@ -876,28 +968,30 @@ a.button.button-outline:hover,
 span.award {
   background: var(--award-bg);
   color: var(--award-text);
-  border: 1px solid #FFEBAA;
+  border: 1px solid var(--award-border);
   border-radius: 3px;
   font-weight: 600;
   font-size: 76%;
   padding: 0.15em 0.5em;
   display: inline-block;
   vertical-align: middle;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .pub-lead-desc {
   font-size: 88%;
-  color: #333333;
+  color: var(--text-main);
   margin: 0.3em 0 0.45em 0;
-  line-height: 152%;
+  line-height: 155%;
 }
 
 .abstract-toggle-btn {
   cursor: pointer;
   font-size: 80%;
   color: var(--accent-link);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Lora", "EB Garamond", Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
   font-weight: 600;
   display: inline-block;
   margin-bottom: 0.4em;
@@ -915,10 +1009,12 @@ input[type="checkbox"] {
 }
 
 .abstract {
-  padding-left: 1.8em;
-  padding-right: 1.8em;
+  padding-left: 1.6em;
+  padding-right: 1.6em;
   margin-top: 0.6em;
-  background: #FBFBFB;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
   border-left: 3px solid var(--accent-burgundy);
   border-radius: 0 4px 4px 0;
   max-height: 0;
@@ -935,7 +1031,7 @@ input[type="checkbox"]:checked ~ .abstract {
 
 .tech-tag {
   font-size: 84%;
-  color: #555555;
+  color: var(--text-muted);
   font-style: normal;
   margin-top: 0.4em;
   line-height: 150%;
@@ -943,18 +1039,18 @@ input[type="checkbox"]:checked ~ .abstract {
 
 .deploy-tag {
   font-size: 80%;
-  font-family: "Fira Code", monospace;
-  color: #222222;
-  background: #F0F2F5;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--text-main);
+  background: var(--code-bg);
   padding: 0.35em 0.7em;
   border-radius: 4px;
-  border: 1px solid #D5DAE0;
+  border: 1px solid var(--border-light);
   margin-top: 0.5em;
   overflow-x: auto;
 }
 
 .deploy-tag code {
-  color: #A02020;
+  color: var(--accent-burgundy);
   font-weight: 600;
 }
 
@@ -979,12 +1075,13 @@ input[type="checkbox"]:checked ~ .abstract {
 .timeline-item {
   margin-bottom: 1.8em;
   padding-left: 1.2em;
-  border-left: 2px solid #E2E8F0;
+  border-left: 2px solid var(--border-light);
 }
 
 .timeline-header {
   font-size: 1.05em;
   margin-bottom: 0.4em;
+  color: var(--heading-color);
 }
 
 .role-title {
@@ -995,7 +1092,7 @@ input[type="checkbox"]:checked ~ .abstract {
 .timeline-date {
   float: right;
   font-size: 85%;
-  color: #777777;
+  color: var(--text-muted);
   font-style: italic;
 }
 
@@ -1020,7 +1117,7 @@ ul.carlini-list li {
   padding-top: 2em;
   padding-bottom: 1em;
   font-size: 82%;
-  color: #777777;
+  color: var(--text-muted);
   border-top: 1px solid var(--border-light);
   margin-top: 3em;
 }
@@ -1182,7 +1279,7 @@ ul.carlini-list li {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
-  padding: 0.25em 0.65em;
+  padding: 0.28em 0.65em;
   background: var(--bg-box);
   border: 1px solid var(--border-card);
   border-radius: 3px;
@@ -1214,6 +1311,39 @@ ul.carlini-list li {
 
 .eco-dot.active {
   background-color: var(--accent-burgundy);
+}
+
+.eco-tag-reel {
+  border-color: rgba(244, 63, 94, 0.35);
+}
+.eco-tag-reel:hover {
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy);
+}
+.eco-dot-reel {
+  background-color: var(--accent-burgundy);
+}
+
+.eco-tag-deck {
+  border-color: rgba(245, 158, 11, 0.35);
+}
+.eco-tag-deck:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+.eco-dot-deck {
+  background-color: #f59e0b;
+}
+
+.eco-tag-sync {
+  border-color: rgba(56, 189, 248, 0.35);
+}
+.eco-tag-sync:hover {
+  border-color: var(--accent-link);
+  color: var(--accent-link);
+}
+.eco-dot-sync {
+  background-color: var(--accent-link);
 }
 
 /* --------------------------------------------------------------------------
@@ -1352,7 +1482,6 @@ ul.carlini-list li {
   flex-direction: column;
   gap: 0.5em;
   text-align: center;
-  transition: all 0.2s ease;
 }
 
 .live-visitor-card:hover {
@@ -1415,7 +1544,7 @@ ul.carlini-list li {
   font-variant: small-caps;
   letter-spacing: 0.12em;
   font-weight: 700;
-  color: #0F766E;
+  color: #10B981;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -1426,7 +1555,7 @@ ul.carlini-list li {
   flex-wrap: wrap;
   gap: 0.6em;
   font-size: 82%;
-  color: #334155;
+  color: var(--text-muted);
 }
 
 .visitor-metric-item {
@@ -1436,20 +1565,20 @@ ul.carlini-list li {
 }
 
 .metric-label {
-  color: #64748B;
+  color: var(--text-muted);
   font-size: 92%;
 }
 
 .metric-value {
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
-  color: #0F172A;
+  color: var(--heading-color);
   font-size: 108%;
   letter-spacing: -0.02em;
 }
 
 .metric-sep {
-  color: #CBD5E1;
+  color: var(--border-light);
 }
 
 .metric-link {
@@ -1468,8 +1597,8 @@ ul.carlini-list li {
   font-size: 88%;
   color: #10B981;
   font-weight: 600;
-  background: #ECFDF5;
+  background: rgba(16, 185, 129, 0.12);
   padding: 0.1em 0.4em;
   border-radius: 3px;
-  border: 1px solid #A7F3D0;
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
