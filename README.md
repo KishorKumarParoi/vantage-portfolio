@@ -3,6 +3,8 @@
 <div align="center">
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-kishor.tech-800000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://kishor.tech)
+[![Executive Pitch Deck](https://img.shields.io/badge/Executive_Pitch_Deck-pptx.kishor.tech-FFD700?style=for-the-badge&logo=microsoftpowerpoint&logoColor=black)](https://pptx.kishor.tech)
+[![4K Cinematic Reel](https://img.shields.io/badge/YouTube_Video-4K_Cinematic_Reel-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=mqX-2FW3o0Q)
 [![macOS Desktop Portfolio](https://img.shields.io/badge/macOS_Ecosystem-macos.kishor.tech-000000?style=for-the-badge&logo=apple&logoColor=white)](https://macos.kishor.tech)
 [![3D WebGL Platform](https://img.shields.io/badge/3D_Platform-3d.kishor.tech-4B0082?style=for-the-badge&logo=three.js&logoColor=white)](https://3d.kishor.tech)
 [![3D Cyber Hacker](https://img.shields.io/badge/Hacker_Cockpit-hacker.kishor.tech-008080?style=for-the-badge&logo=gnubash&logoColor=white)](https://hacker.kishor.tech)
@@ -40,6 +42,8 @@
 | Platform | URL | Architecture Highlights |
 | :--- | :--- | :--- |
 | **🎓 Kishor.tech (Main Academic Portfolio)** | **[kishor.tech](https://kishor.tech)** | Minimalist academic layout, sub-35ms Hybrid RAG, 38-module AI curriculum |
+| **💎 Executive AI Pitch Deck (Widescreen 16:9)** | **[pptx.kishor.tech](https://pptx.kishor.tech)** | 24-slide executive presentation, all 15 architectures, interactive Office Online viewer |
+| **🎬 4K Systems Architecture Reel (90s)** | **[YouTube (4K 60FPS)](https://www.youtube.com/watch?v=mqX-2FW3o0Q)** | High-impact cinematic walkthrough: LangGraph agent mesh, Rust SIMD, and vLLM |
 | **💻 macos-portfolio (Desktop Environment)** | **[macos.kishor.tech](https://macos.kishor.tech)** | Interactive desktop OS emulator with draggable windows, dock, and terminal CLI |
 | **🧊 3d (Interactive 3D WebGL Platform)** | **[3d.kishor.tech](https://3d.kishor.tech)** | React 19.2, Rolldown Vite, Tailwind v4, GSAP 3.13 camera choreography |
 | **⚡ hacker (3D Cyber Hacker Workstation)** | **[hacker.kishor.tech](https://hacker.kishor.tech)** | 3D Cyber Hacker command room, CRT monitor shaders, Web Audio, terminal HUD |
