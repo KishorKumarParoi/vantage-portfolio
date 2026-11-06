@@ -306,23 +306,23 @@
 \end{itemize}
 
 \vspace{2.0pt}
-\noindent\textbf{12. FlashAttention-2 \& 3 Custom CUDA Attention Kernel} \hfill {\small\textit{Oct 2026 -- Present}}\\
-\textit{Bare-Metal CUDA / C++, Tiled Online Softmax, Bank Conflict 2D Swizzling \& Roofline Analysis} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/cuda-attention-kernel}{\textbf{GitHub: cuda-attention-kernel}}}
+\noindent\textbf{12. FlashAttention-2, 3 \& Flash-Decoding Custom CUDA Attention Kernel} \hfill {\small\textit{Oct 2026 -- Present}}\\
+\textit{Bare-Metal CUDA / C++, Flash-Decoding (Split-KV), PagedAttention, Sliding Window \& FP8 Attention} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/cuda-attention-kernel}{\textbf{GitHub: cuda-attention-kernel}}}
 \begin{itemize}
-    \item Engineered bare-metal \textbf{CUDA FlashAttention-2 \& 3 kernels} from first principles for NVIDIA Ampere \& Hopper; eliminated $O(N^2)$ HBM memory bottleneck via \textbf{Tiled Online Softmax}, bounding attention memory to $O(N)$ linear footprint.
-    \item Implemented microarchitectural optimizations: padded shared memory strides (\texttt{[Br][d + 4]}) eliminating 32-way bank conflicts, intra-warp register shuffles (\texttt{\_\_shfl\_down\_sync}) in 5 clock cycles, and causal block skipping cutting FLOPs by \textbf{50\%}.
-    \item Designed $O(N)$ backward pass via \textbf{SRAM recomputation} using forward log-sum-exp vectors ($L_i = m_i + \log l_i$); delivered \textbf{3.8x higher throughput on $>$32K sequence lengths} and averted GPU out-of-memory crashes up to 64K context.
-    \item Authored comprehensive Roofline operational intensity analyzer and automated FLOPs profiler, validating exact forward and backward numerical parity against PyTorch native attention across 19 unit test suites.
+    \item Engineered bare-metal \textbf{CUDA FlashAttention-2 \& 3 kernels} eliminating $O(N^2)$ HBM memory bottleneck via \textbf{Tiled Online Softmax}; implemented \textbf{Flash-Decoding (Split-KV)} restoring \textbf{100\% SM occupancy} during token generation ($S_q = 1$) for \textbf{8x lower decoding latency}.
+    \item Constructed \textbf{PagedAttention virtual memory engine} managing non-contiguous physical block tables, slashing KV cache memory fragmentation waste from 60--80\% down to \textbf{$<$4\%} and tripling concurrent serving batch sizes.
+    \item Implemented microarchitectural optimizations: padded shared memory strides (\texttt{[Br][d + 4]}) eliminating 32-way bank conflicts, intra-warp register shuffles (\texttt{\_\_shfl\_down\_sync}), tile-pruned sliding window attention with fused ALiBi, and FP8 (E4M3/E5M2) scaled attention.
+    \item Designed $O(N)$ backward pass via \textbf{SRAM recomputation} using forward log-sum-exp vectors ($L_i = m_i + \log l_i$); verified exact numerical equivalence against PyTorch native attention across 39 unit test suites.
 \end{itemize}
 
 \vspace{2.0pt}
 \noindent\textbf{13. Distributed LLM Training Framework (4D Parallelism \& Ring All-Reduce)} \hfill {\small\textit{Oct 2026 -- Present}}\\
-\textit{4D Parallelism (TP x PP x DP x SP), Megatron-LM, 1F1B Schedule, ZeRO-3 \& Ring All-Reduce} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/distributed-llm-training}{\textbf{GitHub: distributed-llm-training}}}
+\textit{4D Parallelism (TP x PP x DP x SP), Interleaved 1F1B, ZeRO-3 FSDP, Ring Attention \& DCP} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/distributed-llm-training}{\textbf{GitHub: distributed-llm-training}}}
 \begin{itemize}
-    \item Handcrafted scalable distributed training framework for LLaMA-3 (8B/70B) implementing \textbf{4D Parallelism (Megatron Tensor Parallelism, 1F1B Pipeline Parallelism schedule, ZeRO-1/2/3 Optimizer/Gradient sharding, and Sequence Parallelism)}.
-    \item Implemented custom \textbf{Ring All-Reduce collective communication engine} proving $2 \cdot \frac{P-1}{P} N B$ bandwidth optimality; made communication latency invariant to cluster size $P$, sustaining \textbf{49.07\% MFU} across 64x NVIDIA H100s.
-    \item Engineered dual-stream CUDA asynchronous communication hiding (overlapping TP All-Reduce with MLP GEMM), activation checkpointing bounding bubble ratio ($F_{\text{bubble}} = \frac{P-1}{M+P-1} < 11\%$), and non-blocking pinned host checkpointing.
-    \item Integrated SwiGLU activations, RMSNorm, Rotary Position Embeddings (RoPE), and automated Frobenius-norm gradient health monitoring with automated Inf/NaN rollback.
+    \item Handcrafted scalable distributed training framework for LLaMA-3 (8B/70B) implementing \textbf{4D Parallelism (Megatron Tensor Parallelism, Interleaved 1F1B Pipeline Parallelism with virtual stages, ZeRO-3 FSDP parameter sharding, and Ring Attention Context Parallelism)}.
+    \item Implemented \textbf{ZeRO-3 dynamic parameter lifecycle} (pre-forward All-Gather, post-backward Reduce-Scatter), reducing per-GPU memory to $\frac{16\Phi}{N_{\text{DP}}}$ and sustaining \textbf{49.07\% MFU across 64x NVIDIA H100s} via custom Ring All-Reduce ($2 \cdot \frac{P-1}{P} N B$).
+    \item Engineered \textbf{Ring Attention context parallelism} with multi-hop online softmax and 100\% comm-comp overlap for 1M+ tokens; deployed \textbf{Megatron-LM v2 Interleaved 1F1B schedule} cutting bubble fraction by up to \textbf{70\%} ($F_{\text{bubble}} \approx \frac{P-1}{v \cdot M}$).
+    \item Built \textbf{Distributed Asynchronous Checkpointing (DCP)} with dynamic topology resharding across mismatched GPU cluster sizes; verified across 24 unit test suites.
 \end{itemize}
 
 \vspace{2.0pt}

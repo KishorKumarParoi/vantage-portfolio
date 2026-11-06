@@ -375,14 +375,14 @@
         
         <div class="item-block">
           <div class="item-header">
-            <span class="item-title">FlashAttention-2 & 3 Custom CUDA Attention Kernel <a href="https://github.com/KishorKumarParoi/cuda-attention-kernel" target="_blank" title="GitHub Repository" style="color: var(--burgundy); text-decoration: none; font-size: 7.0pt; margin-left: 3px;"><i class="fa-brands fa-github"></i></a></span>
+            <span class="item-title">FlashAttention-2, 3 & Flash-Decoding Kernel <a href="https://github.com/KishorKumarParoi/cuda-attention-kernel" target="_blank" title="GitHub Repository" style="color: var(--burgundy); text-decoration: none; font-size: 7.0pt; margin-left: 3px;"><i class="fa-brands fa-github"></i></a></span>
             <span class="item-date">Oct'26 -- Present</span>
           </div>
-          <div class="item-subtitle">Bare-Metal CUDA/C++, Tiled Online Softmax & Roofline</div>
+          <div class="item-subtitle">Bare-Metal CUDA/C++, Split-KV, PagedAttention & FP8</div>
           <ul class="compact-list">
-            <li>Handcrafted <strong>CUDA FlashAttention-2 & 3</strong> on Ampere/Hopper; eliminated $O(N^2)$ HBM bottleneck via <strong>Tiled Online Softmax</strong>, bounding memory to $O(N)$ linear footprint.</li>
-<li>Padded shared memory strides ([Br][d+4]) eliminating 32-way bank conflicts and intra-warp shuffle reductions (__shfl_down_sync) in 5 cycles.</li>
-<li>Designed $O(N)$ backward pass via <strong>SRAM recomputation</strong>; delivered <strong>3.8x throughput on >32K context</strong> with automated Roofline operational intensity analyzer.</li>
+            <li>Handcrafted <strong>CUDA FlashAttention-2 & 3</strong>; eliminated $O(N^2)$ memory via <strong>Tiled Online Softmax</strong>; built <strong>Flash-Decoding (Split-KV)</strong> achieving <strong>100% SM occupancy</strong> for <strong>8x lower decode latency</strong>.</li>
+<li>Engineered <strong>PagedAttention virtual paging</strong> over physical block tables (<4% waste), tile-pruned sliding window attention with fused ALiBi, and FP8 scaled attention.</li>
+<li>Designed $O(N)$ backward pass via <strong>SRAM recomputation</strong>; verified bitwise numerical equivalence against PyTorch native attention across 39 unit test suites.</li>
           </ul>
         </div>
         <div class="project-divider"></div>
@@ -392,11 +392,11 @@
             <span class="item-title">Distributed LLM Training Framework (4D Parallelism) <a href="https://github.com/KishorKumarParoi/distributed-llm-training" target="_blank" title="GitHub Repository" style="color: var(--burgundy); text-decoration: none; font-size: 7.0pt; margin-left: 3px;"><i class="fa-brands fa-github"></i></a></span>
             <span class="item-date">Oct'26 -- Present</span>
           </div>
-          <div class="item-subtitle">4D Parallelism (TP x PP x DP x SP), ZeRO-3 & Ring All-Reduce</div>
+          <div class="item-subtitle">4D Parallelism (TP x PP x DP x SP), Interleaved 1F1B & ZeRO-3</div>
           <ul class="compact-list">
-            <li>Handcrafted distributed training for LLaMA-3 (8B/70B) with <strong>Megatron TP, 1F1B PP schedule, ZeRO-1/2/3, and Sequence Parallelism with Ring Attention</strong>.</li>
-<li>Implemented custom <strong>Ring All-Reduce engine</strong> ($2\frac{P-1}{P}NB$ volume); achieved size-invariant latency and sustained <strong>49.07% MFU across 64x H100s</strong>.</li>
-<li>Designed dual-stream CUDA asynchronous communication hiding (TP All-Reduce with MLP GEMM) and non-blocking pinned host memory checkpointing.</li>
+            <li>Handcrafted distributed framework for LLaMA-3 (8B/70B) with <strong>Megatron TP, Interleaved 1F1B PP with virtual stages, ZeRO-3 FSDP, and Ring Attention Context Parallelism</strong>.</li>
+<li>Implemented dynamic <strong>ZeRO-3 parameter lifecycle</strong> and custom <strong>Ring All-Reduce</strong> ($2\frac{P-1}{P}NB$); sustained <strong>49.07% MFU across 64x H100s</strong>.</li>
+<li>Engineered <strong>Ring Attention context parallelism</strong> (1M+ tokens, 100% comm overlap) and <strong>Distributed Asynchronous Checkpointing (DCP)</strong> with topology resharding.</li>
           </ul>
         </div>
         <div class="project-divider"></div>

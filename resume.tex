@@ -266,22 +266,22 @@
 
     \vspace{0.8pt}\noindent{\color{lightgray}\hrule height 0.3pt}\vspace{1.2pt}
     % PROJECT: FLASHATTENTION
-    \noindent\textbf{FlashAttention-2 \& 3 Custom CUDA Attention Kernel} \hfill {\footnotesize\textit{Oct'26 -- Present}}\\
-    \textit{Bare-Metal CUDA/C++, Tiled Online Softmax \& Roofline} \href{https://github.com/KishorKumarParoi/cuda-attention-kernel}{\faGithub}
+    \noindent\textbf{FlashAttention-2, 3 \& Flash-Decoding Kernel} \hfill {\footnotesize\textit{Oct'26 -- Present}}\\
+    \textit{Bare-Metal CUDA/C++, Split-KV, PagedAttention \& FP8} \href{https://github.com/KishorKumarParoi/cuda-attention-kernel}{\faGithub}
     \begin{itemize}
-        \item Handcrafted \textbf{CUDA FlashAttention-2 \& 3} on Ampere/Hopper; eliminated $O(N^2)$ HBM bottleneck via \textbf{Tiled Online Softmax}, bounding memory to $O(N)$ linear footprint.
-        \item Padded shared memory strides (\texttt{[Br][d+4]}) eliminating 32-way bank conflicts and intra-warp shuffle reductions (\texttt{\_\_shfl\_down\_sync}) in 5 cycles.
-        \item Designed $O(N)$ backward pass via \textbf{SRAM recomputation}; delivered \textbf{3.8x throughput on $>$32K context} with automated Roofline operational intensity analyzer.
+        \item Handcrafted \textbf{CUDA FlashAttention-2 \& 3}; eliminated $O(N^2)$ memory via \textbf{Tiled Online Softmax}; built \textbf{Flash-Decoding (Split-KV)} achieving \textbf{100\% SM occupancy} for \textbf{8x lower decode latency}.
+        \item Engineered \textbf{PagedAttention virtual paging} over physical block tables ($<$4\% waste), tile-pruned sliding window attention with fused ALiBi, and FP8 scaled attention.
+        \item Designed $O(N)$ backward pass via \textbf{SRAM recomputation}; verified bitwise numerical equivalence against PyTorch native attention across 39 unit test suites.
     \end{itemize}
 
     \vspace{0.8pt}\noindent{\color{lightgray}\hrule height 0.3pt}\vspace{1.2pt}
     % PROJECT: DISTRIBUTED LLM TRAINING
     \noindent\textbf{Distributed LLM Training Framework (4D Parallelism)} \hfill {\footnotesize\textit{Oct'26 -- Present}}\\
-    \textit{4D Parallelism (TP x PP x DP x SP), ZeRO-3 \& Ring All-Reduce} \href{https://github.com/KishorKumarParoi/distributed-llm-training}{\faGithub}
+    \textit{4D Parallelism (TP x PP x DP x SP), Interleaved 1F1B \& ZeRO-3} \href{https://github.com/KishorKumarParoi/distributed-llm-training}{\faGithub}
     \begin{itemize}
-        \item Handcrafted distributed training for LLaMA-3 (8B/70B) with \textbf{Megatron TP, 1F1B PP schedule, ZeRO-1/2/3, and Sequence Parallelism with Ring Attention}.
-        \item Implemented custom \textbf{Ring All-Reduce engine} ($2\frac{P-1}{P}NB$ volume); achieved size-invariant latency and sustained \textbf{49.07\% MFU across 64x H100s}.
-        \item Designed dual-stream CUDA asynchronous communication hiding (TP All-Reduce with MLP GEMM) and non-blocking pinned host memory checkpointing.
+        \item Handcrafted distributed framework for LLaMA-3 (8B/70B) with \textbf{Megatron TP, Interleaved 1F1B PP with virtual stages, ZeRO-3 FSDP, and Ring Attention Context Parallelism}.
+        \item Implemented dynamic \textbf{ZeRO-3 parameter lifecycle} and custom \textbf{Ring All-Reduce} ($2\frac{P-1}{P}NB$); sustained \textbf{49.07\% MFU across 64x H100s}.
+        \item Engineered \textbf{Ring Attention context parallelism} (1M+ tokens, 100\% comm overlap) and \textbf{Distributed Asynchronous Checkpointing (DCP)} with topology resharding.
     \end{itemize}
 
     \vspace{0.8pt}\noindent{\color{lightgray}\hrule height 0.3pt}\vspace{1.2pt}
