@@ -1084,6 +1084,228 @@ const stats = await peer.getStats();<br>
                   </div>
                 </div>
               </div>
+
+              <!-- System 14: CUDA FlashAttention-2 & 3 -->
+              <div class="publication">
+                <div class="pub-row">
+                  <div class="pub-thumb">
+                    <a href="images/projects/cuda/01_cuda_attention.svg" target="_blank" rel="noopener" class="thumb-link" title="Click to view full CUDA FlashAttention architecture">
+                      <img src="images/projects/cuda/01_cuda_attention.svg" alt="CUDA FlashAttention-2 Architecture" loading="lazy" decoding="async">
+                    </a>
+                    <div class="pub-thumb-caption">
+                      <a href="images/projects/cuda/01_cuda_attention.svg" target="_blank" rel="noopener">🔍 Architecture Blueprint</a>
+                    </div>
+                  </div>
+                  <div class="pub-body">
+                    <div class="pubstuff">
+                      <span class="rightlinks">
+                        <a href="https://github.com/KishorKumarParoi/cuda-attention-kernel" target="_blank" rel="noopener" class="button">Code</a>
+                        <a href="images/projects/cuda/01_cuda_attention.svg" target="_blank" rel="noopener" class="button button-outline">Blueprint</a>
+                        <a href="https://github.com/KishorKumarParoi/cuda-attention-kernel/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener" class="button button-outline">Docs</a>
+                      </span>
+                    </div>
+                    <p>
+                      <label for="pub-cuda" class="paper-title">
+                        <strong>FlashAttention-2 &amp; 3 Custom CUDA Attention Kernel</strong>
+                      </label>
+                      <br>
+                      <span class="me">Kishor Kumar Paroi</span>
+                      <br>
+                      <span class="venue">Bare-Metal CUDA / C++ &bull; NVIDIA Ampere &amp; Hopper SXM5 &bull; Roofline Analysis</span>
+                      <span class="award">O(N) Linear Footprint &bull; 3.8x Throughput &gt;32K</span>
+                    </p>
+                    <p class="pub-lead-desc">
+                      Bare-metal CUDA Attention Kernel based on FlashAttention-2 &amp; 3, eliminating the O(N^2) HBM traffic bottleneck via Tiled Online Softmax in fast on-chip SRAM with zero bank conflicts.
+                    </p>
+                    <input type="checkbox" id="pub-cuda">
+                    <label for="pub-cuda" class="abstract-toggle-btn">[Click for Architecture &amp; Benchmark Deep-Dive &#9662;]</label>
+                    <div class="abstract">
+                      <p>
+                        <strong>Architectural Abstract:</strong> Handcrafted CUDA kernel with padded shared memory strides (<code>[Br][d + 4]</code>) eliminating 32-way bank conflicts, intra-warp register shuffle reductions (<code>__shfl_down_sync</code>) in 5 clock cycles, causal block skipping cutting FLOPs by 50%, and an O(N) backward pass via SRAM recomputation. Sustains over 214 TFLOPs on H100 SXM5.
+                      </p>
+                      <p class="tech-tag"><strong>Key Stack:</strong> CUDA C++, PyTorch C++ Extensions, NVIDIA Ampere/Hopper Tensor Cores, Roofline Model Analyzer.</p>
+                      <p class="deploy-tag"><strong>Runbook:</strong> <code>git clone https://github.com/KishorKumarParoi/cuda-attention-kernel.git &amp;&amp; cd cuda-attention-kernel &amp;&amp; make test</code></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- System 15: Distributed LLM Training System -->
+              <div class="publication">
+                <div class="pub-row">
+                  <div class="pub-thumb">
+                    <a href="images/projects/distributed/01_distributed_mesh.svg" target="_blank" rel="noopener" class="thumb-link" title="Click to view full 4D Parallelism architecture">
+                      <img src="images/projects/distributed/01_distributed_mesh.svg" alt="Distributed LLM Training 4D Mesh" loading="lazy" decoding="async">
+                    </a>
+                    <div class="pub-thumb-caption">
+                      <a href="images/projects/distributed/01_distributed_mesh.svg" target="_blank" rel="noopener">🔍 Architecture Blueprint</a>
+                    </div>
+                  </div>
+                  <div class="pub-body">
+                    <div class="pubstuff">
+                      <span class="rightlinks">
+                        <a href="https://github.com/KishorKumarParoi/distributed-llm-training" target="_blank" rel="noopener" class="button">Code</a>
+                        <a href="images/projects/distributed/01_distributed_mesh.svg" target="_blank" rel="noopener" class="button button-outline">Blueprint</a>
+                        <a href="https://github.com/KishorKumarParoi/distributed-llm-training/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener" class="button button-outline">Docs</a>
+                      </span>
+                    </div>
+                    <p>
+                      <label for="pub-dist" class="paper-title">
+                        <strong>Distributed LLM Training Framework (4D Parallelism &amp; Ring All-Reduce)</strong>
+                      </label>
+                      <br>
+                      <span class="me">Kishor Kumar Paroi</span>
+                      <br>
+                      <span class="venue">4D Parallelism (TP &bull; PP &bull; DP &bull; SP) &bull; ZeRO-1/2/3 FSDP &bull; Ring All-Reduce</span>
+                      <span class="award">49.07% MFU on 64x H100 &bull; 2·(P-1)/P·N·B Optimal</span>
+                    </p>
+                    <p class="pub-lead-desc">
+                      Scalable distributed training framework for LLaMA-3 (8B/70B) implementing 4D Parallelism (Megatron-LM Tensor Parallelism, 1F1B Pipeline Parallelism schedule, ZeRO-3 FSDP, and Sequence Parallelism with Ring Attention).
+                    </p>
+                    <input type="checkbox" id="pub-dist">
+                    <label for="pub-dist" class="abstract-toggle-btn">[Click for Architecture &amp; Benchmark Deep-Dive &#9662;]</label>
+                    <div class="abstract">
+                      <p>
+                        <strong>Architectural Abstract:</strong> Handcrafted custom Ring All-Reduce collective communication engine proving bandwidth optimality ($2\cdot\frac{P-1}{P}NB$), dual-stream CUDA asynchronous communication hiding (overlapping TP All-Reduce with MLP GEMM), activation checkpointing bounding bubble ratio ($F_{\text{bubble}} &lt; 11\%$), and automated Frobenius-norm gradient health monitoring.
+                      </p>
+                      <p class="tech-tag"><strong>Key Stack:</strong> PyTorch Distributed, Megatron-LM, DeepSpeed ZeRO-3, NCCL 2.20, InfiniBand NDR 400 Gbps, MFU Analyzer.</p>
+                      <p class="deploy-tag"><strong>Runbook:</strong> <code>git clone https://github.com/KishorKumarParoi/distributed-llm-training.git &amp;&amp; cd distributed-llm-training &amp;&amp; make test</code></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- System 16: Omnichannel Voice & Chat AI Receptionist -->
+              <div class="publication">
+                <div class="pub-row">
+                  <div class="pub-thumb">
+                    <a href="images/projects/omnichannel/01_omnichannel_voice.svg" target="_blank" rel="noopener" class="thumb-link" title="Click to view full Omnichannel architecture">
+                      <img src="images/projects/omnichannel/01_omnichannel_voice.svg" alt="Omnichannel AI Receptionist Architecture" loading="lazy" decoding="async">
+                    </a>
+                    <div class="pub-thumb-caption">
+                      <a href="images/projects/omnichannel/01_omnichannel_voice.svg" target="_blank" rel="noopener">🔍 Architecture Blueprint</a>
+                    </div>
+                  </div>
+                  <div class="pub-body">
+                    <div class="pubstuff">
+                      <span class="rightlinks">
+                        <a href="https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist" target="_blank" rel="noopener" class="button">Code</a>
+                        <a href="images/projects/omnichannel/01_omnichannel_voice.svg" target="_blank" rel="noopener" class="button button-outline">Blueprint</a>
+                      </span>
+                    </div>
+                    <p>
+                      <label for="pub-omni" class="paper-title">
+                        <strong>Omnichannel Voice &amp; Chat AI Receptionist (Vapi + n8n)</strong>
+                      </label>
+                      <br>
+                      <span class="me">Kishor Kumar Paroi</span>
+                      <br>
+                      <span class="venue">Vapi Voice &bull; Deepgram Nova-2 STT &bull; Cartesia Sonic TTS &bull; n8n Automation</span>
+                      <span class="award">Sub-600ms Turnaround &bull; -74% Missed Calls</span>
+                    </p>
+                    <p class="pub-lead-desc">
+                      Production conversational AI Voice &amp; Chat Receptionist tailored for hair salons, clinics, and wellness studios with sub-600ms voice turnaround, dynamic service calendar slot math, and automated Twilio SMS confirmations.
+                    </p>
+                    <input type="checkbox" id="pub-omni">
+                    <label for="pub-omni" class="abstract-toggle-btn">[Click for Architecture &amp; Benchmark Deep-Dive &#9662;]</label>
+                    <div class="abstract">
+                      <p>
+                        <strong>Architectural Abstract:</strong> Built on Vapi orchestration, Deepgram Nova-2 speech-to-text (&lt;200ms), and Cartesia Sonic text-to-speech (&lt;120ms). Features FastAPI webhook middleware with dynamic calendar duration window matching (e.g., 150-minute Balayage windows), automated Google Calendar / PostgreSQL sync, and instant SMS confirmation with reschedule tokens.
+                      </p>
+                      <p class="tech-tag"><strong>Key Stack:</strong> Vapi, Deepgram Nova-2, Cartesia Sonic, FastAPI, n8n, Twilio SMS, Google Calendar API, Cloudflare Tunnel.</p>
+                      <p class="deploy-tag"><strong>Runbook:</strong> <code>git clone https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist.git &amp;&amp; ./run_live_tunnel.sh</code></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- System 17: Nimbus-AI Suite -->
+              <div class="publication">
+                <div class="pub-row">
+                  <div class="pub-thumb">
+                    <a href="images/projects/nimbus/01_nimbus_suite.svg" target="_blank" rel="noopener" class="thumb-link" title="Click to view Nimbus-AI Suite architecture">
+                      <img src="images/projects/nimbus/01_nimbus_suite.svg" alt="Nimbus-AI 5-Agent Suite Architecture" loading="lazy" decoding="async">
+                    </a>
+                    <div class="pub-thumb-caption">
+                      <a href="images/projects/nimbus/01_nimbus_suite.svg" target="_blank" rel="noopener">🔍 Architecture Blueprint</a>
+                    </div>
+                  </div>
+                  <div class="pub-body">
+                    <div class="pubstuff">
+                      <span class="rightlinks">
+                        <a href="https://github.com/KishorKumarParoi/nimbus-voice-agents-suite" target="_blank" rel="noopener" class="button">Code</a>
+                        <a href="images/projects/nimbus/01_nimbus_suite.svg" target="_blank" rel="noopener" class="button button-outline">Blueprint</a>
+                      </span>
+                    </div>
+                    <p>
+                      <label for="pub-nimbus" class="paper-title">
+                        <strong>Nimbus-AI Suite: Enterprise 5-Agent Voice Copilot Ecosystem</strong>
+                      </label>
+                      <br>
+                      <span class="me">Kishor Kumar Paroi</span>
+                      <br>
+                      <span class="venue">5 Conversational Voice Agents &bull; WebRTC Low-Latency &bull; FastMCP Tool Calling</span>
+                      <span class="award">50K+ Live Spoken Interactions &bull; Sub-650ms Latency</span>
+                    </p>
+                    <p class="pub-lead-desc">
+                      Unified 5-agent conversational AI voice ecosystem combining Meeting Voice Copilot, Sales Discovery Agent, Research Voice Assistant, Scheduling Agent, and Desktop Voice Controller over WebRTC with sub-second latency.
+                    </p>
+                    <input type="checkbox" id="pub-nimbus">
+                    <label for="pub-nimbus" class="abstract-toggle-btn">[Click for Architecture &amp; Benchmark Deep-Dive &#9662;]</label>
+                    <div class="abstract">
+                      <p>
+                        <strong>Architectural Abstract:</strong> Real-time WebRTC audio streaming pipeline with dynamic noise suppression, barge-in speech interruption detection, and function-calling integrations across Google Calendar, Notion, Salesforce CRM, and desktop window automation.
+                      </p>
+                      <p class="tech-tag"><strong>Key Stack:</strong> WebRTC, LiveKit, Vapi, FastAPI, Whisper, Cartesia TTS, FastMCP, Salesforce API, Google Calendar.</p>
+                      <p class="deploy-tag"><strong>Runbook:</strong> <code>git clone https://github.com/KishorKumarParoi/nimbus-voice-agents-suite.git &amp;&amp; pytest tests/ -v</code></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- System 18: AutoCut-AI -->
+              <div class="publication">
+                <div class="pub-row">
+                  <div class="pub-thumb">
+                    <a href="images/projects/autocut/01_autocut_flow.svg" target="_blank" rel="noopener" class="thumb-link" title="Click to view AutoCut-AI architecture">
+                      <img src="images/projects/autocut/01_autocut_flow.svg" alt="AutoCut-AI Video Engine Architecture" loading="lazy" decoding="async">
+                    </a>
+                    <div class="pub-thumb-caption">
+                      <a href="images/projects/autocut/01_autocut_flow.svg" target="_blank" rel="noopener">🔍 Architecture Blueprint</a>
+                    </div>
+                  </div>
+                  <div class="pub-body">
+                    <div class="pubstuff">
+                      <span class="rightlinks">
+                        <a href="https://github.com/KishorKumarParoi/autocut-ai" target="_blank" rel="noopener" class="button">Code</a>
+                        <a href="images/projects/autocut/01_autocut_flow.svg" target="_blank" rel="noopener" class="button button-outline">Blueprint</a>
+                      </span>
+                    </div>
+                    <p>
+                      <label for="pub-autocut" class="paper-title">
+                        <strong>AutoCut-AI: Autonomous Multi-Modal AI Video Editor &amp; Reel Generator</strong>
+                      </label>
+                      <br>
+                      <span class="me">Kishor Kumar Paroi</span>
+                      <br>
+                      <span class="venue">OpenAI Whisper Diarization &bull; FFmpeg GPU NVENC &bull; Computer Vision Face Tracking</span>
+                      <span class="award">&lt;45s Renders &bull; 4.2x Viewer Retention Lift</span>
+                    </p>
+                    <p class="pub-lead-desc">
+                      Autonomous video editing engine analyzing spoken audio via Whisper diarization, automatically stripping filler words and pauses, and rendering 9:16 vertical reels with dynamic animated subtitles in &lt;45 seconds.
+                    </p>
+                    <input type="checkbox" id="pub-autocut">
+                    <label for="pub-autocut" class="abstract-toggle-btn">[Click for Architecture &amp; Benchmark Deep-Dive &#9662;]</label>
+                    <div class="abstract">
+                      <p>
+                        <strong>Architectural Abstract:</strong> Combines word-level timestamp alignment from OpenAI Whisper, automated silence/filler-word removal (-35% dead air), AI viral hook scoring, and hardware-accelerated FFmpeg NVENC rendering with bouncing word-by-word animated subtitles.
+                      </p>
+                      <p class="tech-tag"><strong>Key Stack:</strong> OpenAI Whisper, FFmpeg (NVENC GPU), OpenCV Face Tracking, FastAPI, Next.js 16, Redis Queue.</p>
+                      <p class="deploy-tag"><strong>Runbook:</strong> <code>git clone https://github.com/KishorKumarParoi/autocut-ai.git &amp;&amp; npm install &amp;&amp; npm run dev</code></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
 
             <div style="clear: both"></div>
@@ -1093,6 +1315,18 @@ const stats = await peer.getStats();<br>
             <!-- Work Experience Timeline -->
             <section id="experience">
               <div class="section-heading">Professional Career &amp; Experience</div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <strong>Omnichannel AI Solutions</strong> &bull; <span class="role-title">Lead Conversational Voice AI Architect</span>
+                  <span class="timeline-date">Sept 2026 – Present &bull; Luxe Salon AI</span>
+                </div>
+                <ul>
+                  <li>Orchestrated enterprise omnichannel conversational voice receptionist on <strong>Vapi, Deepgram Nova-2 STT (&lt;200ms), and Cartesia Sonic TTS (&lt;120ms)</strong>; clocked <strong>sub-600ms end-to-end turnaround latency</strong>, reducing missed appointments by <strong>74%</strong>.</li>
+                  <li>Engineered event-driven webhook middleware via <strong>FastAPI and n8n</strong> calculating dynamic calendar duration windows (150-min Balayage matching) with zero double-booking across <strong>10K+ concurrent calls</strong>.</li>
+                  <li>Integrated bi-directional <strong>Twilio SMS confirmations</strong> with automated Google Calendar/PostgreSQL sync and dynamic reschedule tokens, safeguarding <strong>$420K in annual partner revenue</strong>.</li>
+                </ul>
+              </div>
 
               <div class="timeline-item">
                 <div class="timeline-header">

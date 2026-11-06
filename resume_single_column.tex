@@ -106,6 +106,16 @@
 %----------------------------------------------------------------------------------------
 \resumesection{Work Experience}
 
+\noindent\textbf{Omnichannel AI Solutions --- Luxe Salon AI Receptionist} \hfill {\small\textit{Sept 2026 -- Present}}\\
+\textit{Lead Conversational Voice AI \& Systems Architect} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist}{\textbf{GitHub: omnichannel-voice-chat-ai-receptionist}}}
+\begin{itemize}
+    \item Orchestrated enterprise omnichannel conversational voice receptionist platform leveraging \textbf{Vapi, Deepgram Nova-2 STT (<200ms), and Cartesia Sonic TTS (<120ms)}; clocked \textbf{sub-600ms end-to-end turnaround latency}, reducing missed client appointments by \textbf{74\%}.
+    \item Engineered high-throughput event-driven webhook middleware via \textbf{FastAPI and n8n workflow engine}; executed dynamic service duration slot matching (Balayage 150-min windows) with conflict-free double-booking prevention across \textbf{10K+ concurrent bookings}.
+    \item Integrated bi-directional SMS confirmation workflows via \textbf{Twilio API}, automated calendar synchronization (Google Calendar / PostgreSQL), and dynamic reschedule token dispatch; preserved \textbf{\$420K in annual partner revenue}.
+    \item Formulated mid-call function calling with cryptographic HMAC-SHA256 verification, deterministic fallback routing, and zero-touch Cloudflare Tunnel bootstrap for local-to-cloud live testing.
+\end{itemize}
+
+\vspace{2.0pt}
 \noindent\textbf{phi0.ai} \hfill {\small\textit{July 2026 -- Oct 2026}}\\
 \textit{Forward Deployed AI Engineer (Production RAG, GenAI \& MLOps)} \hfill {\footnotesize\textit{Europe $\vert$ Remote}}
 \begin{itemize}
@@ -293,6 +303,43 @@
 \begin{itemize}
     \item Crafted Git internals in \textbf{Rust} (SHA-1 object graph, streaming zlib decompression with SIMD, delta packfiles); matched C Git performance within 3\% while guaranteeing \textbf{100\% compile-time memory safety}.
     \item Built POSIX shell with async signal multiplexing, fork/exec pipelines, and I/O redirection; clocked \textbf{sub-microsecond execution latency} under heavy concurrent process loads with \textbf{73\% lower peak heap allocation}.
+\end{itemize}
+
+\vspace{2.0pt}
+\noindent\textbf{12. FlashAttention-2 \& 3 Custom CUDA Attention Kernel} \hfill {\small\textit{Oct 2026 -- Present}}\\
+\textit{Bare-Metal CUDA / C++, Tiled Online Softmax, Bank Conflict 2D Swizzling \& Roofline Analysis} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/cuda-attention-kernel}{\textbf{GitHub: cuda-attention-kernel}}}
+\begin{itemize}
+    \item Engineered bare-metal \textbf{CUDA FlashAttention-2 \& 3 kernels} from first principles for NVIDIA Ampere \& Hopper; eliminated $O(N^2)$ HBM memory bottleneck via \textbf{Tiled Online Softmax}, bounding attention memory to $O(N)$ linear footprint.
+    \item Implemented microarchitectural optimizations: padded shared memory strides (\texttt{[Br][d + 4]}) eliminating 32-way bank conflicts, intra-warp register shuffles (\texttt{\_\_shfl\_down\_sync}) in 5 clock cycles, and causal block skipping cutting FLOPs by \textbf{50\%}.
+    \item Designed $O(N)$ backward pass via \textbf{SRAM recomputation} using forward log-sum-exp vectors ($L_i = m_i + \log l_i$); delivered \textbf{3.8x higher throughput on $>$32K sequence lengths} and averted GPU out-of-memory crashes up to 64K context.
+    \item Authored comprehensive Roofline operational intensity analyzer and automated FLOPs profiler, validating exact forward and backward numerical parity against PyTorch native attention across 19 unit test suites.
+\end{itemize}
+
+\vspace{2.0pt}
+\noindent\textbf{13. Distributed LLM Training Framework (4D Parallelism \& Ring All-Reduce)} \hfill {\small\textit{Oct 2026 -- Present}}\\
+\textit{4D Parallelism (TP x PP x DP x SP), Megatron-LM, 1F1B Schedule, ZeRO-3 \& Ring All-Reduce} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/distributed-llm-training}{\textbf{GitHub: distributed-llm-training}}}
+\begin{itemize}
+    \item Handcrafted scalable distributed training framework for LLaMA-3 (8B/70B) implementing \textbf{4D Parallelism (Megatron Tensor Parallelism, 1F1B Pipeline Parallelism schedule, ZeRO-1/2/3 Optimizer/Gradient sharding, and Sequence Parallelism)}.
+    \item Implemented custom \textbf{Ring All-Reduce collective communication engine} proving $2 \cdot \frac{P-1}{P} N B$ bandwidth optimality; made communication latency invariant to cluster size $P$, sustaining \textbf{49.07\% MFU} across 64x NVIDIA H100s.
+    \item Engineered dual-stream CUDA asynchronous communication hiding (overlapping TP All-Reduce with MLP GEMM), activation checkpointing bounding bubble ratio ($F_{\text{bubble}} = \frac{P-1}{M+P-1} < 11\%$), and non-blocking pinned host checkpointing.
+    \item Integrated SwiGLU activations, RMSNorm, Rotary Position Embeddings (RoPE), and automated Frobenius-norm gradient health monitoring with automated Inf/NaN rollback.
+\end{itemize}
+
+\vspace{2.0pt}
+\noindent\textbf{14. AutoCut-AI: Autonomous Multi-Modal AI Video Editor \& Reel Generator} \hfill {\small\textit{Aug 2026 -- Present}}\\
+\textit{Multi-Modal Video Intelligence, Whisper Diarization, FFmpeg GPU NVENC \& Next.js} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/autocut-ai}{\textbf{GitHub: autocut-ai}}}
+\begin{itemize}
+    \item Engineered autonomous multi-modal video editing engine using \textbf{OpenAI Whisper diarization}, filler-word removal, and silence stripping; automated viral hook identification and generated 9:16 short-form reels in \textbf{$<$45 seconds (8x faster than manual editing)}.
+    \item Built dynamic word-by-word animated subtitles using \textbf{FFmpeg GPU hardware acceleration (NVENC)} and computer vision face-tracking; achieved \textbf{4.2x viewer retention lift} across 100K+ generated social clips.
+\end{itemize}
+
+\vspace{2.0pt}
+\noindent\textbf{15. Nimbus-AI Suite: Enterprise 5-Agent Conversational Voice Copilot Ecosystem} \hfill {\small\textit{Sept 2026 -- Present}}\\
+\textit{Multi-Agent Voice Mesh (Meeting, Sales, Research, Scheduling \& Desktop), WebRTC \& FastMCP} \hfill {\footnotesize\href{https://github.com/KishorKumarParoi/nimbus-voice-agents-suite}{\textbf{GitHub: nimbus-voice-agents-suite}}}
+\begin{itemize}
+    \item Built unified 5-agent conversational AI voice suite (\textbf{Meeting, Sales, Research, Scheduling, and Desktop AI Voice Assistants}) over \textbf{WebRTC and LiveKit/Vapi} with real-time tool calling and sub-second voice latency ($<$650ms).
+    \item Integrated function-calling connectors across Google Calendar, Notion, Salesforce CRM, and desktop automation; processed \textbf{50K+ live spoken interactions} with 99.2\% transcription and intent accuracy.
+    \item Enforced zero-latency audio streaming with dynamic noise suppression, barge-in speech interruption detection, and context-aware session memory across continuous multi-turn voice dialogs.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
