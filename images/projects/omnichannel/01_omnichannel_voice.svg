@@ -17,12 +17,12 @@
   <!-- Title Badge -->
   <rect x="40" y="25" width="920" height="55" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1.5"/>
   <text x="58" y="58" fill="#f43f5e" font-size="16.5" font-weight="700">💇‍♀️ Omnichannel AI Voice &amp; Chat Receptionist (Vapi Squad + n8n)</text>
-  <text x="595" y="58" fill="#94a3b8" font-size="11.8">Sub-500ms Turnaround • +1 (667) 307-0119 • Live on Vercel</text>
+  <text x="595" y="58" fill="#94a3b8" font-size="11.8">Sub-500ms Turnaround • +1 (617) 271-8180 • Live on Vercel</text>
 
   <!-- Telephony & Voice Audio Ingestion -->
   <rect x="40" y="105" width="280" height="460" rx="10" fill="url(#vapiGrad)" stroke="#f43f5e" stroke-width="1.5"/>
   <text x="60" y="135" fill="#fb7185" font-size="15" font-weight="700">Voice Telephony &amp; STT/TTS</text>
-  <text x="60" y="155" fill="#fda4af" font-size="11.5">PSTN (+1-667-307-0119) • WebRTC /vapi-call</text>
+  <text x="60" y="155" fill="#fda4af" font-size="11.5">PSTN (+1-617-271-8180) • WebRTC /vapi-call</text>
 
   <g transform="translate(60, 180)">
     <rect width="240" height="75" rx="6" fill="#1e1b4b" stroke="#f43f5e" stroke-width="1"/>

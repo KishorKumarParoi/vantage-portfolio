@@ -1,4 +1,4 @@
-# 🏛️ Kishor Kumar Paroi — Principal AI Systems Architect & Founder @ KoomAI
+# 🏛️ Kishor Kumar Paroi — Principal AI Systems Architect & Founder @ Omnichannel AI & KoomAI
 
 <div align="center">
 
@@ -43,7 +43,7 @@
 | Platform | URL | Architecture Highlights |
 | :--- | :--- | :--- |
 | **🎓 Kishor.tech (Main Academic Portfolio)** | **[kishor.tech](https://kishor.tech)** | Minimalist academic layout, 17 flagship systems, sub-35ms Hybrid RAG, 38-module AI curriculum |
-| **📞 Omnichannel AI Voice & Chat SaaS** | **[ai-voice-receptionist.kishor.tech](https://ai-voice-receptionist.kishor.tech)** | Sub-500ms Vapi Squad (Deepgram Nova-2 + Cartesia Sonic-3.5), PSTN `+1 (667) 307-0119`, WebRTC, 8+ social channels, Clerk + Neon PG + n8n |
+| **📞 Omnichannel AI Voice & Chat SaaS** | **[ai-voice-receptionist.kishor.tech](https://ai-voice-receptionist.kishor.tech)** | Sub-500ms Vapi Squad (Deepgram Nova-2 + Cartesia Sonic-3.5), PSTN `+1 (617) 271-8180`, WebRTC, 8+ social channels, Clerk + Neon PG + n8n |
 | **💎 Executive AI Pitch Deck (Widescreen 16:9)** | **[pptx.kishor.tech](https://pptx.kishor.tech)** | 29-slide executive presentation, all 20 architectures, interactive Office Online viewer |
 | **🎬 4K Systems Architecture Reel (90s)** | **[YouTube (4K 60FPS)](https://www.youtube.com/watch?v=mqX-2FW3o0Q)** | High-impact cinematic walkthrough: LangGraph agent mesh, Rust SIMD, and vLLM |
 | **💻 macos-portfolio (Desktop Environment)** | **[macos.kishor.tech](https://macos.kishor.tech)** | Interactive desktop OS emulator with draggable windows, dock, and terminal CLI |
@@ -124,7 +124,7 @@
 
 ### [15. Omnichannel Voice & Chat AI Receptionist (Live SaaS)](https://ai-voice-receptionist.kishor.tech/)
 * **Stack:** Vapi Squad (Marcus↔Sophia), Deepgram Nova-2 STT (<180ms), FastAPI (<40ms), Cartesia Sonic-3.5 TTS (<110ms), Clerk, Neon Serverless PostgreSQL, Google Calendar v3 OAuth2, Twilio SMS/WhatsApp, n8n + Slack.
-* **Impact:** Live 6-vertical SaaS achieving sub-500ms conversational turnaround across PSTN (`+1 667-307-0119`), WebRTC (`/vapi-call`), and 8+ social webhooks with automated 24h/1h cron reminders ([GitHub](https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist)).
+* **Impact:** Live 6-vertical SaaS achieving sub-500ms conversational turnaround across PSTN (`+1 (617) 271-8180`), WebRTC (`/vapi-call`), and 8+ social webhooks with automated 24h/1h cron reminders ([GitHub](https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist)).
 
 ### [16. Nimbus-AI Suite: 5-Agent Live Conversational Voice Ecosystem](https://nimbus.kishor.tech/)
 * **Stack:** LiveKit WebRTC, FastAPI, OpenAI GPT-4o / Whisper, ElevenLabs Turbo v2.5, RAG vs RAG-less, 60fps audio waveform & instant barge-in ([Hub Repo](https://github.com/KishorKumarParoi/nimbus-voice-agents-suite)).
