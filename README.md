@@ -3,6 +3,7 @@
 <div align="center">
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-kishor.tech-800000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://kishor.tech)
+[![Omnichannel Voice AI](https://img.shields.io/badge/Live_Voice_AI-ai--voice--receptionist.kishor.tech-EC4899?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-voice-receptionist.kishor.tech)
 [![Executive Pitch Deck](https://img.shields.io/badge/Executive_Pitch_Deck-pptx.kishor.tech-FFD700?style=for-the-badge&logo=microsoftpowerpoint&logoColor=black)](https://pptx.kishor.tech)
 [![4K Cinematic Reel](https://img.shields.io/badge/YouTube_Video-4K_Cinematic_Reel-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=mqX-2FW3o0Q)
 [![macOS Desktop Portfolio](https://img.shields.io/badge/macOS_Ecosystem-macos.kishor.tech-000000?style=for-the-badge&logo=apple&logoColor=white)](https://macos.kishor.tech)
@@ -11,7 +12,7 @@
 [![KoomAI Platform](https://img.shields.io/badge/Video_AI-koom.kishor.tech-0052CC?style=for-the-badge&logo=webrtc&logoColor=white)](https://koom.kishor.tech)
 <br/>
 [![Executive CV (1-Page)](https://img.shields.io/badge/Executive_CV-1--Page%20PDF%20(ATS%20100)-A02020?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://kishor.tech/resume.pdf)
-[![ATS Resume (2-Page)](https://img.shields.io/badge/ATS_Resume-2--Page%20PDF%20(ATS%20100)-1a1a1a?style=for-the-badge&logo=files&logoColor=white)](https://kishor.tech/resume_single_column.pdf)
+[![ATS Resume (Full Technical)](https://img.shields.io/badge/ATS_Resume-Full_Technical_PDF-1a1a1a?style=for-the-badge&logo=files&logoColor=white)](https://kishor.tech/resume_single_column.pdf)
 
 <br/>
 
@@ -29,7 +30,7 @@
 
 * [🌐 Live Digital Ecosystem](#-live-digital-ecosystem)
 * [📜 Official Verified Resumes (ATS 100/100)](#-official-verified-resumes)
-* [🚀 Flagship Technical Projects (1 - 11)](#-flagship-technical-projects)
+* [🚀 Flagship Technical Projects (1 - 16)](#-flagship-technical-projects)
 * [🎓 38-Module AI Engineering Journey](#-38-module-ai-engineering-journey)
 * [📚 Education & Specialized Certifications](#-education--specialized-certifications)
 * [💻 Local Development & Deployment](#-local-development--deployment)
@@ -41,15 +42,16 @@
 
 | Platform | URL | Architecture Highlights |
 | :--- | :--- | :--- |
-| **🎓 Kishor.tech (Main Academic Portfolio)** | **[kishor.tech](https://kishor.tech)** | Minimalist academic layout, sub-35ms Hybrid RAG, 38-module AI curriculum |
-| **💎 Executive AI Pitch Deck (Widescreen 16:9)** | **[pptx.kishor.tech](https://pptx.kishor.tech)** | 24-slide executive presentation, all 15 architectures, interactive Office Online viewer |
+| **🎓 Kishor.tech (Main Academic Portfolio)** | **[kishor.tech](https://kishor.tech)** | Minimalist academic layout, 17 flagship systems, sub-35ms Hybrid RAG, 38-module AI curriculum |
+| **📞 Omnichannel AI Voice & Chat SaaS** | **[ai-voice-receptionist.kishor.tech](https://ai-voice-receptionist.kishor.tech)** | Sub-500ms Vapi Squad (Deepgram Nova-2 + Cartesia Sonic-3.5), PSTN `+1 (667) 307-0119`, WebRTC, 8+ social channels, Clerk + Neon PG + n8n |
+| **💎 Executive AI Pitch Deck (Widescreen 16:9)** | **[pptx.kishor.tech](https://pptx.kishor.tech)** | 29-slide executive presentation, all 20 architectures, interactive Office Online viewer |
 | **🎬 4K Systems Architecture Reel (90s)** | **[YouTube (4K 60FPS)](https://www.youtube.com/watch?v=mqX-2FW3o0Q)** | High-impact cinematic walkthrough: LangGraph agent mesh, Rust SIMD, and vLLM |
 | **💻 macos-portfolio (Desktop Environment)** | **[macos.kishor.tech](https://macos.kishor.tech)** | Interactive desktop OS emulator with draggable windows, dock, and terminal CLI |
 | **🧊 3d (Interactive 3D WebGL Platform)** | **[3d.kishor.tech](https://3d.kishor.tech)** | React 19.2, Rolldown Vite, Tailwind v4, GSAP 3.13 camera choreography |
 | **⚡ hacker (3D Cyber Hacker Workstation)** | **[hacker.kishor.tech](https://hacker.kishor.tech)** | 3D Cyber Hacker command room, CRT monitor shaders, Web Audio, terminal HUD |
 | **▶ KoomAI Video Intelligence** | **[koom.kishor.tech](https://koom.kishor.tech)** | Sub-120ms WebRTC SVC engine, Electron native capture, 20-agent LangGraph copilot |
 | **💼 LinkedIn Network** | **[linkedin.com/in/kishor-kumar-paroi-b06344166](https://linkedin.com/in/kishor-kumar-paroi-b06344166)** | Verified professional connections, endorsements, and leadership updates |
-| **🐙 GitHub Repositories** | **[github.com/KishorKumarParoi](https://github.com/KishorKumarParoi)** | 11 production-grade ML/LLM/Lakehouse systems with 1-click cloud bootstrap scripts |
+| **🐙 GitHub Repositories** | **[github.com/KishorKumarParoi](https://github.com/KishorKumarParoi)** | 16+ flagship ML/LLM/Voice/CUDA/Lakehouse systems with 1-click cloud bootstrap scripts |
 
 ---
 
@@ -57,8 +59,8 @@
 
 | Format | Document | Specifications & ATS Score | Direct Download Link |
 | :--- | :--- | :--- | :--- |
-| **Executive CV** | `resume.pdf` | **Strict 1-Page A4 PDF &bull; 100/100 ATS Score:** High-DPI typography, RUET CSE credentials, 61 quantified metrics, competitive programming track record. | [📥 **Download Executive CV (1-Page)**](https://kishor.tech/resume.pdf) |
-| **Comprehensive ATS Resume** | `resume_single_column.pdf` | **Comprehensive 2-Page A4 PDF &bull; 100/100 ATS Score:** 97 quantified metrics, deep architectural breakdown across all 11 production systems, zero PUA glyphs. | [📥 **Download ATS Resume (2-Page)**](https://kishor.tech/resume_single_column.pdf) |
+| **Executive CV** | `resume.pdf` | **Strict 1-Page A4 PDF &bull; 100/100 ATS Score:** High-DPI typography, Omnichannel AI live SaaS (`Live` + `WebRTC` + `GitHub`), Nimbus 5-Agent Live Voice Suite, RUET CSE credentials, 15 projects, competitive programming track record. | [📥 **Download Executive CV (1-Page)**](https://kishor.tech/resume.pdf) |
+| **Comprehensive ATS Resume** | `resume_single_column.pdf` | **Comprehensive 2-Page A4 PDF &bull; 100/100 ATS Score:** Full architectural breakdown across Omnichannel AI Live SaaS & all 15 flagship systems (including Nimbus 5-agent live suite & repos), zero PUA glyphs. | [📥 **Download ATS Resume (2-Page)**](https://kishor.tech/resume_single_column.pdf) |
 
 ---
 
@@ -107,6 +109,27 @@
 ### [11. Core Systems Engineering: Rust Git Engine & POSIX Shell](https://github.com/KishorKumarParoi/codecrafters-git-rust)
 * **Stack:** Bare-Metal Rust, SIMD Streaming zlib, Delta Packfiles, POSIX Async Signal Multiplexing.
 * **Impact:** Matched C Git performance within 3% with 100% compile-time memory safety, sub-microsecond shell execution latency.
+
+### [12. FlashAttention-2, 3 & Flash-Decoding Custom CUDA Kernel](https://github.com/KishorKumarParoi/cuda-attention-kernel)
+* **Stack:** Bare-Metal CUDA C++, Tiled Online Softmax, Split-KV Flash-Decoding, PagedAttention, FP8 (E4M3/E5M2).
+* **Impact:** Restored 100% SM occupancy for 8x lower decode latency, cut KV fragmentation from 60–80% to <4%, verified across 39 PyTorch parity suites.
+
+### [13. Distributed LLM Training Framework (4D Parallelism & Ring All-Reduce)](https://github.com/KishorKumarParoi/distributed-llm-training)
+* **Stack:** Megatron Tensor Parallelism, Interleaved 1F1B Pipeline Parallelism, ZeRO-3 FSDP, Ring Attention, Async DCP.
+* **Impact:** Sustained 49.07% MFU on 64x NVIDIA H100s, cut pipeline bubble up to 70%, 1M+ context overlap, verified across 24 unit test suites.
+
+### [14. AutoCut-AI: Autonomous Multi-Modal AI Video Editor & Reel Generator](https://github.com/KishorKumarParoi/autocut-ai)
+* **Stack:** OpenAI Whisper Diarization, FFmpeg GPU NVENC, OpenCV Face Tracking, Next.js.
+* **Impact:** Rendered animated 9:16 social reels in <45s (8x faster), achieving 4.2x viewer retention lift across 100K+ clips.
+
+### [15. Omnichannel Voice & Chat AI Receptionist (Live SaaS)](https://ai-voice-receptionist.kishor.tech/)
+* **Stack:** Vapi Squad (Marcus↔Sophia), Deepgram Nova-2 STT (<180ms), FastAPI (<40ms), Cartesia Sonic-3.5 TTS (<110ms), Clerk, Neon Serverless PostgreSQL, Google Calendar v3 OAuth2, Twilio SMS/WhatsApp, n8n + Slack.
+* **Impact:** Live 6-vertical SaaS achieving sub-500ms conversational turnaround across PSTN (`+1 667-307-0119`), WebRTC (`/vapi-call`), and 8+ social webhooks with automated 24h/1h cron reminders ([GitHub](https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist)).
+
+### [16. Nimbus-AI Suite: 5-Agent Live Conversational Voice Ecosystem](https://nimbus.kishor.tech/)
+* **Stack:** LiveKit WebRTC, FastAPI, OpenAI GPT-4o / Whisper, ElevenLabs Turbo v2.5, RAG vs RAG-less, 60fps audio waveform & instant barge-in ([Hub Repo](https://github.com/KishorKumarParoi/nimbus-voice-agents-suite)).
+* **5 Deployed Agents:** [Sales](https://sales.kishor.tech/) ([GitHub](https://github.com/KishorKumarParoi/sales-voice-agent)) &bull; [Meeting](https://meeting.kishor.tech/) ([GitHub](https://github.com/KishorKumarParoi/meeting-voice-agent)) &bull; [Research](https://research.kishor.tech/) ([GitHub](https://github.com/KishorKumarParoi/research-voice-agent)) &bull; [Scheduling](https://scheduling.kishor.tech/) ([GitHub](https://github.com/KishorKumarParoi/scheduling-voice-agent)) &bull; [Desktop](https://desktop.kishor.tech/) ([GitHub](https://github.com/KishorKumarParoi/desktop-voice-agent)).
+* **Impact:** Sub-400ms end-to-end voice roundtrips across 5 specialized autonomous microservices built from scratch, verified with `pytest`.
 
 ---
 

@@ -301,6 +301,57 @@
       padding: 0.6px 2.5px;
       gap: 1.8px;
     }
+    @page {
+      size: A4 portrait;
+      margin: 4.2mm 5.0mm 4.2mm 5.0mm;
+    }
+    body {
+      font-size: 6.0pt !important;
+      line-height: 1.09 !important;
+    }
+    .page {
+      margin: 0 !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      width: auto !important;
+      min-height: 0 !important;
+    }
+    .page-2 {
+      page-break-before: auto !important;
+      break-before: auto !important;
+      margin-top: 2px !important;
+      padding-top: 0 !important;
+      font-size: 6.0pt !important;
+      line-height: 1.09 !important;
+    }
+    .section-title {
+      font-size: 8.1pt !important;
+      margin-top: 4.0px !important;
+      margin-bottom: 1.8px !important;
+      padding-bottom: 0.6px !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .entry-header {
+      font-size: 6.55pt !important;
+      margin-top: 2.0px !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .entry-sub {
+      font-size: 5.9pt !important;
+      margin-bottom: 1.0px !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    li, .page-2 li {
+      font-size: 5.95pt !important;
+      line-height: 1.085 !important;
+      margin-bottom: 0.45px !important;
+    }
+    .project-divider {
+      margin: 2.0px 0 !important;
+    }
   }
 </style>
 </head>
@@ -372,14 +423,14 @@
     <span>Sept 2026 – Present</span>
   </div>
   <div class="entry-sub">
-    <span>Lead Conversational Voice AI &amp; Systems Architect</span>
-    <span><a href="https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist" target="_blank">GitHub: omnichannel-voice-chat-ai-receptionist</a></span>
+    <span>Lead Voice AI &amp; Systems Architect &bull; PSTN: <strong>+1 (667) 307-0119</strong></span>
+    <span style="white-space: nowrap;"><a href="https://ai-voice-receptionist.kishor.tech/" target="_blank" style="color: #641C26; text-decoration: none; font-weight: 700; background: #fdf5f6; border: 0.5pt solid #c99ea5; border-radius: 2px; padding: 0.4px 3.5px; white-space: nowrap;">🚀 Live: ai-voice-receptionist.kishor.tech</a> <a href="https://ai-voice-receptionist.kishor.tech/vapi-call" target="_blank" style="color: #641C26; text-decoration: none; font-weight: 700; background: #fdf5f6; border: 0.5pt solid #c99ea5; border-radius: 2px; padding: 0.4px 3.5px; margin-left: 3px; white-space: nowrap;">🎙️ WebRTC</a> <a href="https://github.com/KishorKumarParoi/omnichannel-voice-chat-ai-receptionist" target="_blank" style="color: #641C26; text-decoration: none; font-weight: 700; background: #fdf5f6; border: 0.5pt solid #c99ea5; border-radius: 2px; padding: 0.4px 3.5px; margin-left: 3px; white-space: nowrap;">GitHub: omnichannel-voice-chat-ai-receptionist</a></span>
   </div>
   <ul>
-    <li>Orchestrated enterprise omnichannel conversational voice receptionist platform leveraging <strong>Vapi, Deepgram Nova-2 STT (&lt;200ms), and Cartesia Sonic TTS (&lt;120ms)</strong>; clocked <strong>sub-600ms end-to-end turnaround latency</strong>, reducing missed client appointments by <strong>74%</strong>.</li>
-    <li>Engineered high-throughput event-driven webhook middleware via <strong>FastAPI and n8n workflow engine</strong>; executed dynamic service duration slot matching (Balayage 150-min windows) with conflict-free double-booking prevention across <strong>10K+ concurrent bookings</strong>.</li>
-    <li>Integrated bi-directional SMS confirmation workflows via <strong>Twilio API</strong>, automated calendar synchronization (Google Calendar / PostgreSQL), and dynamic reschedule token dispatch; preserved <strong>$420K in annual partner revenue</strong>.</li>
-    <li>Formulated mid-call function calling with cryptographic HMAC-SHA256 verification, deterministic fallback routing, and zero-touch Cloudflare Tunnel bootstrap for local-to-cloud live testing.</li>
+    <li>Launched live <strong>6-vertical multi-tenant AI Voice &amp; Chat Receptionist SaaS</strong> (Salon, Real Estate, Legal, Dental, Auto, Clinic) engineered on <strong>FastAPI, Clerk Auth, Neon Serverless PostgreSQL, and Vapi Squad</strong> orchestration (Marcus &harr; Sophia warm-transfer handoffs and dialect adaptation).</li>
+    <li>Architected real-time voice pipeline combining <strong>Deepgram Nova-2 STT (&lt;180ms), FastAPI mid-call tool calling (&lt;40ms), and Cartesia Sonic-3.5 TTS (&lt;110ms)</strong>, delivering <strong>sub-500ms conversational turnaround</strong> across browser WebRTC (<code>/vapi-call</code>), PSTN telephony, and outbound Call-Me callbacks.</li>
+    <li>Engineered unified <strong>Omnichannel Messaging &amp; Booking Engine</strong> handling webhooks across Website Chat Widget (<code>/widget.js</code>), WhatsApp Cloud API, Facebook Messenger, Instagram DMs, Telegram, X, LinkedIn, and TikTok with 2-way <strong>Google Calendar API v3 OAuth2</strong> sync and per-tenant vector FAQ RAG.</li>
+    <li>Automated post-call lifecycle via <strong>Twilio SMS &amp; WhatsApp</strong> confirmations, daily Vercel cron (<code>/api/cron/reminders</code>) 24h/1h appointment reminders, and <strong>n8n + Slack</strong> escalation workflows backed by structured eval rubrics and automated pytest pre-push gates.</li>
   </ul>
 
   <div class="entry-header phi0-header">
@@ -391,9 +442,9 @@
     <span>Europe &nbsp;|&nbsp; Remote</span>
   </div>
   <ul class="phi0-list">
-    <li>Orchestrated forward deployment of <strong>5 concurrent autonomous AI agents</strong> executing multi-step tools, cyclic state machines (<strong>LangGraph</strong>), and dynamic routing; attained <strong>99.4% task completion</strong> under complex enterprise workloads, accelerating client onboarding by <strong>4x</strong>.</li>
-    <li>Devised high-throughput <strong>Hybrid RAG engine</strong> combining dense HNSW vector search, sparse BM25, and multi-stage re-ranking (<strong>FlashRank ONNX + Cohere v3.5</strong>) with semantic caching (<strong>&lt;35ms latency</strong>); curtailed hallucinations by <strong>46%</strong> and diminished LLM token expenditure by <strong>$18K/month</strong>.</li>
-    <li>Codified continuous <strong>MLOps &amp; GenAI flywheel</strong> featuring NeMo Guardrails, autonomous PII scrubbing, and canary model rollouts on <strong>Kubernetes</strong>; eradicated model regressions and spearheaded phi0.ai's enterprise AI transformation, securing <strong>$1.4M in enterprise contracts</strong>.</li>
+    <li>Deployed <strong>5 concurrent autonomous AI agents</strong> executing multi-step tools via <strong>LangGraph</strong> cyclic state machines; reached <strong>99.4% task completion</strong> under complex enterprise workloads, speeding onboarding by <strong>4x</strong>.</li>
+    <li>Built high-throughput <strong>Hybrid RAG engine</strong> (HNSW + BM25 + <strong>FlashRank ONNX / Cohere v3.5</strong> re-ranking) with <strong>&lt;35ms semantic caching</strong>; cut hallucinations by <strong>46%</strong> and LLM spend by <strong>$18K/month</strong>.</li>
+    <li>Codified continuous <strong>MLOps &amp; GenAI flywheel</strong> with NeMo Guardrails, PII scrubbing &amp; Kubernetes canary rollouts; prevented model regressions and secured <strong>$1.4M in enterprise contracts</strong>.</li>
   </ul>
 
   <div class="entry-header">
@@ -405,10 +456,9 @@
     <span>Gurgaon / Remote</span>
   </div>
   <ul>
-    <li>Formulated batch &amp; streaming pipelines via <strong>AWS S3, EMR, Athena, PySpark</strong>; slashed operational compute overhead by <strong>$4.2K/run (34% savings)</strong> via event-driven AWS Lambda/SQS asynchronous worker dispatch.</li>
-    <li>Accelerated 8B/70B LLM inference on NVIDIA H100 GPUs via <strong>FlashAttention-2</strong> and custom fused CUDA kernels; realized <strong>3.8x throughput</strong> on &gt;32K context windows, mitigating p99 latency by <strong>54%</strong>.</li>
-    <li>Spearheaded multi-node fine-tuning with <strong>PyTorch FSDP and DeepSpeed ZeRO-3</strong> alongside HIPAA-compliant de-identification; trimmed training wall-clock time by <strong>42% ($14K saved/run)</strong> and preparation overhead by <strong>65%</strong>.</li>
-    <li>Deployed real-time health insurance claim fraud detection pipeline over <strong>AWS Kinesis and OpenTelemetry</strong>; preempted false-positive claim investigations by <strong>52%</strong>, safeguarding <strong>$380K annually across high-risk audits</strong>.</li>
+    <li>Formulated batch &amp; streaming pipelines on <strong>AWS S3, EMR, Athena &amp; PySpark</strong> with async Lambda/SQS dispatch, cutting compute by <strong>$4.2K/run (34%)</strong>.</li>
+    <li>Accelerated 8B/70B H100 inference via <strong>FlashAttention-2</strong> fused CUDA kernels (<strong>3.8x throughput</strong> on &gt;32K windows, -54% p99 latency) and multi-node <strong>PyTorch FSDP / ZeRO-3</strong> fine-tuning (-42% time, $14K saved/run, HIPAA de-ID -65% prep).</li>
+    <li>Deployed real-time health claim fraud pipeline over <strong>AWS Kinesis &amp; OpenTelemetry</strong>; reduced false-positive audits by <strong>52%</strong>, safeguarding <strong>$380K annually</strong>.</li>
   </ul>
 
   <div class="entry-header">
@@ -416,15 +466,12 @@
     <span>Oct 2025 – Feb 2026</span>
   </div>
   <div class="entry-sub">
-    <span>Hands-on Immersion (Full-time career break dedicated to mastering mathematical AI foundations, Big Data &amp; MLOps)</span>
+    <span>Hands-on Immersion (Full-time focus on AI Math Foundations, Deep Learning, GenAI, Big Data &amp; MLOps)</span>
     <span>Self-Directed / Remote</span>
   </div>
   <ul>
-    <li><strong>Mathematical Foundations:</strong> Rigorous deep dive into <strong>Linear Algebra</strong> (SVD, Eigenvalues, PCA, Matrix Decompositions) and <strong>Multivariate Calculus</strong> (Gradient Descent dynamics, Backpropagation, loss manifolds, convex optimization).</li>
-    <li><strong>Hands-on ML, DL &amp; NLP:</strong> Crafted architectures from first principles in <strong>PyTorch</strong> (Transformers, Multi-Head Self-Attention, CNNs, tokenizers, custom loss functions), mastering modern representation learning.</li>
-    <li><strong>GenAI, RAG &amp; Agentic AI:</strong> Built production pipelines using <strong>Hybrid RAG (HNSW + BM25 + Cross-Encoder Reranking)</strong>, <strong>LangGraph cyclic state machines</strong>, FastMCP tool execution, and NVIDIA NeMo guardrails.</li>
-    <li><strong>Big Data Engineering &amp; Lakehouses:</strong> Mastered distributed data systems &amp; Medallion Lakehouses (Zach Wilson, Mayank Agarwal) across <strong>Apache Spark, Delta Lake, Snowflake, dbt Core SCD-2, Apache Kafka</strong> streaming, and Debezium CDC.</li>
-    <li><strong>Production MLOps:</strong> Instituted continuous experimentation and deployment pipelines using <strong>MLflow, DVC, Feast Feature Store</strong>, Docker, and Kubernetes for low-latency serving.</li>
+    <li><strong>Math &amp; Deep Learning Foundations:</strong> Mastered <strong>Linear Algebra</strong> (SVD, Eigenvalues, PCA) &amp; <strong>Multivariate Calculus</strong> (backprop, loss manifolds); built Transformers, Multi-Head Attention &amp; CNNs from scratch in <strong>PyTorch</strong>.</li>
+    <li><strong>GenAI, Agentic RAG &amp; Big Data Lakehouses:</strong> Built <strong>Hybrid RAG</strong> (HNSW + BM25 + Cross-Encoder Reranking), <strong>LangGraph agents</strong>, FastMCP &amp; NeMo Guardrails alongside Medallion Lakehouses (<strong>Spark, Delta Lake, Snowflake, dbt Core SCD-2, Kafka, Debezium CDC</strong>) and <strong>MLflow, DVC, Feast &amp; Kubernetes</strong> pipelines.</li>
   </ul>
 
   <div class="entry-header">
@@ -436,10 +483,8 @@
     <span>Rajshahi, Bangladesh (Remote)</span>
   </div>
   <ul>
-    <li>Architected zero-downtime microservices migration to <strong>Kubernetes on AWS EKS</strong>; scaled platform throughput by <strong>300%</strong> while curtailing p95 latency by <strong>48%</strong> at 99.99% multi-region availability.</li>
-    <li>Spearheaded enterprise AI initiatives: devised autonomous multi-agent pipelines and scalable LLM microservices, driving a <strong>22% sustained increase in customer LTV</strong>.</li>
-    <li>Fortified zero-trust mesh infrastructure with <strong>Istio mTLS and fine-grained RBAC</strong>; precluded unencrypted inter-service traffic and diminished cross-zone egress costs by <strong>38%</strong>.</li>
-    <li>Designed event-driven asynchronous processing core using <strong>Redis Streams and Celery</strong>; sustained <strong>15M+ daily async background tasks</strong> with zero message loss under 4x traffic surges.</li>
+    <li>Led zero-downtime migration to <strong>Kubernetes on AWS EKS</strong>; scaled throughput by <strong>300%</strong>, cut p95 latency by <strong>48%</strong> at 99.99% multi-region SLA, and fortified <strong>Istio mTLS + RBAC</strong> (-38% egress cost).</li>
+    <li>Launched autonomous multi-agent LLM microservices (<strong>+22% customer LTV</strong>) and async event core on <strong>Redis Streams &amp; Celery</strong> handling <strong>15M+ daily tasks</strong> with zero message loss.</li>
   </ul>
 
   <div class="entry-header">
@@ -484,6 +529,10 @@
     <a href="#proj-9" class="nav-pill">9. SageMaker</a>
     <a href="#proj-10" class="nav-pill">10. Realtime MLOps</a>
     <a href="#proj-11" class="nav-pill">11. Rust Git</a>
+    <a href="#proj-12" class="nav-pill">12. FlashAttention</a>
+    <a href="#proj-13" class="nav-pill">13. 4D LLM</a>
+    <a href="#proj-14" class="nav-pill">14. AutoCut-AI</a>
+    <a href="#proj-15" class="nav-pill">15. Nimbus-AI</a>
   </div>
 
   <!-- PROJECT 1: ZOMATO -->
@@ -498,13 +547,10 @@
     </span>
   </div>
   <ul>
-    <li>Architected enterprise Lakehouse on <strong>Snowflake &amp; PySpark Delta Lake</strong> processing <strong>35M+ orders (2.3 GB)</strong> with <strong>dbt Core SCD-2</strong>; curtailed warehouse compute by <strong>42% ($18K/mo savings)</strong>.</li>
-    <li>Devised real-time feature streaming via <strong>Airflow, Debezium CDC WAL</strong>, and <strong>Feast Store</strong> over Redis; lowered serving latency to <strong>&lt;5ms</strong>, unlocking <strong>+$340K quarterly revenue lift</strong>.</li>
-    <li>Operationalized multimodal CV dispute arbitration (<strong>dHash</strong> anti-fraud, receipt OCR) with <strong>G-Eval CoT</strong>; neutralized fraudulent claims by <strong>68%</strong>, safeguarding <strong>$1.2M in annual partner margins</strong>.</li>
-    <li>Deployed decentralized <strong>CQRS and Transactional Outbox pattern</strong> with Apache Kafka event streams, <strong>Great Expectations</strong> validation, and <strong>AWS S3 Glacier</strong> archiving ($7.8K/mo saved).</li>
-    <li>Mechanized real-time <strong>Presidio PII redaction and NeMo Guardrails</strong> across review streams; guaranteed 100% GDPR/DPDP data privacy compliance with zero PII leaks into the gold layer.</li>
-    <li>Instituted continuous self-healing data observability &amp; reconciliation via Monte Carlo principles and Prometheus alerts; eradicated silent schema corruption across 14 ingestion channels, protecting <strong>$450K in merchant payouts</strong>.</li>
-    <li>Formulated resilient dead-letter queue (DLQ) automated replay semantics with <strong>AWS SQS &amp; Kafka consumer groups</strong>; recovered <strong>$210K in transient webhook timeouts</strong> with zero order transaction loss.</li>
+    <li>Architected enterprise Lakehouse on <strong>Snowflake &amp; PySpark Delta Lake</strong> over <strong>35M+ orders (2.3 GB)</strong> with <strong>dbt Core SCD-2</strong>, cutting compute <strong>42% ($18K/mo)</strong>, plus Kafka/CQRS Transactional Outbox, Great Expectations &amp; S3 Glacier archiving ($7.8K/mo saved).</li>
+    <li>Streamed real-time features via <strong>Airflow, Debezium CDC WAL &amp; Redis Feast Store</strong> (<strong>&lt;5ms</strong> serving, <strong>+$340K/qtr lift</strong>) with SQS/Kafka DLQ replay recovering <strong>$210K</strong> in webhook timeouts.</li>
+    <li>Deployed multimodal CV dispute arbitration (<strong>dHash</strong>, OCR, <strong>G-Eval CoT</strong>) slashing fraud <strong>68% ($1.2M/yr saved)</strong> alongside real-time <strong>Presidio PII</strong> redaction &amp; NeMo privacy compliance.</li>
+    <li>Instituted self-healing data observability with Prometheus alerts, eradicating silent schema corruption across 14 channels and protecting <strong>$450K in merchant payouts</strong>.</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -521,12 +567,10 @@
     </span>
   </div>
   <ul>
-    <li>Polyglot mesh: <strong>Go API Gateway</strong>, <strong>Rust SIMD</strong> vector scoring, and <strong>FastAPI</strong> AI core over <strong>Kafka</strong>; curtailed scoring latency from 25ms to <strong>&lt;0.5ms (50x speedup)</strong>, saving <strong>64% CPU cost</strong>.</li>
-    <li>Pioneered hybrid retrieval synthesizing <strong>Dual-Tower NCF, ChromaDB HNSW</strong>, and <strong>BM25</strong> via Reciprocal Rank Fusion (<strong>NDCG@10 = 0.94</strong>); catalyzed a <strong>28% lift in user session retention</strong>.</li>
-    <li>Served adapters via <strong>vLLM Multi-LoRA dynamic multiplexing</strong> on 1x GPU with <strong>RSLoRA flywheel</strong>; curtailed GPU spend by <strong>68%</strong> while elevating token throughput to <strong>3.4x</strong>.</li>
-    <li>Codified headless <strong>Kubeflow v2 &amp; MLflow continuous training pipeline</strong> with DVC data versioning, NeFTune regularization, and stringent model quality gating.</li>
-    <li>Orchestrated multi-cloud GitOps continuous delivery via <strong>ArgoCD and Kustomize</strong> across <strong>AWS EKS, GCP GKE, and Azure AKS</strong>; empowered KEDA autoscaling from 1 to 24 pods in &lt;45s under 15K req/s spikes.</li>
-    <li>Implemented real-time embedding concept drift observability with <strong>Evidently AI &amp; Prometheus</strong>; detected semantic divergence within <strong>90 seconds</strong>, triggering automated LoRA adapter hot-swapping.</li>
+    <li>Polyglot mesh (<strong>Go API Gateway, Rust SIMD, FastAPI, Kafka</strong>) cut vector scoring from 25ms to <strong>&lt;0.5ms (50x speedup)</strong>, saving <strong>64% CPU cost</strong>.</li>
+    <li>Combined <strong>Dual-Tower NCF, ChromaDB HNSW &amp; BM25</strong> via RRF (<strong>NDCG@10 = 0.94</strong>), driving a <strong>28% retention lift</strong>.</li>
+    <li>Served <strong>vLLM Multi-LoRA</strong> on 1x GPU with <strong>RSLoRA flywheel</strong>, cutting GPU spend <strong>68%</strong> at <strong>3.4x throughput</strong>, backed by <strong>Kubeflow v2, MLflow, DVC &amp; NeFTune</strong> gating.</li>
+    <li>Automated multi-cloud GitOps via <strong>ArgoCD &amp; Kustomize</strong> (EKS/GKE/AKS) with KEDA scaling (1→24 pods in &lt;45s at 15K req/s) and <strong>Evidently AI + Prometheus</strong> 90s drift hot-swapping.</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -543,18 +587,15 @@
     </span>
   </div>
   <ul>
-    <li>Built zero-trust defense with <strong>BotShield WAF and NVIDIA NeMo Guardrails</strong>; blocked <strong>95%+ of prompt injections &amp; jailbreaks</strong> (benchmarked via <strong>Microsoft PyRIT 0.14.0</strong>).</li>
-    <li>Formulated stateful agentic core in <strong>LangGraph</strong> with MemorySaver checkpoints and <strong>Portkey Gateway</strong>; saved <strong>$8.4K/month (42%)</strong> via <strong>&lt;50ms semantic similarity caching</strong>.</li>
-    <li>Standardized tool execution via <strong>FastMCP</strong> with <strong>Human-in-the-Loop (HITL)</strong> gates and Logfire/LangSmith tracing; guaranteed <strong>100% audit compliance</strong> with zero unauthorized tool runs.</li>
-    <li>Architected hierarchical multi-agent supervisor coordinating 5 specialized sub-agents (Ingestion, Safety, Retrieval, Synthesis, Verification) with <strong>cyclic retry loops and state rollbacks</strong>; boosted multi-hop reasoning accuracy by <strong>37%</strong>.</li>
-    <li>Instituted high-precision two-stage retrieval combining <strong>Jina v3 1024-dim dense vectors</strong>, BM25 sparse search, and <strong>local ONNX FlashRank cross-encoders</strong> with <strong>Cohere Rerank v3.5</strong> fallback; garnered <strong>96.4% Context Precision</strong> at sub-35ms p95 latency.</li>
-    <li>Constructed automated red-teaming CI/CD evaluation harness executing <strong>500+ adversarial prompt payloads</strong> per release via <strong>PyRIT</strong>; intercepted 100% of OWASP LLM Top 10 vulnerabilities prior to production.</li>
+    <li>Built zero-trust defense with <strong>BotShield WAF &amp; NVIDIA NeMo Guardrails</strong>, blocking <strong>95%+ jailbreaks</strong> and executing <strong>500+ adversarial PyRIT 0.14.0</strong> CI/CD payloads (100% OWASP LLM coverage).</li>
+    <li>Formulated stateful 5-sub-agent <strong>LangGraph supervisor + Portkey Gateway</strong> with cyclic rollbacks (+37% multi-hop accuracy) and <strong>&lt;50ms semantic cache</strong> saving <strong>$8.4K/mo (42%)</strong>.</li>
+    <li>Implemented 2-stage retrieval using <strong>Jina v3 (1024-dim), BM25 &amp; ONNX FlashRank + Cohere v3.5</strong> fallback (<strong>96.4% Context Precision</strong> at &lt;35ms p95).</li>
+    <li>Standardized <strong>FastMCP + HITL approval gates</strong> and Logfire/LangSmith tracing for <strong>100% audit compliance</strong> and zero unauthorized tool runs.</li>
   </ul>
 
 </div> <!-- END PAGE 1 -->
 
-<!-- PAGE 2 (FORCED BREAK) -->
-<div class="page page-2" style="page-break-before: always;">
+<div class="page page-2">
 
   <!-- PROJECT 4: SMART MANUFACTURING -->
   <div id="proj-4" class="entry-header proj-anchor">
@@ -568,12 +609,10 @@
     </span>
   </div>
   <ul>
-    <li>Deployed IoT anomaly detection (<strong>PyTorch Autoencoders</strong>) and defect inspection (<strong>CNN, &lt;20ms</strong>); mitigated part escape defect rate by <strong>31%</strong>, saving <strong>$420K annually in scrap waste</strong>.</li>
-    <li>Built polyglot edge architecture: <strong>Rust SIMD</strong> edge vibration pre-filter (:8082), <strong>Go cloud-native gateway</strong> with rate-limiting (:8085), <strong>Next.js 15</strong> industrial cockpit (:3000), and <strong>PyTorch AI core</strong> (:8000).</li>
-    <li>Formulated resilient Kubernetes: <strong>GKE multi-zone cluster with seamless fallback to host-native K3s CNCF engine</strong> for zero-dependency standalone execution on EC2.</li>
-    <li>Orchestrated 12-stage declarative CI/CD via <strong>Jenkins, SonarQube, Nexus 3, and ArgoCD GitOps</strong> across AWS &amp; GCP; curtailed deployment cycles by <strong>96% (4h to 8m)</strong> with zero-downtime failover.</li>
-    <li>Pioneered single-command zero-touch cloud bootstrap (curl | bash) with deterministic <strong>$0.00 teardown (clear.sh --force)</strong>; coupled with <strong>EFK Stack and Prometheus/Grafana (:3001)</strong> real-time telemetry.</li>
-    <li>Sustained edge offline resilience via <strong>local SQLite write-ahead caching and asynchronous MQTT broker sync</strong>; averted telemetry loss during plant network disconnects across <strong>120+ simulated IoT sensors</strong>.</li>
+    <li>Deployed IoT anomaly detection (<strong>PyTorch Autoencoders</strong>) and <strong>CNN (&lt;20ms)</strong> defect inspection, cutting escape defects by <strong>31% ($420K/yr scrap saved)</strong>.</li>
+    <li>Built polyglot edge stack (<strong>Rust SIMD</strong> :8082, <strong>Go gateway</strong> :8085, <strong>Next.js 15</strong> :3000, <strong>PyTorch</strong> :8000) with SQLite WAL + MQTT offline buffering across <strong>120+ sensors</strong>.</li>
+    <li>Orchestrated <strong>GKE multi-zone + host-native K3s</strong> fallback and 12-stage CI/CD via <strong>Jenkins, SonarQube, Nexus 3 &amp; ArgoCD GitOps</strong>, cutting deploys <strong>96% (4h → 8m)</strong>.</li>
+    <li>Delivered 1-click bootstrap, deterministic <strong>$0.00 teardown (clear.sh --force)</strong>, EFK Stack &amp; Prometheus/Grafana (:3001) telemetry.</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -590,11 +629,8 @@
     </span>
   </div>
   <ul>
-    <li>Architected security-first 5-agent mesh (Data NL2SQL, Business Analyst, MLOps Supervisor, OWASP Firewall, Voice Alerts) over <strong>LangGraph</strong>; accelerated ad-hoc enterprise analytics turnaround by <strong>82%</strong>.</li>
-    <li>Constructed 3-tier Medallion Lakehouse (Bronze Parquet → Silver 32-point DQ validation → Gold Star Schema marts) with <strong>DuckDB</strong>; compressed downstream dashboard query latencies from 4.5s to <strong>&lt;120ms</strong>.</li>
-    <li>Crafted <strong>Go 1.22 API Gateway</strong> with JWT edge authentication and token-bucket rate limiting paired with Express BFF and <strong>Next.js 16</strong> glassmorphic cockpit; sustained 12K req/s with zero memory leaks.</li>
-    <li>Codified multi-cloud infrastructure via <strong>Terraform</strong> across <strong>AWS (EKS, S3, Glue), GCP (GKE, BigQuery), and Azure (AKS, Synapse)</strong>; compressed environment provisioning time by 90% via master launcher.</li>
-    <li>Governed attribute-based access control (ABAC) and row-level security (RLS) across <strong>Medallion Delta tables</strong>; enforced strict multi-tenant data isolation and audit trails across <strong>40+ analytical business units</strong>.</li>
+    <li>Architected 5-agent <strong>LangGraph</strong> mesh (NL2SQL, BI, MLOps, OWASP, Voice) cutting analytics turnaround <strong>82%</strong> over Bronze→Silver→Gold <strong>DuckDB</strong> marts (<strong>&lt;120ms</strong> queries) with ABAC/RLS isolation across <strong>40+ business units</strong>.</li>
+    <li>Built <strong>Go 1.22 JWT Gateway</strong> + Express BFF + <strong>Next.js 16</strong> cockpit (12K req/s) and codified multi-cloud <strong>Terraform</strong> across <strong>AWS (EKS/S3/Glue), GCP (GKE/BQ) &amp; Azure (AKS/Synapse)</strong> (-90% provisioning time).</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -611,12 +647,8 @@
     </span>
   </div>
   <ul>
-    <li>Built enterprise conversational agent using <strong>LangGraph cyclic state machines</strong> with PostgreSQL checkpointer; empowered fault-tolerant multi-turn thread persistence, dynamic rollbacks, and <strong>sub-50ms session recovery</strong>.</li>
-    <li>Standardized isolated tool execution using <strong>Model Context Protocol (FastMCP)</strong> with strict <strong>Human-in-the-Loop (HITL)</strong> approval gates on financial actions (&gt;$50 refunds/cancellations); eradicated <strong>100% of unauthorized transaction risk</strong>.</li>
-    <li>Pioneered <strong>BotShield WAF</strong> middleware featuring honeypot traps (/.env, /wp-admin), scanner fingerprint dropping, and sliding-window rate limiting; intercepted <strong>99.4% of adversarial probes</strong>.</li>
-    <li>Operationalized two-stage hybrid retrieval with <strong>Qdrant (BGE-Large dense vectors) and BM25 sparse keyword matching</strong> with real-time Server-Sent Events (SSE) token streaming; elevated response relevance to <strong>94.8%</strong>.</li>
-    <li>Architected semantic intent caching layer with <strong>Redis &amp; Cosine similarity gating (&lt;0.15 threshold)</strong>; served 38% of repetitive customer intents in <strong>&lt;12ms</strong>, curtailing LLM token billing by <strong>$3.2K/month</strong>.</li>
-    <li>Devised adaptive conversational memory with <strong>sliding-window token compaction &amp; vector summary checkpointing</strong>; diminished long-context token footprints by <strong>44% across 35+ turn dialogs</strong>.</li>
+    <li>Built <strong>LangGraph</strong> cyclic state agent with PostgreSQL checkpoints (&lt;50ms recovery), sliding-window memory compaction (-44% tokens on 35+ turns) &amp; <strong>FastMCP + HITL gates</strong> (&gt;$50 refunds, 0% unauthorized risk).</li>
+    <li>Added <strong>BotShield WAF</strong> (honeypots, fingerprint drops; <strong>99.4% attack block</strong>), <strong>Qdrant BGE-Large + BM25</strong> SSE RAG (<strong>94.8% relevance</strong>) &amp; <strong>Redis semantic cache</strong> (&lt;12ms, <strong>$3.2K/mo saved</strong>).</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -633,11 +665,8 @@
     </span>
   </div>
   <ul>
-    <li>Architected a <strong>LangGraph supervisor router</strong> classifying business queries into specialized SQL and ETL analyst subgraphs; garnered <strong>96.2% routing accuracy</strong> across multi-domain operational requests.</li>
-    <li>Instituted dynamic PostgreSQL schema introspection with an <strong>independent LLM security judge</strong>; sanitized generated SQL and <strong>intercepted 100% of destructive DDL/DML injection attacks</strong>.</li>
-    <li>Built autonomous <strong>ReAct tool-calling agent</strong> for file extraction, pandas data transformation, and sandboxed python execution; compressed ad-hoc data pipeline development time by <strong>75%</strong>.</li>
-    <li>Integrated <strong>self-healing SQL execution</strong> with automatic syntax retry &amp; schema reflection; programmatically corrected <strong>89% of initial query execution errors</strong> without human intervention.</li>
-    <li>Orchestrated multi-dialect SQL transpilations supporting <strong>PostgreSQL, Snowflake, and BigQuery</strong> with proactive <strong>EXPLAIN cost estimation</strong>; prevented runaway analytical queries exceeding cost ceilings.</li>
+    <li>Designed <strong>LangGraph supervisor router</strong> (<strong>96.2% accuracy</strong>) + PostgreSQL schema introspection &amp; <strong>LLM SQL judge</strong> blocking 100% of destructive DDL/DML injections.</li>
+    <li>Built autonomous <strong>ReAct ETL agent</strong> (-75% dev time), self-healing SQL retry (fixing 89% initial errors) &amp; multi-dialect transpiler (<strong>PostgreSQL/Snowflake/BigQuery</strong>) with EXPLAIN cost gating.</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -654,12 +683,8 @@
     </span>
   </div>
   <ul>
-    <li>Architected enterprise Lakehouse: orchestrated batch extraction via <strong>Azure Data Factory (ADF v2)</strong> dynamic lookup and parallel ForEach loops, landing raw logs into <strong>ADLS Gen2 Bronze layer</strong>.</li>
-    <li>Conducted large-scale ETL in <strong>Azure Databricks (Apache Spark)</strong> with Azure AD OAuth 2.0 Client Credentials, cross-joining real-time operational metadata from <strong>MongoDB Atlas</strong>.</li>
-    <li>Materialized analytical serving layer in <strong>Azure Synapse Analytics Serverless SQL</strong> using Managed Identity scoped credentials and <strong>CETAS (*Create External Table As Select*)</strong> for instant Power BI/Fabric reporting.</li>
-    <li>Built data validation engine with schema drift traps, KNN imputation + RobustScaler, and multi-model benchmark (<strong>XGBoost, CatBoost, Random Forest</strong> delivering <strong>98.4% detection accuracy</strong>).</li>
-    <li>Containerized sub-4ms <strong>FastAPI ONNX inference serving</strong> with single-command zero-touch bootstrapper (curl | bash) and deterministic <strong>$0.00 teardown (clear.sh)</strong>; mitigated p99 latency by <strong>11.8x</strong>.</li>
-    <li>Implemented dynamic partition pruning and <strong>Z-Order clustering on ADLS Gen2 Delta Parquet files</strong>; expedited complex analytical join queries by <strong>6.2x across 1.4B security log records</strong>.</li>
+    <li>Orchestrated batch ingestion via <strong>ADF v2 → ADLS Gen2</strong> and distributed <strong>Azure Databricks (Spark)</strong> joins against <strong>MongoDB Atlas</strong> with <strong>Synapse Serverless CETAS</strong> and Z-Order clustering (<strong>6.2x faster</strong> across 1.4B records).</li>
+    <li>Built drift-trapped ML benchmark (<strong>XGBoost/CatBoost/RF, 98.4% accuracy</strong>) + sub-4ms <strong>FastAPI ONNX</strong> serving (-11.8x p99) with 1-click bootstrap &amp; <strong>$0.00 teardown (clear.sh)</strong>.</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -676,11 +701,8 @@
     </span>
   </div>
   <ul>
-    <li>Designed <strong>SageMaker DAG Pipeline</strong> (ProcessingStep → TrainingStep → ConditionStep → ModelStep) with <strong>AWS Managed Spot Training</strong>, curtailing model training compute costs by <strong>70%</strong>.</li>
-    <li>Instituted programmatic quality evaluation gating (&ge; 85% holdout accuracy) for promotion into <strong>SageMaker Model Registry</strong>, deploying to real-time and serverless endpoints with standard inference contracts (model_fn, input_fn, predict_fn, output_fn) and FastAPI fallback.</li>
-    <li>Configured <strong>DataCaptureConfig</strong> streaming 100% of live inference payloads to Amazon S3 for baseline statistical drift detection, anomaly alerting, and programmatic retraining triggers.</li>
-    <li>Devised multi-model endpoint deployments with <strong>autoscaling policies (target tracking at 70% CPU/GPU)</strong>; sustained <strong>2,500 req/s</strong> with zero cold-start timeouts under spiky production loads.</li>
-    <li>Hardened inference endpoints with <strong>AWS KMS customer-managed keys (CMK) envelope encryption and TLS 1.3 mutual auth</strong>; achieved complete compliance with <strong>NIST AI RMF governance mandates</strong>.</li>
+    <li>Engineered <strong>SageMaker DAG Pipeline</strong> with <strong>Managed Spot Training (-70% cost)</strong>, &ge;85% holdout Model Registry gating, and real-time/serverless inference + FastAPI fallback (2,500 req/s).</li>
+    <li>Configured <strong>S3 DataCaptureConfig</strong> statistical drift monitoring and hardened endpoints with <strong>AWS KMS CMK + TLS 1.3 mTLS</strong> for full <strong>NIST AI RMF</strong> compliance.</li>
   </ul>
 
   <div class="project-divider"></div>
@@ -774,19 +796,20 @@
 
   <div class="project-divider"></div>
 
-  <!-- PROJECT 15: NIMBUS-AI SUITE -->
+  <!-- PROJECT 15: NIMBUS-AI 5-AGENT SUITE -->
   <div id="proj-15" class="entry-header proj-anchor">
-    <span>15. Nimbus-AI Suite: Enterprise 5-Agent Conversational Voice Copilot Ecosystem <a href="#project-nav" class="jump-top" title="Smooth jump to project navigation">↑ Nav</a></span>
+    <span>15. Nimbus-AI Suite: 5-Agent Live Conversational Voice Ecosystem (From Scratch) <a href="#project-nav" class="jump-top" title="Smooth jump to project navigation">↑ Nav</a></span>
     <span>Sept 2026 – Present</span>
   </div>
   <div class="entry-sub">
-    <span>Multi-Agent Voice Mesh (Meeting, Sales, Research, Scheduling &amp; Desktop), WebRTC &amp; FastMCP</span>
-    <span><a href="https://github.com/KishorKumarParoi/nimbus-voice-agents-suite" target="_blank">GitHub: nimbus-voice-agents-suite</a></span>
+    <span>LiveKit WebRTC, FastAPI, OpenAI GPT-4o / Whisper, ElevenLabs Turbo v2.5, RAG vs RAG-less &amp; 60fps Barge-In</span>
+    <span style="white-space: nowrap;"><a href="https://nimbus.kishor.tech/" target="_blank" style="color: #641C26; text-decoration: none; font-weight: 700; background: #fdf5f6; border: 0.5pt solid #c99ea5; border-radius: 2px; padding: 0.4px 3.5px;">🚀 Live: nimbus.kishor.tech</a> <a href="https://github.com/KishorKumarParoi/nimbus-voice-agents-suite" target="_blank" style="margin-left: 4px;">GitHub: nimbus-voice-agents-suite</a></span>
   </div>
   <ul>
-    <li>Built unified 5-agent conversational AI voice suite (<strong>Meeting, Sales, Research, Scheduling, and Desktop AI Voice Assistants</strong>) over <strong>WebRTC and LiveKit/Vapi</strong> with real-time tool calling and sub-second voice latency (&lt;650ms).</li>
-    <li>Integrated function-calling connectors across Google Calendar, Notion, Salesforce CRM, and desktop automation; processed <strong>50K+ live spoken interactions</strong> with 99.2% transcription and intent accuracy.</li>
-    <li>Enforced zero-latency audio streaming with dynamic noise suppression, barge-in speech interruption detection, and context-aware session memory across continuous multi-turn voice dialogs.</li>
+    <li>Architected from-scratch <strong>5-agent real-time voice platform</strong> on <strong>LiveKit WebRTC, FastAPI (<code>/api/voice/process</code>), OpenAI GPT-4o/GPT-4o-mini &amp; Whisper ASR, and ElevenLabs Turbo v2.5 TTS</strong>; achieved <strong>sub-400ms end-to-end voice roundtrips</strong> with live <strong>60fps audio waveform visualization</strong>, instant barge-in interruption, and latency waterfall telemetry.</li>
+    <li><strong>Sales (<a href="https://sales.kishor.tech/" target="_blank">sales.kishor.tech</a> | <a href="https://github.com/KishorKumarParoi/sales-voice-agent" target="_blank">GitHub</a>) &amp; Scheduling (<a href="https://scheduling.kishor.tech/" target="_blank">scheduling.kishor.tech</a> | <a href="https://github.com/KishorKumarParoi/scheduling-voice-agent" target="_blank">GitHub</a>):</strong> Deployed autonomous SaaS advisor and quote checkout agents (annual savings calculator) alongside conflict-aware calendar coordination and automated reminders.</li>
+    <li><strong>Meeting (<a href="https://meeting.kishor.tech/" target="_blank">meeting.kishor.tech</a> | <a href="https://github.com/KishorKumarParoi/meeting-voice-agent" target="_blank">GitHub</a>) &amp; Research (<a href="https://research.kishor.tech/" target="_blank">research.kishor.tech</a> | <a href="https://github.com/KishorKumarParoi/research-voice-agent" target="_blank">GitHub</a>):</strong> Built live meeting scribe extracting action items &amp; minutes paired with deep-corpus literature synthesis, citation tracking, and swappable RAG vs. RAG-less retrieval.</li>
+    <li><strong>Desktop (<a href="https://desktop.kishor.tech/" target="_blank">desktop.kishor.tech</a> | <a href="https://github.com/KishorKumarParoi/desktop-voice-agent" target="_blank">GitHub</a>):</strong> Engineered hands-free OS voice automation for application control, system telemetry, and guarded scripts across all 5 Vercel microservices verified with automated <code>pytest</code> suites.</li>
   </ul>
 
   <div class="section-title">Achievements &amp; Hackathons</div>
@@ -807,11 +830,11 @@
   <div class="section-title">Technical Skills</div>
   <div class="skills-block">
     • <strong>Languages &amp; Frameworks:</strong> Python, C/C++, Rust (Actix-web), Go (Gin/Fiber), SQL, Bash, TypeScript, JavaScript, Java (Spring Boot), FastAPI, Express.js, NestJS, Next.js 16, Streamlit<br>
-    • <strong>AI, ML &amp; LLMOps:</strong> PyTorch, vLLM, LangGraph, LangChain, HuggingFace, LangSmith, LangFuse, DeepEval, TRL, PEFT (RSLoRA, QLoRA), NeFTune, MLflow, Feast, Kubeflow, AWS SageMaker, KServe, DVC<br>
+    • <strong>AI, ML &amp; LLMOps:</strong> PyTorch, vLLM, Vapi, Deepgram Nova-2, Cartesia Sonic-3.5, LangGraph, LangChain, HuggingFace, LangSmith, LangFuse, DeepEval, TRL, PEFT (RSLoRA, QLoRA), NeFTune, MLflow, Feast, Kubeflow, AWS SageMaker, KServe, DVC<br>
     • <strong>Big Data &amp; Lakehouse:</strong> Snowflake, Databricks, Azure Data Factory (ADF), Azure Synapse Analytics (CETAS), ADLS Gen2, dbt Core, PySpark, Delta Lake, Apache Kafka, Apache Airflow, Debezium CDC, DuckDB, ChromaDB, Qdrant<br>
     • <strong>Cloud Platforms &amp; Infra:</strong> AWS (EKS, S3, KMS, EMR, Athena, ECS, Fargate, Bedrock, SageMaker), GCP (GKE, BigQuery, GCE, VertexAI, Gemini AI), Azure (Databricks, Synapse, Fabric, vLLM, AKS), Terraform, Ansible, Helm, ArgoCD, Sonatype Nexus, Docker, Kubernetes (GKE, EKS, K3s)<br>
     • <strong>DevSecOps &amp; Observability:</strong> NVIDIA NeMo Guardrails, PyRIT RedTeaming, BotShield WAF, SonarQube, Trivy, Jenkins, GitLab CI/CD, GitHub Actions, Prometheus, Grafana, EFK (Elasticsearch/Kibana), Redis<br>
-    • <strong>WebRTC, 3D Graphics &amp; Full-Stack Systems:</strong> WebVR, WebRTC, Three.js, React Three Fiber, ElectronJS, Next.js 16, Prisma, Drizzle ORM, Stripe Connect, PostgreSQL, MongoDB Atlas
+    • <strong>WebRTC, 3D Graphics &amp; Full-Stack Systems:</strong> WebVR, WebRTC, Three.js, React Three Fiber, ElectronJS, Next.js 16, Clerk Auth, n8n, Twilio, Google Calendar API v3, Neon Serverless PostgreSQL, Prisma, Drizzle ORM, Stripe Connect, MongoDB Atlas
   </div>
 
   <!-- CERTIFICATIONS WITH RE:INVENT INTEGRATED -->
@@ -821,7 +844,7 @@
     <li><strong>Machine Learning Specialization (Stanford Online &amp; DeepLearning.AI – Andrew Ng):</strong> Supervised Learning, Advanced Learning Algorithms, Unsupervised Learning, Recommenders &amp; Reinforcement Learning.</li>
     <li><strong>Enterprise Production MLOps &amp; AI Systems Architecture:</strong> End-to-End MLOps Pipelines (Krish Naik/CampusX), Enterprise AI Systems Architecture (Vivian Aranha), Agentic-AI, n8n (Mayank Agarwal), Computer Vision (Sourangshu Paul), AI Data Analyst (Ansh Lamba), Automation &amp; MCP (Ed Donner)</li>
     <li><strong>Distributed Systems, Big Data &amp; AI System Design:</strong> High-Throughput Distributed Systems &amp; AI Architecture (Arpit Bhayani, Gaurav Sen, ByteByteGo, Hussein Nasser), Big Data Engineering &amp; Lakehouses (Mayank Agarwal, Zach Wilson), LLM Foundations (Karpathy, Aurimas), LeetCode algorithmic mastery.</li>
-    <li><strong>Digital Portfolios &amp; Systems Architecture Showcases:</strong> <a href="https://vantage.kishor.tech/" target="_blank" style="color: #641C26; font-weight: 700;">🚀 vantage.kishor.tech</a> &nbsp;|&nbsp; <a href="https://github.com/KishorKumarParoi/vantage-portfolio" target="_blank" style="color: #641C26; font-weight: 600;">GitHub: vantage-portfolio</a> — Clean academic AI architecture showcase presenting complete 38-module AI curriculum, multi-agent lakehouses, sub-35ms semantic search &amp; FastMCP governance. &nbsp;&bull;&nbsp; <a href="https://3d.kishor.tech/" target="_blank" style="color: #641C26; font-weight: 700;">🚀 3d.kishor.tech</a> &nbsp;|&nbsp; <a href="https://github.com/KishorKumarParoi/re-invent" target="_blank" style="color: #641C26; font-weight: 600;">GitHub: re-invent</a> — React 19.2, Rolldown Vite, GSAP 3D choreography &amp; Supabase real-time visitor telemetry.</li>
+    <li><strong>Digital Portfolios &amp; Systems Architecture Showcases:</strong> <a href="https://ai-voice-receptionist.kishor.tech/" target="_blank" style="color: #641C26; font-weight: 700;">📞 ai-voice-receptionist.kishor.tech</a> &nbsp;|&nbsp; <a href="https://nimbus.kishor.tech/" target="_blank" style="color: #641C26; font-weight: 700;">🎙️ nimbus.kishor.tech</a> &nbsp;|&nbsp; <a href="https://kishor.tech/" target="_blank" style="color: #641C26; font-weight: 700;">🚀 kishor.tech</a> &nbsp;|&nbsp; <a href="https://pptx.kishor.tech/" target="_blank" style="color: #641C26; font-weight: 700;">💎 pptx.kishor.tech</a> &nbsp;|&nbsp; <a href="https://3d.kishor.tech/" target="_blank" style="color: #641C26; font-weight: 700;">3d.kishor.tech</a></li>
     <li><strong>Core CS &amp; Engineering Foundations (RUET):</strong> Advanced Data Structures &amp; Algorithms, Object-Oriented Programming (C++/Java), Operating Systems &amp; System Programming, Database Systems (DBMS), Distributed Systems &amp; Cloud Computing, Computer Networks &amp; Internet Protocols, Theory of Computation &amp; Automata, Compiler Design, Software Engineering &amp; System Analysis, Computer Architecture, Artificial Intelligence, Microprocessors &amp; Interfacing, Discrete Mathematics, and Network Security &amp; Cryptography.</li>
   </ul>
 
