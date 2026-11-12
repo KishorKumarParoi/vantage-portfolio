@@ -520,8 +520,8 @@ p {
   z-index: 1000;
   display: flex;
   align-items: flex-start;
-  transform: translateX(-232px);
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+  transform: translateX(-224px);
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.34s ease;
 }
 
 #leftnav.hover-drawer:hover {
@@ -560,27 +560,29 @@ p {
 
 .drawer-content {
   order: 1;
-  width: 232px;
-  background: var(--bg-box);
-  border: 1px solid var(--border-light);
+  width: 224px;
+  background: rgba(13, 19, 30, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.18);
   border-left: none;
-  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.12);
-  padding: 0.85em 1em 1em 1em;
-  border-radius: 0 8px 8px 0;
+  box-shadow: 6px 8px 28px rgba(0, 0, 0, 0.45), 0 0 18px rgba(56, 189, 248, 0.08);
+  padding: 0.75em 0.9em 0.9em 0.9em;
+  border-radius: 0 10px 10px 0;
   font-variant: small-caps;
 }
 
 .leftnav-header {
-  border-bottom: 1px dashed var(--border-light);
-  margin-bottom: 0.5em;
+  border-bottom: 1px dashed rgba(56, 189, 248, 0.25);
+  margin-bottom: 0.45em;
   padding-bottom: 0.35em;
 }
 
 #leftnav .sub {
-  font-size: 0.72em;
+  font-size: 0.66em;
   font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.1em;
+  color: #38bdf8;
+  letter-spacing: 0.14em;
   white-space: nowrap;
 }
 
@@ -588,23 +590,28 @@ p {
   color: var(--text-main);
   text-decoration: none;
   display: block;
-  padding: 0.28em 0.35em;
-  font-size: 0.85em;
-  border-radius: 4px;
+  padding: 0.26em 0.45em;
+  font-size: 0.78em;
+  letter-spacing: 0.03em;
+  border-radius: 5px;
+  border-left: 2px solid transparent;
   white-space: nowrap;
-  transition: all 0.15s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #leftnav a:hover {
-  color: var(--accent-link);
-  background: var(--bg-card);
-  padding-left: 0.5em;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border-left-color: #38bdf8;
+  padding-left: 0.7em;
 }
 
 #leftnav a.active {
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
-  color: var(--accent-link);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border-left-color: #38bdf8;
 }
 
 /* Hide on mobile devices where the top menu already provides navigation */
@@ -1871,3 +1878,178 @@ hr.vintage-divider {
   border-top: 1px solid var(--border-card);
   opacity: 0.55;
 }
+
+/* ==============================================================================
+   ANIMATED EYE-SOOTHING EXECUTIVE BIO DOSSIER (#about)
+   ============================================================================== */
+.bio-dossier {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95em;
+  margin-bottom: 1.25em;
+}
+
+.bio-kicker-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.12), rgba(168, 85, 247, 0.1));
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  position: relative;
+  overflow: hidden;
+  animation: bioBeatIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.bio-kicker-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: bioPulseDot 1.8s ease-in-out infinite;
+}
+
+@keyframes bioPulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.8); }
+}
+
+.bio-beat-card {
+  background: linear-gradient(135deg, rgba(23, 32, 46, 0.65), rgba(17, 23, 34, 0.85));
+  border: 1px solid var(--border-light);
+  border-left: 3px solid #38bdf8;
+  border-radius: 10px;
+  padding: 0.95em 1.15em;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+  animation: bioBeatIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.bio-beat-card:nth-child(2) { animation-delay: 0.06s; border-left-color: #38bdf8; }
+.bio-beat-card:nth-child(3) { animation-delay: 0.14s; border-left-color: #10b981; }
+.bio-beat-card:nth-child(4) { animation-delay: 0.22s; border-left-color: #a855f7; }
+.bio-beat-card:nth-child(5) { animation-delay: 0.30s; border-left-color: #f59e0b; }
+
+.bio-beat-card:hover {
+  transform: translateX(4px);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.82), rgba(17, 23, 34, 0.95));
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+@keyframes bioBeatIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bio-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 0.4em;
+  opacity: 0.92;
+}
+
+.bio-eyebrow-cyan { color: #38bdf8; }
+.bio-eyebrow-emerald { color: #34d399; }
+.bio-eyebrow-violet { color: #c084fc; }
+.bio-eyebrow-amber { color: #fbbf24; }
+
+.bio-beat-card p {
+  margin: 0 !important;
+  line-height: 1.65;
+  font-size: 0.96em;
+  color: var(--text-main);
+}
+
+.bio-u {
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(56, 189, 248, 0.55);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.bio-u:hover {
+  border-bottom-color: #38bdf8;
+}
+
+.bio-metric {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+}
+
+.bio-metric-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.bio-metric-amber {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fcd34d;
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.bio-nav-strip {
+  background: rgba(17, 23, 34, 0.72);
+  border: 1px dashed rgba(56, 189, 248, 0.28);
+  border-radius: 10px;
+  padding: 0.85em 1.1em;
+  font-size: 0.92em;
+  line-height: 1.7;
+  animation: bioBeatIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+}
+
+/* Light-mode compatibility for bio cards & sidebar */
+html[data-theme="light"] .drawer-content,
+html.light .drawer-content,
+body.light .drawer-content {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 6px 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+html[data-theme="light"] .bio-beat-card,
+html.light .bio-beat-card,
+body.light .bio-beat-card {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+html[data-theme="light"] .bio-metric,
+html.light .bio-metric,
+body.light .bio-metric {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0369a1;
+}
+
+html[data-theme="light"] .bio-nav-strip,
+html.light .bio-nav-strip,
+body.light .bio-nav-strip {
+  background: rgba(241, 245, 249, 0.85);
+}
+
