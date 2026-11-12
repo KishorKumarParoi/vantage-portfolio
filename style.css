@@ -1702,7 +1702,6 @@ button.nav-dropbtn,
 }
 
 a.button,
-.cv-quick-btn,
 .ecosystem-label,
 .eco-tag,
 .abstract-toggle-btn,
@@ -1724,14 +1723,12 @@ a.button,
 
 /* Crisp 3px Architectural Chamfer + Obsidian Depth */
 .boxed,
-.rightelement,
 .pub-thumb a.thumb-link,
 .journey-card,
 .course-card,
 .live-visitor-card,
 .ecosystem-banner,
 .eco-tag,
-.cv-quick-btn,
 .theme-toggle-btn,
 button.nav-dropbtn,
 .nav-dropdown-menu,
@@ -1748,13 +1745,32 @@ span.award,
   box-shadow: var(--card-shadow);
 }
 
-.rightelement,
 .journey-card,
 .course-card,
 .live-visitor-card,
 .ecosystem-banner {
   border: 1px solid var(--border-card);
   background: var(--bg-card);
+}
+
+/* Keep Right Profile Card & CV Quick Grid matching the previous version */
+.rightelement {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  background: var(--bg-card);
+}
+
+:root[data-theme="light"] .rightelement,
+html[data-theme="light"] .rightelement {
+  border: 1px solid var(--border-light);
+}
+
+.cv-quick-btn {
+  font-family: var(--font-body);
+  font-variant: small-caps;
+  text-transform: none;
+  font-size: 76%;
+  letter-spacing: 0.03em;
 }
 
 .journey-card:hover,
@@ -1810,21 +1826,19 @@ a.button.button-outline:hover,
   color: var(--accent-link-hover) !important;
 }
 
-.cv-quick-btn,
 .theme-toggle-btn,
 button.nav-dropbtn {
-  font-size: 0.7rem;
-  background: var(--bg-body);
-  border: 1px solid var(--border-card);
+  font-size: 0.76rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   color: var(--text-main) !important;
 }
 
-.cv-quick-btn:hover,
 .theme-toggle-btn:hover,
 button.nav-dropbtn:hover {
   background: var(--blueprint-tint);
-  border-color: var(--accent-link);
-  color: var(--accent-link) !important;
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy) !important;
 }
 
 .deploy-tag {
