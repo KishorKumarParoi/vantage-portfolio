@@ -255,81 +255,149 @@
               <div class="bio-dossier">
                 <div class="bio-kicker-bar">
                   <span class="bio-kicker-dot"></span>
-                  <span>PRINCIPAL AI SYSTEMS ARCHITECT &bull; FOUNDER &bull; FIRST-PRINCIPLES BUILDER</span>
+                  <span class="bio-kicker-title">PRINCIPAL AI SYSTEMS ARCHITECT &bull; FOUNDER &bull; FIRST-PRINCIPLES BUILDER</span>
+                  <span class="bio-kicker-status">✦ ACTIVE IN PRODUCTION</span>
+                </div>
+
+                <!-- Instant Executive Telemetry HUD Strip -->
+                <div class="bio-hud-strip">
+                  <div class="bio-hud-chip" title="Enterprise WebRTC Glass-to-Glass Latency">
+                    <span class="hud-dot hud-dot-cyan"></span>
+                    <span class="hud-label">VOICE/VIDEO</span>
+                    <span class="hud-val">&lt;120ms WebRTC</span>
+                  </div>
+                  <div class="bio-hud-chip" title="LangGraph Enterprise Task Completion">
+                    <span class="hud-dot hud-dot-emerald"></span>
+                    <span class="hud-label">LANGGRAPH</span>
+                    <span class="hud-val">99.4% Success</span>
+                  </div>
+                  <div class="bio-hud-chip" title="Hybrid RAG p95 Latency">
+                    <span class="hud-dot hud-dot-cyan"></span>
+                    <span class="hud-label">HYBRID RAG</span>
+                    <span class="hud-val">&lt;35ms p95</span>
+                  </div>
+                  <div class="bio-hud-chip" title="Rust SIMD Vector Scoring Speedup">
+                    <span class="hud-dot hud-dot-purple"></span>
+                    <span class="hud-label">RUST SIMD</span>
+                    <span class="hud-val">50x (&lt;0.5ms)</span>
+                  </div>
+                  <div class="bio-hud-chip" title="Zero-Trust Guardrail Blocking Rate">
+                    <span class="hud-dot hud-dot-emerald"></span>
+                    <span class="hud-label">GUARDRAILS</span>
+                    <span class="hud-val">95%+ Blocked</span>
+                  </div>
+                  <div class="bio-hud-chip" title="Monthly Cloud Compute Cost Reduction">
+                    <span class="hud-dot hud-dot-amber"></span>
+                    <span class="hud-label">INFRA SAVINGS</span>
+                    <span class="hud-val">$18K/mo Saved</span>
+                  </div>
                 </div>
 
                 <!-- Beat 01: Founder & Real-Time Voice/Video -->
-                <div class="bio-beat-card">
-                  <span class="bio-eyebrow bio-eyebrow-cyan">01 // FOUNDER &amp; REAL-TIME VOICE + VIDEO INFRASTRUCTURE</span>
+                <div class="bio-beat-card bio-card-voice">
+                  <div class="bio-card-header">
+                    <span class="bio-eyebrow bio-eyebrow-cyan">01 // FOUNDER &amp; REAL-TIME MULTIMODAL INFRASTRUCTURE</span>
+                    <span class="bio-badge bio-badge-cyan">VOICE &bull; WEBRTC &bull; SAAS</span>
+                  </div>
                   <p>
-                    I am an <strong>AI Systems Architect &amp; Engineer</strong> working at the intersection of
-                    <u class="bio-u"><em>distributed ML infrastructure</em></u>, <u class="bio-u"><em>sub-millisecond retrieval</em></u>, and
+                    I am an <strong>AI SYSTEMS ARCHITECT &amp; ENGINEER</strong> working at the intersection of
+                    <u class="bio-u"><em>distributed ML infrastructure</em></u>,
+                    <u class="bio-u"><em>sub-millisecond retrieval</em></u>, and
                     <u class="bio-u"><em>production agent mesh networks</em></u>.
                     Currently, I am the <strong>FOUNDER &amp; LEAD ARCHITECT</strong> at
-                    <a href="https://ai-voice-receptionist.kishor.tech/" target="_blank" rel="noopener"><strong>Omnichannel AI Solutions</strong> ↗</a>
+                    <a href="https://ai-voice-receptionist.kishor.tech/" target="_blank" rel="noopener" class="bio-link bio-link-cyan">
+                      <strong>Omnichannel AI Solutions</strong> ↗
+                    </a>
                     (<em>commercial conversational voice &amp; chat SaaS</em>) and
-                    <a href="https://koom.kishor.tech/" target="_blank" rel="noopener"><strong>KoomAI</strong> ↗</a>,
-                    where I built an enterprise WebRTC high-performance video communication engine sustaining
-                    <span class="bio-metric">&lt;120ms</span> glass-to-glass latency across
+                    <a href="https://koom.kishor.tech/" target="_blank" rel="noopener" class="bio-link bio-link-cyan">
+                      <strong>KoomAI</strong> ↗
+                    </a>,
+                    where I built an enterprise <strong>WebRTC high-performance video communication engine</strong> sustaining
+                    <span class="bio-metric bio-metric-cyan">&lt;120ms</span> glass-to-glass latency across
                     <span class="bio-metric bio-metric-emerald">50,000+ recording minutes</span>.
                   </p>
                 </div>
 
                 <!-- Beat 02: Enterprise Impact (phi0.ai & Samsung) -->
-                <div class="bio-beat-card">
-                  <span class="bio-eyebrow bio-eyebrow-emerald">02 // ENTERPRISE IMPACT &bull; PHI0.AI (EUROPE) &amp; SAMSUNG AI CORE</span>
+                <div class="bio-beat-card bio-card-enterprise">
+                  <div class="bio-card-header">
+                    <span class="bio-eyebrow bio-eyebrow-emerald">02 // ENTERPRISE IMPACT &bull; PHI0.AI (EUROPE) &amp; SAMSUNG AI CORE</span>
+                    <span class="bio-badge bio-badge-emerald">H100 &bull; LANGGRAPH &bull; RAG</span>
+                  </div>
                   <p>
-                    Previously, I served as a <strong>Forward Deployed AI Engineer</strong> at
-                    <a href="#experience"><strong>phi0.ai</strong></a> in <em>Europe</em>, architecting production
-                    <strong>LangGraph agent workflows</strong> (<span class="bio-metric bio-metric-emerald">99.4% task completion</span> across enterprise workloads)
-                    and high-throughput <u class="bio-u">Hybrid RAG engines</u>
-                    (<sup><a href="#rag-footnote" id="ref-rag">1</a></sup>)
-                    that curtailed p95 latency to <span class="bio-metric">&lt;35ms</span> and saved
+                    Previously, I served as a <strong>FORWARD DEPLOYED AI ENGINEER</strong> at
+                    <a href="#experience" class="bio-link bio-link-emerald"><strong>phi0.ai</strong></a> in <em>Europe</em>, architecting production
+                    <strong>LangGraph agent workflows</strong>
+                    (<span class="bio-metric bio-metric-emerald">99.4% task completion</span> across enterprise workloads)
+                    and high-throughput <u class="bio-u"><em>Hybrid RAG engines</em></u>
+                    (<sup><a href="#rag-footnote" id="ref-rag" class="bio-footnote">1</a></sup>)
+                    that curtailed p95 latency to <span class="bio-metric bio-metric-cyan">&lt;35ms</span> and saved
                     <span class="bio-metric bio-metric-amber">$18K/month</span> in compute expenses.
                     Earlier, at <strong>SAMSUNG AI CORE / CARE HEALTH</strong>, I engineered distributed data pipelines across <em>AWS EMR</em> and accelerated
                     <strong>8B/70B LLM training &amp; inference</strong> on <em>NVIDIA H100 clusters</em> with
-                    <u class="bio-u">FlashAttention-2</u>, custom fused CUDA kernels, and PyTorch FSDP / DeepSpeed ZeRO-3.
+                    <u class="bio-u"><em>FlashAttention-2</em></u>, custom fused CUDA kernels, and <em>PyTorch FSDP / DeepSpeed ZeRO-3</em>.
                     I hold a <strong>B.Sc. in Computer Science &amp; Engineering</strong> from
-                    <a href="#education"><strong>RUET</strong></a> (ranked <span class="bio-metric">483rd nationwide</span> in Bangladesh).
+                    <a href="#education" class="bio-link"><strong>RUET</strong></a> (ranked <span class="bio-metric">483rd nationwide</span> in Bangladesh).
                   </p>
                 </div>
 
                 <!-- Beat 03: Low-Latency Systems & Zero-Trust Security -->
-                <div class="bio-beat-card">
-                  <span class="bio-eyebrow bio-eyebrow-violet">03 // LOW-LATENCY SYSTEMS &amp; ZERO-TRUST AI GUARDRAILS</span>
+                <div class="bio-beat-card bio-card-systems">
+                  <div class="bio-card-header">
+                    <span class="bio-eyebrow bio-eyebrow-violet">03 // LOW-LATENCY SYSTEMS &amp; ZERO-TRUST AI GUARDRAILS</span>
+                    <span class="bio-badge bio-badge-violet">RUST SIMD &bull; GO &bull; NEMO</span>
+                  </div>
                   <p>
-                    My work spans <strong>low-latency systems</strong> and <em>mathematical foundations</em>: from authoring
-                    <a href="#projects"><strong>Rust SIMD vector search accelerators</strong></a>
-                    (<span class="bio-metric">&lt;0.5ms scoring latency</span>, <span class="bio-metric bio-metric-emerald">50x speedup</span> over standard implementations)
+                    My work spans <strong>LOW-LATENCY SYSTEMS</strong> and <em>mathematical foundations</em>: from authoring
+                    <a href="#projects" class="bio-link bio-link-violet"><strong>Rust SIMD vector search accelerators</strong></a>
+                    (<span class="bio-metric bio-metric-cyan">&lt;0.5ms scoring latency</span>,
+                    <span class="bio-metric bio-metric-emerald">50x speedup</span> over standard implementations)
                     and <strong>Go microservices</strong> handling high concurrency, to building
-                    <u class="bio-u">zero-trust enterprise guardrails</u> (<em>BotShield WAF, NVIDIA NeMo</em>) blocking
+                    <u class="bio-u"><em>zero-trust enterprise guardrails</em></u>
+                    (<em>BotShield WAF, NVIDIA NeMo</em>) blocking
                     <span class="bio-metric bio-metric-emerald">95%+</span> of prompt injections and jailbreaks.
                   </p>
                 </div>
 
                 <!-- Beat 04: Experimental Systems From Scratch -->
-                <div class="bio-beat-card">
-                  <span class="bio-eyebrow bio-eyebrow-amber">04 // REBUILT FROM SCRATCH &bull; EXPERIMENTAL SYSTEMS SOFTWARE</span>
+                <div class="bio-beat-card bio-card-scratch">
+                  <div class="bio-card-header">
+                    <span class="bio-eyebrow bio-eyebrow-amber">04 // REBUILT FROM SCRATCH &bull; EXPERIMENTAL SYSTEMS SOFTWARE</span>
+                    <span class="bio-badge bio-badge-amber">BARE-METAL &bull; IOT &bull; EVALS</span>
+                  </div>
                   <p>
                     When not designing <em>production lakehouses</em> or fine-tuning models with <strong>LoRA / DPO</strong>, I write experimental systems software ranging from
-                    a <a href="https://github.com/KishorKumarParoi" target="_blank" rel="noopener"><strong>Git storage engine written in pure Rust</strong> ↗</a>,
-                    to an <u class="bio-u">offline-first industrial IoT edge telemetry engine</u> with <em>SQLite write-ahead caching</em>,
-                    to a <u class="bio-u">real-time multimodal receipt arbitration engine</u> using <strong>DHash perceptual hashing</strong> and <strong>G-Eval</strong>.
+                    a <a href="https://github.com/KishorKumarParoi/codecrafters-git-rust" target="_blank" rel="noopener" class="bio-link bio-link-amber"><strong>Git storage engine written in pure Rust</strong> ↗</a>,
+                    to an <u class="bio-u"><em>offline-first industrial IoT edge telemetry engine</em></u> with <em>SQLite write-ahead caching (WAL)</em>,
+                    to a <u class="bio-u"><em>real-time multimodal receipt arbitration engine</em></u> using <strong>DHash perceptual hashing</strong> and <strong>G-Eval</strong>.
                   </p>
                 </div>
 
                 <!-- Quick Navigation & Verified Credentials -->
                 <div class="bio-nav-strip">
-                  <strong>EXPLORE DOSSIER:</strong>
-                  <a href="#projects"><u>Systems &amp; Architectures</u></a> &bull;
-                  <a href="#code"><u>Open-Source Code</u></a> &bull;
-                  <a href="#experience"><u>Work History</u></a> &bull;
-                  <a href="#journey"><u>AI Engineering Curriculum</u></a>
-                  <br>
-                  <strong>VERIFIED CREDENTIALS:</strong>
-                  <a href="resume.pdf?v=20261111-2" target="_blank" rel="noopener" style="font-weight: 700; color: var(--accent-burgundy);">📄 1-Page Visual Resume (PDF) ↗</a>
-                  &bull;
-                  <a href="resume_single_column.pdf?v=20261111-2" target="_blank" rel="noopener" style="font-weight: 700; color: var(--accent-link);">📑 2-Page ATS Resume (PDF) ↗</a>
+                  <div class="bio-nav-row">
+                    <span class="bio-nav-label">✦ EXPLORE DOSSIER:</span>
+                    <div class="bio-nav-links">
+                      <a href="#projects" class="bio-nav-item"><u>Systems &amp; Architectures</u> ↗</a>
+                      <span class="bio-nav-dot">&bull;</span>
+                      <a href="#code" class="bio-nav-item"><u>Open-Source Code</u> ↗</a>
+                      <span class="bio-nav-dot">&bull;</span>
+                      <a href="#experience" class="bio-nav-item"><u>Work History</u> ↗</a>
+                      <span class="bio-nav-dot">&bull;</span>
+                      <a href="#journey" class="bio-nav-item"><u>AI Engineering Curriculum</u> ↗</a>
+                    </div>
+                  </div>
+                  <div class="bio-cred-row">
+                    <span class="bio-cred-label">🛡️ VERIFIED CREDENTIALS:</span>
+                    <div class="bio-cred-buttons">
+                      <a href="resume.pdf?v=20261111-2" target="_blank" rel="noopener" class="bio-cred-btn bio-cred-pdf">
+                        📄 <strong>1-Page Visual Resume (PDF)</strong> ↗
+                      </a>
+                      <a href="resume_single_column.pdf?v=20261111-2" target="_blank" rel="noopener" class="bio-cred-btn bio-cred-ats">
+                        📑 <strong>2-Page ATS Technical Resume (PDF)</strong> ↗
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Live Digital Ecosystem Navigation -->
